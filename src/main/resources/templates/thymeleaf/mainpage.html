@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeLeaf.org">
+<head>
+<meta charset="UTF-8">
+<title>노틸러스 메인</title>
+<!-- bootstrap css -->
+<link rel="stylesheet" th:href="@{/css/bootstrap.css}" type="text/css">
+<link rel="stylesheet" th:href="@{/css/main.css}" type="text/css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand">노틸러스</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="#">메인<span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="/syn/classes">시너지/class</a>
+      <a class="nav-item nav-link" href="/syn/origins">시너지/origin</a>
+      <a class="nav-item nav-link" href="#">아이템</a>
+      <a class="nav-item nav-link" href="#">증강</a>
+      <a class="nav-item nav-link" href="#">게시판</a>
+      <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    </div>
+  </div>
+</nav>
+<div class="main">
+	<img class="mainImage" th:src="@{/image/etc/nautilus_main2.png}">
+</div>
+
+</body>
+</html>

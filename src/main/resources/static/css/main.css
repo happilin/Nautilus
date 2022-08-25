@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+.main{
+	text-align: center;
+	height: auto;
+}
+.mainImage{
+	max-width:70%;
+	max-height:300px;
+}

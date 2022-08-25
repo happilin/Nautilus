@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.nautilus.mapper.BoardMapper">
+
+	<select id="getList" resultType="com.nautilus.vo.Board">
+		SELECT * FROM nautilusboard
+	</select>
+	
+	<select id="getListBynum"
+			parameterType="Integer"
+			resultType="com.nautilus.vo.Board">
+		SELECT * FROM nautilusboard WHERE num > #{num}
+	</select>
+	
+	<select id="getInfoByDeptno"
+			parameterType="Integer"
+			resultType="com.nautilus.vo.Board">
+		SELECT * FROM nautilusboard WHERE num=#{num}
+	</select>
+	
+	<insert id="add"
+			parameterType="com.nautilus.vo.Board"
+			useGeneratedKeys="true" 
+            keyColumn="num" keyProperty="num">
+		INSERT INTO nautilusboard(num,author,wdate,title,contents,pcode) VALUES(nautilus_board_num.nextval,#{author},SYSDATE,#{title},#{contents},#{pcode})
+	</insert>
+	
+	<update id="update"
+			parameterType="com.nautilus.vo.Board">
+		UPDATE nautilusboard SET title=#{title}, contents=#{contents} WHERE num=#{num}	
+	</update>
+	<delete id="delete"
+			parameterType="Integer">
+		DELETE nautilusboard WHERE num=#{num}
+	</delete>
+	
+	<select id="search"
+			parameterType="map"
+			resultType="com.nautilus.vo.Board">
+		SELECT * FROM nautilusboard
+		WHERE
+		<choose>
+	    	<when test='category.equalsIgnoreCase("author")'>
+	    		<!-- author LIKE '%'||#{key}||'%' -->
+	    		LOWER(author)=#{keyword}
+	   		</when>
+	   		<when test='category.equalsIgnoreCase("title")'>
+	   			title LIKE '%'||#{key}||'%'
+	   		</when>
+		</choose>
+	</select>
+</mapper>

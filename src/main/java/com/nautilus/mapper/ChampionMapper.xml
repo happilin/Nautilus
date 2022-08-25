@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.nautilus.mapper.ChampionMapper">
+
+	<select id="findAll" resultType="com.nautilus.vo.Champion">
+		SELECT * FROM champions
+	</select>
+	
+	<select id="getChampionByOrigin" parameterType="String"
+		resultType="String">	
+		SELECT korname FROM champions WHERE synergy1=#{synergy} or synergy2=#{synergy} or synergy3=#{synergy} ORDER BY korname
+	</select>
+
+	<select id="getChampionByClass" parameterType="String"
+		resultType="String">	
+		SELECT korname FROM champions WHERE synergy1=#{synergy} or synergy2=#{synergy} or synergy3=#{synergy} ORDER BY korname
+	</select>
+
+	<select id="getChampionAll" parameterType="String"
+		resultType="com.nautilus.vo.Champion">	
+		SELECT * FROM champions WHERE synergy1=#{synergy} or synergy2=#{synergy} or synergy3=#{synergy} ORDER BY korname
+	</select>
+	
+	<select resultType="com.nautilus.vo.Champion" id="getChampionCrossList" parameterType="String">
+		SELECT * FROM champions WHERE (synergy1=#{classname} or synergy2=#{classname} or synergy3=#{classname}) 
+		and (synergy1=#{originname} or synergy2=#{originname} or synergy3=#{originname}) 
+	</select>
+</mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.nautilus.mapper.OriginMapper">
+
+	<select id="findAll" resultType="com.nautilus.vo.Origins">
+		SELECT * FROM origins ORDER BY originname ASC
+	</select>
+
+	<select id="findEffect" parameterType="String"
+	resultType="com.nautilus.vo.OriginEffect">
+		SELECT * FROM origineffect WHERE originname = #{origin} 
+	</select>
+	
+	<select id="findAllName" resultType="String">
+		SELECT originname FROM origins ORDER BY originname
+	</select>
+</mapper>

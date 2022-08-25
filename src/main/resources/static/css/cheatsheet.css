@@ -1,0 +1,41 @@
+@charset "UTF-8";
+body{
+	align-items: center;
+}
+.cheatTable{
+	border:1px solid;
+	margin : auto;
+	border-radius:3px;
+	border-collapse: collapse;
+	text-align: center;
+}
+th,td{
+	border:1px solid;
+}
+
+.origin{
+	height: 50px;
+	width: 85px;
+}
+
+.class{
+	text-align: center;
+}
+.originName{
+	
+}
+.className{
+	width: 80px;
+}
+
+.cham{
+	margin:auto;
+}
+.chamImage{
+	height: 50px;
+	width: 50px;
+	margin: 2px;
+}
+.chamKorName{
+	display:none;
+}

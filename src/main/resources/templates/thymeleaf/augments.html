@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>nautilus_augments</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+	
+		function search()
+		{
+			/* alert($('#keyword').val()); */
+			$.ajax({
+		   		url:'/agm/search/'+$('#keyword').val(),
+			   	method:'get',
+			   	cache:false,
+			   	success:function(res){
+			      	location.href='/agm/search/'+$('#keyword').val();
+			   	},
+			   	error:function(xhr,status,err){
+			      	alert('에러:' + err);
+			   	}
+			});
+		}
+		
+		function enterkey(e)
+		{
+			if(e.keyCode == 13) //enter key
+			{
+				/* alert('엔터: '+$('#keyword').val()); */
+				if($('#keyword').val()=="" || $('#keyword').val() == null) return;
+				search();
+			}
+		}
+		
+	</script>
+</head>
+<body>
+	<form action="">
+		
+		<!-- 버튼 -->
+		<div> 
+			[<a href="/agm/1">실버</a>]&nbsp;&nbsp;
+			[<a href="/agm/2">골드</a>]&nbsp;&nbsp;
+			[<a href="/agm/3">프리즘</a>]
+		</div>
+		
+		<!-- 검색창 -->
+		<div>
+			<input type="text" id="keyword" placeholder="증강 검색(ex.강인함, ㄱㅇㅎ, ...)" list="dtList" onKeypress="enterkey(event);">
+			<button type="button" onclick="search();">검색</button>
+		</div>
+		
+		<!-- <datalist id="dtList" th:each="list:${list}">
+			<option value="${list.name}">
+		</datalist> -->
+		
+		<div>
+		<!-- 증강체들... -->
+			<table>
+				<tr th:each="list:${list}">
+					<td>
+						<img src="augments_img/${list.name}.png" width="50" height="50">
+					</td>
+					<td>
+						<div id="name" th:text="${list.name}"></div>
+						<div id="explanation" th:text="${list.explanation}"></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</form>
+</body>
+</html>
