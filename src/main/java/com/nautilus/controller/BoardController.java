@@ -19,7 +19,7 @@ import com.github.pagehelper.PageInfo;
 import com.nautilus.mapper.BoardMapper;
 import com.nautilus.vo.Board;
 
-//825 merge
+//220825 오후 10:32 
 @Controller
 @RequestMapping("/board")
 public class BoardController {
