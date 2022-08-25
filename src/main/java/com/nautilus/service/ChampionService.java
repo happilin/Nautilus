@@ -18,6 +18,7 @@ public class ChampionService {
 		return chamMapper.findAll();
 	}
 
+	// champion mapper Champion detailCham(String name);
 	public Champion detailCham(String name) {
 		return chamMapper.detailCham(name);
 	}
