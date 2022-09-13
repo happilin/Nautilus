@@ -7,6 +7,7 @@
 <!-- bootstrap css -->
 <link rel="stylesheet" th:href="@{/css/bootstrap.css}" type="text/css">
 <link rel="stylesheet" th:href="@{/css/synergy.css}" type="text/css">
+<link rel="stylesheet" th:href="@{/css/main.css}" type="text/css">
 </head>
 
 <body>
@@ -15,34 +16,44 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <a class="nav-item nav-link active" href="/main/index">메인<span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="/syn/classes">시너지/class</a>
-      <a class="nav-item nav-link" href="/syn/origins">시너지/origin</a>
+      <div class = "dropdown">
+      <a class="nav-item nav-link">시너지</a>
+	      <div class="dropdown-content">
+	      	<a class="nav-item nav-link" href="/syn/classes">직 업</a>
+	      	<a class="nav-item nav-link" href="/syn/origins">계 열</a>
+	      	<a class="nav-item nav-link" href="/syn/origins">족 보</a>
+	      </div>
+	  </div>
       <a class="nav-item nav-link" href="#">아이템</a>
       <a class="nav-item nav-link" href="#">증강</a>
       <a class="nav-item nav-link" href="#">게시판</a>
-      <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
     </div>
   </div>
 </nav>
 
-<main>
-<h3 class="head">origin</h3>
+<main class="synergyBody">
+<div class="head">
+	<div class="mainhead">계 열</div>
+	<div class="subhead">Origins</div>
+</div>
 <div class="synergyMain">
 	<div class="synergyBox" th:each="origin : ${originChamp}">
 	    <div th:each="origin2 : ${originEff}" th:if="${origin.key.originName == origin2.key}">
-	        <div class="synergyName" th:text="${origin.key.originName}"></div>
+	        <div class="synergyName">
+	        	<img class="synergyImage" th:src="@{/image/synergy/}+|${origin.key.originName}.svg|" th:alt="${origin.key.originName}">
+	        	<span th:text="${origin.key.originName}"></span>
+	        </div>
 	        <div class="champions" >
 		        <div class="championDetail" th:each="cham : ${origin.value}">
 		        	<img class="chamImage" th:src="@{/image/champion/}+|${cham.engName}.png|" th:alt="${cham.korname}">
 		        	<a class="chamName" th:utext="|<br>${cham.korname}|"></a>	
 		        </div>
 	        </div>
-	        <div class="synergy">
-	        	<a class="explan" th:text="효과"></a><br>
+	        <div class="synergy" th:if="${(origin.key.originExplan != NULL)}">
 	        	<a th:utext="${origin.key.originExplan}"></a>
 	        </div>
 	        <div class="effect">
-	        	<a class="explan" th:text="효과"></a><br>
+	        	<a class="explan">시너지 효과</a><br>
 	        	<a th:each="eff : ${origin2.value}" th:utext="|(${eff.member}) : ${eff.effect}<br>|"></a>
 	        </div>
 	    </div>

@@ -6,44 +6,53 @@
 <!-- bootstrap css -->
 <link rel="stylesheet" th:href="@{/css/bootstrap.css}" type="text/css">
 <link rel="stylesheet" th:href="@{/css/synergy.css}" type="text/css">
-
+<link rel="stylesheet" th:href="@{/css/main.css}" type="text/css">
 </head>
+
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">노틸러스</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<nav class="navbar navbar-expand-lg topbar-main">
+  <a class="navbar-brand ourBrand" href="#">노틸러스</a>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">메인<span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="/syn/classes">시너지/class</a>
-      <a class="nav-item nav-link" href="/syn/origins">시너지/origin</a>
-      <a class="nav-item nav-link" href="#">아이템</a>
-      <a class="nav-item nav-link" href="#">증강</a>
-      <a class="nav-item nav-link" href="#">게시판</a>
-      <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      <a class="topbar-sub" href="/main/index">메  인</a>
+      <div class = "dropdown topbar-sub">
+      <a class="topbar-sub">시너지</a>
+	      <div class="dropdown-content">
+	      	<a class="topbar-sub" href="/syn/classes">직 업</a>
+	      	<a class="topbar-sub" href="/syn/origins">계 열</a>
+	      	<a class="topbar-sub" href="/syn/origins">족 보</a>
+	      </div>
+	  </div>
+      <a class="topbar-sub" href="#">아이템</a>
+      <a class="topbar-sub" href="#">증  강</a>
+      <a class="topbar-sub" href="#">게시판</a>
     </div>
   </div>
 </nav>
-<main>
-<h3 class="head">Classes</h3>
+
+<main class="synergyBody">
+<div class="head">
+	<div class="mainhead">직 업</div>
+	<div class="subhead">Class</div>
+</div>
 <div class="synergyMain">
 	<div class="synergyBox" th:each="class : ${classChamp}">
 	    <div th:each="class2 : ${classEff}" th:if="${class.key.className == class2.key}">
-	        <div class="synergyName" th:text="${class.key.className}"></div>
+	        <div class="synergyName">
+	        	<img class="synergyImage" th:src="@{/image/synergy/}+|${class.key.className}.svg|" th:alt="${class.key.className}">
+	        	<span th:text="${class.key.className}"></span>
+	        </div>
 	        <div class="champions">
 		        <div class="championDetail" th:each="cham : ${class.value}">
 		        	<img class="chamImage" th:src="@{/image/champion/}+|${cham.engName}.png|" th:alt="${cham.korname}">
 		        	<span th:utext="|<br>${cham.korname}|"></span>	
 		        </div>
 	        </div>
-	        <div class="synergy">
-	        	<a class="explan" th:text="효과"></a><br>
+	        <div class="synergy" th:if="${(class.key.classExplan != NULL)}">
 	        	<a th:utext="${class.key.classExplan}"></a>
 	        </div>
 	        <div class="effect">
-	        	<a class="explan" th:text="효과"></a><br>
+	        	<a class="explan">시너지 효과</a><br>
 	        	<a th:each="eff : ${class2.value}" th:utext="|(${eff.member}) : ${eff.effect}<br>|"></a>
 	        </div>
 	    </div>

@@ -1,15 +1,31 @@
 @charset "UTF-8";
 
+/* 글꼴 */
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+@import url('https://hangeul.pstatic.net/hangeul_static/css/maru-buri.css');
+@import url('https://hangeul.pstatic.net/hangeul_static/css/nanum-gothic.css');
+
 /* 챔피언 이미지 */
 img {
  max-width: 100%;
  max-height: 100%;
 }
 
-.head{
-	font-size: 100px;
+.synergyBody{
+	background-color: #a8c6f9;
 }
 
+.head{
+	text-align: center;
+	font-family: 'Black Han Sans', sans-serif;
+}
+.mainhead{
+	font-size: 100px;
+}
+.subhead{
+	display : none;
+	font-size: 50px;
+}
 .synergyMain{
 	margin-left: auto;
     margin-right: auto;
@@ -21,22 +37,31 @@ img {
 
 .synergyBox{
     display: inline-grid;
-    border: 3px solid green;
+    border: 3px solid #a0a0a0;
     margin-bottom: 10px;
-    padding: 5px;
+    padding-bottom: 5px;
     width: 450px;
 }
 
+.synergyImage{
+	height: 40px;
+	box-sizing: inherit;
+	width: 40px;
+}
+
 .synergyName{
+	font-family: 'NanumGothicExtraBold';
 	font-size: 30px;
 	font-weight: bold;
-	background-color: #A9F5F2;
+	padding:3px;
+	background-color: #0c5cd4;
 	text-align : center;
+	color : white;
 }
 
 .champions{
+	font-family: 'NanumGothic';
 	text-align : center;
-	border: 1px solid blue;
 	align-content: center;
 	margin-top:5px;
 	margin-bottom:5px;
@@ -47,7 +72,7 @@ img {
 .championDetail{
 	display: inline-block;
 	text-align: center;
-	margin: 5px;
+	margin: 3px;
 }
 .chamImage{
 	height: 70px;
@@ -55,16 +80,21 @@ img {
 	width: 70px;
 }
 
+.explan{
+	font-size: 25px;
+}
 .synergy{
-	padding-top: 10px;
+	font-family: 'MaruBuriBold';
+	padding: 5px;
 	box-sizing: content-box;
-	font-size: 18px;
-	    text-align: center;
+	font-size: 20px;
+	text-align: center;
 }
 
 .effect{
+	font-family: 'MaruBuriBold';
 	padding-top: 10px;
 	box-sizing: content-box;
-	font-size: 17px;
-	    text-align: center;
+	font-size: 20px;
+	text-align: center;
 }
