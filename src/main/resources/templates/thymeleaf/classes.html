@@ -3,10 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Class page</title>
+
 <!-- bootstrap css -->
 <link rel="stylesheet" th:href="@{/css/bootstrap.css}" type="text/css">
 <link rel="stylesheet" th:href="@{/css/synergy.css}" type="text/css">
 <link rel="stylesheet" th:href="@{/css/main.css}" type="text/css">
+<link rel="stylesheet" th:href="@{/css/topnavbar.css}" type="text/css">
 </head>
 
 <body>
@@ -15,12 +17,12 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <a class="topbar-sub" href="/main/index">메  인</a>
-      <div class = "dropdown topbar-sub">
+      <div class="dropdown">
       <a class="topbar-sub">시너지</a>
 	      <div class="dropdown-content">
-	      	<a class="topbar-sub" href="/syn/classes">직 업</a>
-	      	<a class="topbar-sub" href="/syn/origins">계 열</a>
-	      	<a class="topbar-sub" href="/syn/origins">족 보</a>
+	      	<a href="/syn/classes">직 업</a>
+	      	<a href="/syn/origins">계 열</a>
+	      	<a href="/syn/cheat">족 보</a>
 	      </div>
 	  </div>
       <a class="topbar-sub" href="#">아이템</a>

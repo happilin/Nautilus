@@ -1,41 +1,62 @@
 @charset "UTF-8";
+
+/* 글꼴 */
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+@import url('https://hangeul.pstatic.net/hangeul_static/css/maru-buri.css');
+@import url('https://hangeul.pstatic.net/hangeul_static/css/nanum-gothic.css');
+
 body{
+	background-color: #a8c6f9;
 	align-items: center;
 }
+main{
+	padding : 3px;
+}
 .cheatTable{
-	border:1px solid;
-	margin : auto;
+	border:2px solid;
+	width: -webkit-fill-available;
 	border-radius:3px;
 	border-collapse: collapse;
 	text-align: center;
+	background-color: white;
 }
 th,td{
 	border:1px solid;
 }
 
 .origin{
+	background-color: #a8c6f9;
 	height: 50px;
-	width: 85px;
+	width: 90px;
 }
 
 .class{
 	text-align: center;
 }
 .originName{
-	
+	word-break:break-all;
+	white-space:pre-line;
+	font-family: 'NanumGothicExtraBold';
+	font-size: 25px;
 }
 .className{
+	word-break:break-all;
+	white-space:pre-line;
+	background-color: #a8c6f9;
+	font-family: 'NanumGothicExtraBold';
+	font-size: 25px;
 	width: 80px;
 }
 
 .cham{
-	margin:auto;
+	margin:3px;
 }
 .chamImage{
 	height: 50px;
 	width: 50px;
-	margin: 2px;
 }
 .chamKorName{
-	display:none;
+		white-space:pre-line;
+	font-family: 'NanumGothicExtraBold';
+	font-size: 15px;
 }
