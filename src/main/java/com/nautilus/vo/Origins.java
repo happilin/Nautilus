@@ -19,9 +19,9 @@ public class Origins {
 //	private int originNum;
 
 	@Id
-	@Column(name="originname") //-> originname 으로 인식
+	@Column(name="korname") //-> originname 으로 인식
 //	@Column(name="originName") //-> origin_name 으로 인식
-	private String originName;
+	private String korName;
 	
 	@Column(name="originexplan")
 	private String originExplan;

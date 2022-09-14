@@ -5,15 +5,15 @@
 <mapper namespace="com.nautilus.mapper.ClassMapper">
 
 	<select id="findAll" resultType="com.nautilus.vo.Classes">
-		SELECT * FROM classes ORDER BY classname
+		SELECT * FROM classes ORDER BY korName
 	</select>
 
 	<select id="findEffect" parameterType="String"
 	resultType="com.nautilus.vo.ClassEffect">
-		SELECT * FROM classeffect WHERE classname = #{className} 
+		SELECT * FROM classeffect WHERE korName = #{className} 
 	</select>
 	
 	<select id="findAllName" resultType="String">
-		SELECT classname FROM classes ORDER BY classname
+		SELECT korName FROM classes ORDER BY korName
 	</select>
 </mapper>

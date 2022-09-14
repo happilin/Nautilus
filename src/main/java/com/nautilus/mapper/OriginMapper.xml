@@ -5,15 +5,15 @@
 <mapper namespace="com.nautilus.mapper.OriginMapper">
 
 	<select id="findAll" resultType="com.nautilus.vo.Origins">
-		SELECT * FROM origins ORDER BY originname ASC
+		SELECT * FROM origins ORDER BY korName ASC
 	</select>
 
 	<select id="findEffect" parameterType="String"
 	resultType="com.nautilus.vo.OriginEffect">
-		SELECT * FROM origineffect WHERE originname = #{origin} 
+		SELECT * FROM origineffect WHERE korName = #{origin} 
 	</select>
 	
 	<select id="findAllName" resultType="String">
-		SELECT originname FROM origins ORDER BY originname
+		SELECT korName FROM origins ORDER BY korName
 	</select>
 </mapper>

@@ -19,8 +19,8 @@ public class Classes {
 //	private int classNum;
 	
 	@Id
-	@Column(name="classname")
-	private String className;
+	@Column(name="korname")
+	private String korName;
 	
 	@Column(name="classexplan")
 	private String classExplan;

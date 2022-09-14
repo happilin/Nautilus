@@ -39,10 +39,10 @@
 </div>
 <div class="synergyMain">
 	<div class="synergyBox" th:each="origin : ${originChamp}">
-	    <div th:each="origin2 : ${originEff}" th:if="${origin.key.originName == origin2.key}">
+	    <div th:each="origin2 : ${originEff}" th:if="${origin.key.korName == origin2.key}">
 	        <div class="synergyName">
-	        	<img class="synergyImage" th:src="@{/image/synergy/}+|${origin.key.originName}.svg|" th:alt="${origin.key.originName}">
-	        	<span th:text="${origin.key.originName}"></span>
+	        	<img class="synergyImage" th:src="@{/image/synergy/}+|${origin.key.korName}.svg|" th:alt="${origin.key.korName}">
+	        	<span th:text="${origin.key.korName}"></span>
 	        </div>
 	        <div class="champions" >
 		        <div class="championDetail" th:each="cham : ${origin.value}">

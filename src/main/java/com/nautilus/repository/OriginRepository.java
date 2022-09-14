@@ -8,6 +8,4 @@ import com.nautilus.vo.Origins;
 @Repository
 public interface OriginRepository extends JpaRepository<Origins, Integer>{
 
-	Origins findByOriginName(String string);
-
 }

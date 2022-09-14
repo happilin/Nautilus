@@ -51,7 +51,7 @@ public class SynergyController {
 		Map<String,List<OriginEffect>> originEff = new LinkedHashMap<>();
 		
 		for(int i=0;i<oriList.size();i++) {
-			String originName = oriList.get(i).getOriginName();
+			String originName = oriList.get(i).getKorName();
 			List<Champion> chamList = synService.getChampionAll(originName);
 			List<OriginEffect> effectList = synService.getOriginEffect(originName);
 			
@@ -73,7 +73,7 @@ public class SynergyController {
 		Map<String,List<ClassEffect>> classEff = new LinkedHashMap<>();
 		
 		for(int i=0;i<classList.size();i++) {
-			String className = classList.get(i).getClassName();
+			String className = classList.get(i).getKorName();
 			List<Champion> chamList = synService.getChampionAll(className);
 			List<ClassEffect> effectList = synService.getClassEffect(className);
 			
@@ -98,5 +98,11 @@ public class SynergyController {
 		model.addAttribute("chamList",chamList);
 		
 		return "thymeleaf/cheatsheet";
+	}
+	
+	//
+	@GetMapping("/detail")
+	public String detail(Model model) {
+		
 	}
 }
