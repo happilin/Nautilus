@@ -23,8 +23,8 @@ public class Origins {
 //	@Column(name="originName") //-> origin_name 으로 인식
 	private String korName;
 	
-	@Column(name="originexplan")
-	private String originExplan;
+	@Column(name="explan")
+	private String explan;
 	
 //	@Column(name="memberNum")
 //	private int memberNum;

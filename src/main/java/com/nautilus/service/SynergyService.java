@@ -72,4 +72,12 @@ public class SynergyService {
 	public List<Champion> getChampionCrossList(String className, String originName){
 		return chamMapper.getChampionCrossList(className,originName);
 	}
+
+	public Classes getClass(String name) {
+		return classMapper.findClass(name);
+	}
+
+	public Origins getOrigin(String name) {
+		return originMapper.findOrigin(name);
+	}
 }

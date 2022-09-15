@@ -28,16 +28,20 @@ public class MainController {
 	}
 	
 	@PostMapping("/search")
-	@ResponseBody
-	public Map<String,String> search(@RequestParam(value="name") String name) {
+	//@ResponseBody
+	public String search(
+			@RequestParam(value="name") String name) {
 		Map<String,String> check = mainMapper.getSearch(name);
+		String type = check.get("type");
 		
-		return check;
+		return "redirect:/syn/"+type;
+		//return type;
+		//return check;
 	}
 	
 	@GetMapping("/test")
 	public String test() {
 		
-		return "redirect:/syn/origins";
+		return "redirect:/syn/detail/origin";
 	}
 }

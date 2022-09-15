@@ -15,4 +15,6 @@ public interface OriginMapper {
 	List<OriginEffect> findEffect(String origin);
 
 	List<String> findAllName();
+
+	Origins findOrigin(String name);
 }

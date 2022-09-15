@@ -17,4 +17,6 @@ public interface ClassMapper {
 
 	List<String> findAllName();
 
+	Classes findClass(String name);
+
 }

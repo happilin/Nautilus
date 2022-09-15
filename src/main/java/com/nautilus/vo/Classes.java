@@ -22,8 +22,8 @@ public class Classes {
 	@Column(name="korname")
 	private String korName;
 	
-	@Column(name="classexplan")
-	private String classExplan;
+	@Column(name="explan")
+	private String explan;
 	
 //	@Column(name="member_num")
 //	private int memberNum;
