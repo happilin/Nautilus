@@ -11,4 +11,7 @@ import com.nautilus.vo.Champion;
 @Repository
 public interface ChampionRepository extends JpaRepository<Champion,Integer>{
 
+	List<Champion> findByKornameContaining(String korname);
+	
+//	List<Champion> findByKornameContainingOrClassesContainingOrOriginsContaining(String korname, String classes, String origins);
 }

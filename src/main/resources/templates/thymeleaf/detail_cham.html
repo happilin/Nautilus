@@ -3,63 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <title>챔피언</title>
-<style type="text/css">
-	#container { width:fit-content; padding:1em; margin:0 auto;}
-</style>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" th:href="@{/css/synergy.css}" type="text/css">
 </head>
 <body>
-
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">TFT 정보</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">챔피언 <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">시너지</a></li>
-      </ul>
-      <form class="navbar-form navbar-right" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-    </div>
-  </div>
-</nav>
-	
 	<div id="container" th:object="${cham}">
-	<h3>상세보기</h3>	
-	<img class="chamImage" th:src="@{/image/champion/}+|${cham.engName}.png|" th:alt="${cham.name}">
-	<div th:text="*{name}"></div>
+	<img class="chamImage" th:src="@{/image/champion/}+|${cham.engName}.png|" th:alt="${cham.korname}">
+	<div th:text="*{korname}"></div>
 	<tr>
-		<td th:text="'코스트: ' + *{cost}"></td>
+		<td th:text="'코스트: ' + *{cost1}"></td>
+		<td th:text="' ' + *{cost2}"></td>
 		<td th:utext="'계열: ' + *{origins}"></td>
 		<td th:utext="'직업: ' + *{classes}"></td>
 		<td th:text="'체력: ' + *{health}"></td>
 		<td th:text="'방어력: ' + *{defence}"></td>
 		<td th:text="'마법 저항력: ' + *{mDefence}"></td>
 		<td th:text="'공격력: ' + *{offense}"></td>
-		<td th:text="'사거리: ' + *{health}"></td>
+		<td th:text="'사거리: ' + *{attackrange}"></td>
 		<td th:text="'공격속도: ' + *{attackSpeed}"></td>
-		<td th:text="'스킬: ' + *{skillName}"></td>
+		<td th:text="'스킬: ' + *{skillname}"></td>
 		<td th:text="'마나: ' + *{mana}"></td>
 	</tr>
 	
 	<div>
 		<h3>챔피언 목록</h3>
+		<form class="form-inline" method="GET" th:action="@{/cham/chamList}">
+  			<div class="form-group mx-sm-3 mb-2">
+    			<label for="searchText" class="sr-only">검색</label>
+    			<input type="text" class="form-control" id="searchText" name="searchText">
+  			</div>
+  			<button type="submit" class="btn btn-light mb-2">검색</button>
+		</form>
 		<table class="table table-hover">
 			<tr>
 				<th>이름</th>
@@ -75,16 +49,16 @@
 
 			<tr th:each="cham : ${list}">
 				<td>
-					<img class="chamImage" th:src="@{/image/champion/}+|${cham.engName}.png|" th:alt="${cham.name}">
-					<a th:href="@{'/cham/detailCham/'+${cham.engName}}" th:text="${cham.name}"></a>
+					<img class="chamImage" th:src="@{/image/champion/}+|${cham.engName}.png|" th:alt="${cham.korname}">
+					<a th:href="@{'/cham/detailCham/'+${cham.engName}}" th:text="${cham.korname}"></a>
 				</td>
-				<td th:text="${cham.cost}"></td>
+				<td th:text="${cham.cost1}"></td>
 				<td th:utext="${cham.origins}"></td>
 				<td th:utext="${cham.classes}"></td>
 				<td th:text="${cham.health}"></td>
 				<td th:text="${cham.defence}"></td>
 				<td th:text="${cham.offense}"></td>
-				<td th:text="${cham.skillName}"></td>
+				<td th:text="${cham.skillname}"></td>
 				<td th:text="${cham.mana}"></td>
 			</tr>
 		</table>

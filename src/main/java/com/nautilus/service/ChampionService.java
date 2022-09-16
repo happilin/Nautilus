@@ -1,6 +1,7 @@
 package com.nautilus.service;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,9 +19,12 @@ public class ChampionService {
 		return chamMapper.findAll();
 	}
 
-	// champion mapper Champion detailCham(String name);a
-	public Champion detailCham(String name) {
-		return chamMapper.detailCham(name);
+	public Champion detailCham(String korname) {
+		return chamMapper.detailCham(korname);
+	}
+
+	public List<Champion> getSearchCham(Champion champion) {
+		return chamMapper.getSearchCham(champion);
 	}
 	
 }

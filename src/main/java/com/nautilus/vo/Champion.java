@@ -2,8 +2,6 @@ package com.nautilus.vo;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -14,14 +12,9 @@ import lombok.Data;
 @Data
 @Component
 @Entity
-@Table(name="champions")
-public class Champion {
-
-	
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int championNum;
-	
-	//챔피언 이름 계열 길드
+@Table(name="champion")
+public class Champion 
+{
 	@Id
 	@Column(name="korname")
 	private String korname;
@@ -29,25 +22,39 @@ public class Champion {
 	@Column(name="engname")
 	private String engName;
 	
-	@Column(name="synergy1")
-	private String synergy1;
+	@Column(name="cost1")
+	private int cost1;
 	
-	@Column(name="synergy2")
-	private String synergy2;
+	@Column(name="cost2")
+	private String cost2;
 	
-	@Column(name="synergy3")
-	private String synergy3;
+	@Column(name="origins")
+	private String origins;
 	
-//	private int cost;
-//	private int health;
-//	private int attack;
-//	private int depen;
-//	private int range;
-//	private float attack_speed;
-//	private int dps;
-//	
-//	private int skill_num;
-//	private String skill_name;
-//	
-//	private String mana;
+	@Column(name="classes")
+	private String classes;
+	
+	@Column(name="health")
+	private String health;
+	
+	@Column(name="defence")
+	private int defence;
+	
+	@Column(name="mdefence")
+	private int mDefence;
+	
+	@Column(name="offense")
+	private String offense;
+	
+	@Column(name="attackrange")
+	private int attackrange;
+	
+	@Column(name="attackspeed")
+	private float attackSpeed;
+	
+	@Column(name="skillname")
+	private String skillname;
+	
+	@Column(name="mana")
+	private String mana;
 }
