@@ -1,0 +1,2234 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <title>아이템 사이트</title>
+  
+  <link rel="stylesheet" href="/css/item.css" type="text/css">
+  <script>
+        function common() {
+            document.getElementById("bf_item").style.display = "none";
+            document.getElementById("speed_item").style.display = "none";
+            document.getElementById("cn_item").style.display = "none";
+            document.getElementById("nc_item").style.display = "none";
+            document.getElementById("us_item").style.display = "none";
+            document.getElementById("gt_item").style.display = "none";
+            document.getElementById("gb_item").style.display = "none";
+            document.getElementById("pl_item").style.display = "none";
+            document.getElementById("gl_item").style.display = "none";
+
+        }
+        function onClickBfEvent() {
+            if (document.getElementById("bf_item").style.display === "none") {
+                common();
+                document.getElementById("bf_item").style.display = "block";
+            } else {
+                common();
+            }
+        }
+        function onClickSpeedEvent() {
+            if (document.getElementById("speed_item").style.display === "none") {
+                common();
+                document.getElementById("speed_item").style.display = "block";
+            } else {
+                common();
+            }
+        }
+        function onClickcnEvent() {
+            if (document.getElementById("cn_item").style.display === "none") {
+                common();
+                document.getElementById("cn_item").style.display = "block";
+            } else {
+                common();
+            }
+        }
+        function onClickncEvent() {
+            if (document.getElementById("nc_item").style.display === "none") {
+                common();
+                document.getElementById("nc_item").style.display = "block";
+            } else {
+                common();
+            }
+        }
+        function onClickusEvent() {
+          if (document.getElementById("us_item").style.display === "none") {
+                common();
+                document.getElementById("us_item").style.display = "block";
+            } else {
+                common();
+            }
+        }
+        function onClickgtEvent(){
+         if (document.getElementById("gt_item").style.display === "none") {
+                common();
+                document.getElementById("gt_item").style.display = "block";
+            } else {
+                common();
+            }
+        }
+        function onClickgbEvent(){
+         if (document.getElementById("gb_item").style.display === "none") {
+                common();
+                document.getElementById("gb_item").style.display = "block";
+            } else {
+                common();
+            }
+        }
+        function onClickplEvent(){
+         if (document.getElementById("pl_item").style.display === "none") {
+                common();
+                document.getElementById("pl_item").style.display = "block";
+            } else {
+                common();
+            }
+        }
+        function onClickglEvent(){
+         if (document.getElementById("gl_item").style.display === "none") {
+                common();
+                document.getElementById("gl_item").style.display = "block";
+            } else {
+                common();
+            }
+        }
+    </script>
+</head>
+
+<body class="theme-dark">
+
+<div id="item_see">
+    보고싶은 아이템을 클릭하시면 아이템 조합표가 나옵니다.
+</div>
+    <div class="tembox">
+        <div id = "fristitem">
+            <img id="bf" onclick="onClickBfEvent()" src="//cdn.lolchess.gg/upload/images/items/BFSword_1658364277-1038.png" alt="bf대검"/>
+            <img id="speed" onclick="onClickSpeedEvent()" src="//cdn.lolchess.gg/upload/images/items/RecurveBow_1640058784.png" alt="곡궁"/>
+            <img id="cn" onclick="onClickcnEvent()" src="//cdn.lolchess.gg/upload/images/items/ChainVest_1640058945.png" alt="쇠사슬조끼"/>
+            <img id="nc" onclick="onClickncEvent()" src="//cdn.lolchess.gg/upload/images/items/NegatronCloak_1640059073.png" alt="음전자망토"/>
+            <img id="us" onclick="onClickusEvent()" src="//cdn.lolchess.gg/upload/images/items/NeedlesslyLargeRod_1640059008.png" alt="쓸데없이큰지팡이"/>
+            <img id="gt" onclick="onClickgtEvent()" src="//cdn.lolchess.gg/upload/images/items/Tearofthegoddess_1640059037.png" alt="여신의눈물"/>
+            <img id="gb" onclick="onClickgbEvent()" src="//cdn.lolchess.gg/upload/images/items/GiantsBelt_1658368751-1011.png" alt="거인의허리띠"/>
+            <img id="pl" onclick="onClickplEvent()" src="//cdn.lolchess.gg/upload/images/items/SparringGloves_1640059055.png" alt="연습용장갑"/>
+            <img id="gl" onclick="onClickglEvent()" src="//cdn.lolchess.gg/upload/images/items/Spatula_1658364227-4403.png" alt="황급뒤집개"/>
+        </div>
+    </div>
+<div id="collection">
+    <div id="bf_item">
+        <div id="itemlist">
+            <img  src="//cdn.lolchess.gg/upload/images/items/BFSword_1658364277-1038.png" alt="bf대검"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/BFSword_1658364277-1038.png" alt="bf대검"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/LordsEdge_1658738758-LordsEdge_80.jpg" alt="죽음의검"/>
+        </div>
+
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/BFSword_1658364277-1038.png" alt="bf대검"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/RecurveBow_1640058784.png" alt="곡궁"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/GiantSlayer_1658738581-GiantSlayer_80.jpg" alt="거인 학살자"/>
+        </div>
+
+        <div id ="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/BFSword_1658364277-1038.png" alt="bf대검"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/ChainVest_1640058945.png" alt="쇠사슬조끼"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/GuardianAngel_1643780049.png" alt="밤의끝자락"/>
+        </div>
+
+
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/BFSword_1658364277-1038.png" alt="bf대검"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/NegatronCloak_1640059073.png" alt="음전자망토"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/Bloodthirster_1640059177.png" alt="피바라기"/>
+        </div>
+
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/BFSword_1658364277-1038.png" alt="bf대검"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/NeedlesslyLargeRod_1640059008.png" alt="쓸데없이큰지팡이"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/HextechGunblade_1640058876.png" alt="마법공학 총검"/>
+        </div>
+
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/BFSword_1658364277-1038.png" alt="bf대검"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/Tearofthegoddess_1640059037.png" alt="여신의눈물"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/SpearofShojin_1642015208.png" alt="쇼진의 창"/>
+        </div>
+
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/BFSword_1658364277-1038.png" alt="bf대검"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/GiantsBelt_1658368751-1011.png" alt="거인의허리띠"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/ZekesHerald_1640059135.png" alt="지크의전령"/>
+        </div>
+
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/BFSword_1658364277-1038.png" alt="bf대검"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/SparringGloves_1640059055.png" alt="연습용장갑"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/InfinityEdge_ljmJbkViyMGC8IKr50os4jC8Ccl1ro2JbqXuvHqT.png" alt="무한의 대검"/>
+        </div>
+
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/BFSword_1658364277-1038.png" alt="bf대검"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/Spatula_1658364227-4403.png" alt="황급뒤집개"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/ShimmerscaleEmblem_1653450781.png" alt="빛비는 상징"/>
+        </div>
+
+
+    </div>
+    <div id="speed_item">
+
+        <div id="itemlist">
+            <img src="//cdn.lolchess.gg/upload/images/items/RecurveBow_1640058784.png" alt="곡궁"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/RecurveBow_1640058784.png" alt="곡궁"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/3094_SZmtvKzywMHMFOPSyWM1jysci2VFB13EmWzpUkh1.png" alt="고속연사포"/>
+        </div>
+
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/RecurveBow_1640058784.png" alt="곡궁"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/BFSword_1658364277-1038.png" alt="bf대검"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/GiantSlayer_1658738581-GiantSlayer_80.jpg" alt="거인 학살자"/>
+        </div>
+
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/RecurveBow_1640058784.png" alt="곡궁"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/ChainVest_1640058945.png" alt="쇠사슬조끼"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/TitansResolve_1640058512.png" alt="거인의 결의"/>
+        </div>
+
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/RecurveBow_1640058784.png" alt="곡궁"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/NegatronCloak_1640059073.png" alt="음전자망토"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/RunaansHurricane_1640058427.png" alt="루난의 허리케인"/>
+        </div>
+
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/RecurveBow_1640058784.png" alt="곡궁"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/NeedlesslyLargeRod_1640059008.png" alt="쓸데없이 큰 지팡이"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/GuinsoosRageblade_1658367270-3124.png" alt="구인수 격노의 검"/>
+        </div>
+
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/RecurveBow_1640058784.png" alt="곡궁"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/GiantsBelt_1658368751-1011.png" alt="거인의 허리띠">
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/images/tft/item/ZzRotPortal.png" alt="즈릇 차원문"/>
+        </div>
+
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/RecurveBow_1640058784.png" alt="곡궁"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/Tearofthegoddess_1640059037.png" alt="여신의눈물"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/StatikkShiv_1640058978.png" alt="스태틱의 단검"/>
+        </div>
+
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/RecurveBow_1640058784.png" alt="곡궁"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/SparringGloves_1640059055.png" alt="연습용장갑"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/LastWhisper_1642015257.png" alt="최후의 속삭임">
+        </div>
+
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/RecurveBow_1640058784.png" alt="곡궁"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/Spatula_1658364227-4403.png" alt="황급뒤집개"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/RagewingEmblem_1653450766.png" alt="분노날개 상징"/>
+        </div>
+
+    </div>
+
+
+    <div id="cn_item">
+
+        <div id="itemlist">
+            <img src="//cdn.lolchess.gg/upload/images/items/ChainVest_1640058945.png" alt="쇠사슬조끼"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/ChainVest_1640058945.png" alt="쇠사슬조끼"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/BrambleVest_1640058438.png" alt="덤불조끼"/>
+        </div>
+
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/ChainVest_1640058945.png" alt="쇠사슬조끼"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/BFSword_1658364277-1038.png" alt="bf대검"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/GuardianAngel_1643780049.png" alt="밤의끝자락"/>
+        </div>
+
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/ChainVest_1640058945.png" alt="쇠사슬조끼"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/RecurveBow_1640058784.png" alt="곡궁"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/TitansResolve_1640058512.png" alt="거인의 결의"/>
+        </div>
+
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/ChainVest_1640058945.png" alt="쇠사슬조끼"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/NegatronCloak_1640059073.png" alt="음전자망토"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/IronWill_AnyIyxtEcc5fby5mgL1NNIwzm76wiG0yxwcPQ7nj.png" alt="가고일의 돌갑옷"/>
+        </div>
+
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/ChainVest_1640058945.png" alt="쇠사슬조끼"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/NeedlesslyLargeRod_1640059008.png" alt="쓸데없이 큰 지팡이"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/LocketoftheIronSolari_YOaQeJjb0jXhQnypCCvBBX2TNxqgICIFAp6lyvqz.png"alt="강철의 솔라리 펜던트"/>
+        </div>
+
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/ChainVest_1640058945.png" alt="쇠사슬조끼"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/GiantsBelt_1658368751-1011.png" alt="거인의 허리띠">
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/SunfireCape_1640059158.png"alt="태양불꽃 망토"/>
+        </div>
+
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/ChainVest_1640058945.png" alt="쇠사슬조끼"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/SparringGloves_1640059055.png" alt="연습용장갑"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/Shroud_EgjmR23WSHz0nbvbfOk5UYUAmGDsNO0iEPNjl7za.png"alt="침묵의 장막"/>
+        </div>
+
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/ChainVest_1640058945.png" alt="쇠사슬조끼"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/Tearofthegoddess_1640059037.png" alt="여신의눈물"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/3110_v0619r67zsjsowMlFniZvXGsVNfdNDwoYbeCcVFX.png"alt="얼어붙은 심장"/>
+        </div>
+
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/ChainVest_1640058945.png" alt="쇠사슬조끼"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/Spatula_1658364227-4403.png" alt="황급뒤집개"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/CavalierEmblem_1653450753.png"alt="기병대 상징"/>
+        </div>
+
+
+
+
+    </div>
+    <div id="nc_item">
+        <div id="itemlist">
+            <img src="//cdn.lolchess.gg/upload/images/items/NegatronCloak_1640059073.png" alt="음전자망토"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/NegatronCloak_1640059073.png" alt="음전자망토"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/DragonsClaw_1640058416.png" alt="용의발톱"/>
+        </div>
+
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/NegatronCloak_1640059073.png" alt="음전자망토"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/BFSword_1658364277-1038.png" alt="bf대검"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/Bloodthirster_1640059177.png" alt="피바라기"/>
+
+        </div>
+
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/NegatronCloak_1640059073.png" alt="음전자망토"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/RecurveBow_1640058784.png" alt="곡궁"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/RunaansHurricane_1640058427.png" alt="루난의 허리케인"/>
+        </div>
+
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/NegatronCloak_1640059073.png" alt="음전자망토"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/ChainVest_1640058945.png" alt="쇠사슬조끼"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/IronWill_AnyIyxtEcc5fby5mgL1NNIwzm76wiG0yxwcPQ7nj.png" alt="가고일 돌갑옷"/>
+        </div>
+
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/NegatronCloak_1640059073.png" alt="음전자망토"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/NeedlesslyLargeRod_1640059008.png" alt="쓸데없이큰지팡이"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/IonicSpark_1640059091.png" alt="이온 충격기"/>
+        </div>
+
+
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/NegatronCloak_1640059073.png" alt="음전자망토"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/Tearofthegoddess_1640059037.png" alt="여신의눈물"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/Chalice_D96IpanZVyS5SqA0PxLDfDp7FVAV7WGz6iCZaVLC.png" alt="힘의성배"/>
+        </div>
+
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/NegatronCloak_1640059073.png" alt="음전자망토"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/GiantsBelt_1658368751-1011.png" alt="거인의허리띠"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/images/tft/item/Zephyr.png" alt="서풍"/>
+        </div>
+
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/NegatronCloak_1640059073.png" alt="음전자망토"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/SparringGloves_1640059055.png" alt="연습용장갑"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/Quicksilver_1658738710-Quicksilver_80.jpg" alt="수은"/>
+        </div>
+
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/NegatronCloak_1640059073.png" alt="음전자망토"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/Spatula_1658364227-4403.png" alt="황급뒤집개"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/MirageEmblem_1653450741.png" alt="신기루상징"/>
+        </div>
+
+
+    </div>
+
+    <div id="us_item">
+        <div id="itemlist">
+            <img src="//cdn.lolchess.gg/upload/images/items/NeedlesslyLargeRod_1640059008.png" alt="쓸데없이큰지팡이"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/BFSword_1658364277-1038.png" alt="bf대검"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/HextechGunblade_1640058876.png" alt="마법공학 총검">
+        </div>
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/NeedlesslyLargeRod_1640059008.png" alt="쓸데없이큰지팡이"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/RecurveBow_1640058784.png" alt="곡궁"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/GuinsoosRageblade_1658367270-3124.png" alt="구인수">
+        </div>
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/NeedlesslyLargeRod_1640059008.png" alt="쓸데없이큰지팡이"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/ChainVest_1640058945.png" alt="쇠사슬조끼"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/LocketoftheIronSolari_YOaQeJjb0jXhQnypCCvBBX2TNxqgICIFAp6lyvqz.png" alt="강철의 솔라리 펜던트">
+        </div>
+        <div id="itemlist">
+            <span></span>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/NeedlesslyLargeRod_1640059008.png" alt="쓸데없이큰지팡이"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/NegatronCloak_1640059073.png" alt="음전자망토"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/IonicSpark_1640059091.png" alt="이온 충격기">
+        </div>
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/NeedlesslyLargeRod_1640059008.png" alt="쓸데없이큰지팡이"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/NeedlesslyLargeRod_1640059008.png" alt="쓸데없이큰지팡이"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/RabadonsDeathcap_1658368695-3089.png" alt="라바돈의 죽음모자">
+        </div>
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/NeedlesslyLargeRod_1640059008.png" alt="쓸데없이큰지팡이"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/GiantsBelt_1658368751-1011.png" alt="거인의허리띠"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/Morellonomicon_1640058393.png" alt="모렐로노미콘">
+        </div>
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/NeedlesslyLargeRod_1640059008.png" alt="쓸데없이큰지팡이"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/SparringGloves_1640059055.png" alt="연습용장갑"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/ArcaneGauntlet_1658738730-ArcaneGauntlet_80.jpg" alt="보석건틀릿">
+        </div>
+        <div id="itemlist">
+            <span></span>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/NeedlesslyLargeRod_1640059008.png" alt="쓸데없이큰지팡이"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/Spatula_1658364227-4403.png" alt="황급뒤집개"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/DragonmancerEmblem_1653450723.png" alt="용술사 상징">
+        </div>
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/NeedlesslyLargeRod_1640059008.png" alt="쓸데없이큰지팡이"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/Tearofthegoddess_1640059037.png" alt="여신의눈물"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/3285_8H5TqcPL1z03UB6hTyP9x6N5hZ9jVJIcf6YhxpUg.png" alt="대천사의 지팡이">
+        </div>
+
+    </div>
+
+    <div id="gt_item">
+        <div id="itemlist">
+            <img src="//cdn.lolchess.gg/upload/images/items/Tearofthegoddess_1640059037.png" alt="여신의눈물"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/BFSword_1658364277-1038.png" alt="bf대검"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/SpearofShojin_1642015208.png" alt="쇼진"/>
+        </div>
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/Tearofthegoddess_1640059037.png" alt="여신의눈물"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/RecurveBow_1640058784.png" alt="곡궁"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/StatikkShiv_1640058978.png" alt="스태틱"/>
+        </div>
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/Tearofthegoddess_1640059037.png" alt="여신의눈물"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/ChainVest_1640058945.png" alt="쇠사슬조끼"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/3110_v0619r67zsjsowMlFniZvXGsVNfdNDwoYbeCcVFX.png" alt="얼어붙은심장"/>
+        </div>
+        <div id="itemlist">
+            <span></span>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/Tearofthegoddess_1640059037.png" alt="여신의눈물"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/NegatronCloak_1640059073.png" alt="음전자망토"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/Chalice_D96IpanZVyS5SqA0PxLDfDp7FVAV7WGz6iCZaVLC.png" alt="힘의성배"/>
+        </div>
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/Tearofthegoddess_1640059037.png" alt="여신의눈물"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/NeedlesslyLargeRod_1640059008.png" alt="쓸데없이큰지팡이"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/3285_8H5TqcPL1z03UB6hTyP9x6N5hZ9jVJIcf6YhxpUg.png" alt="대천사의지팡이"/>
+        </div>
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/Tearofthegoddess_1640059037.png" alt="여신의눈물"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/GiantsBelt_1658368751-1011.png" alt="거인의허리띠"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/Redemption_1642015166.png" alt="구원"/>
+        </div>
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/Tearofthegoddess_1640059037.png" alt="여신의눈물"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/SparringGloves_1640059055.png" alt="연습용장갑"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/HandofJustice_1658738743-HandofJustice_80.jpg" alt="정의의손길"/>
+        </div>
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/Tearofthegoddess_1640059037.png" alt="여신의눈물"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/Spatula_1658364227-4403.png" alt="황급뒤집개"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/MageEmblem_1653450707.png" alt="요술사 상징"/>
+        </div>
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/Tearofthegoddess_1640059037.png" alt="여신의눈물"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/Tearofthegoddess_1640059037.png" alt="여신의눈물"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/images/tft/item/BlueBuff.png" alt="푸른파수꾼"/>
+        </div>
+
+    </div>
+
+
+
+    <div id="gb_item">
+        <div id="itemlist">
+            <img src="//cdn.lolchess.gg/upload/images/items/GiantsBelt_1658368751-1011.png" alt="거인의허리띠"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/BFSword_1658364277-1038.png" alt="bf대검"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/ZekesHerald_1640059135.png" alt="지크의전령"/>
+        </div>
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/GiantsBelt_1658368751-1011.png" alt="거인의허리띠"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/RecurveBow_1640058784.png" alt="곡궁"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/images/tft/item/ZzRotPortal.png" alt="즈릇차원문"/>
+        </div>
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/GiantsBelt_1658368751-1011.png" alt="거인의허리띠"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/ChainVest_1640058945.png" alt="쇠사슬조끼"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/SunfireCape_1640059158.png" alt="태양불꽃망토 "/>
+        </div>
+        <div id="itemlist">
+            <span></span>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/GiantsBelt_1658368751-1011.png" alt="거인의허리띠"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/NegatronCloak_1640059073.png" alt="음전자망토"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/images/tft/item/Zephyr.png" alt="서풍 "/>
+        </div>
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/GiantsBelt_1658368751-1011.png" alt="거인의허리띠"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/NeedlesslyLargeRod_1640059008.png" alt="쓸데없이큰지팡이"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/Morellonomicon_1640058393.png" alt="모렐로노미콘 갑옷"/>
+        </div>
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/GiantsBelt_1658368751-1011.png" alt="거인의허리띠"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/GiantsBelt_1658368751-1011.png" alt="거인의허리띠"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/3083_C5Y1EvfU08Ug9wCaCJTEp2hNRjh5zSkq9eoY97Uc.png" alt="워모그의갑옷"/>
+        </div>
+        <div id="itemlist">
+            <span></span>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/GiantsBelt_1658368751-1011.png" alt="거인의허리띠"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/SparringGloves_1640059055.png" alt="연습용장갑"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/images/tft/item/Backhand.png" alt="밴시의발톱"/>
+        </div>
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/GiantsBelt_1658368751-1011.png" alt="거인의허리띠"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/Spatula_1658364227-4403.png" alt="황급뒤집개"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/GuardianEmblem_1653450685.png" alt="수호자상징"/>
+        </div>
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/GiantsBelt_1658368751-1011.png" alt="거인의허리띠"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/Tearofthegoddess_1640059037.png" alt="여신의눈물"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/Redemption_1642015166.png" alt="구원"/>
+        </div>
+
+    </div>
+
+    <div id="pl_item">
+        <div id="itemlist">
+            <img src="//cdn.lolchess.gg/upload/images/items/SparringGloves_1640059055.png" alt="연습용장갑"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/BFSword_1658364277-1038.png" alt="bf대검"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/InfinityEdge_ljmJbkViyMGC8IKr50os4jC8Ccl1ro2JbqXuvHqT.png" alt="무한의대검" />
+        </div>
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/SparringGloves_1640059055.png" alt="연습용장갑"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/RecurveBow_1640058784.png" alt="곡궁"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/LastWhisper_1642015257.png" alt="최후의속삭임" />
+        </div>
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/SparringGloves_1640059055.png" alt="연습용장갑"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/ChainVest_1640058945.png" alt="쇠사슬조끼"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/Shroud_EgjmR23WSHz0nbvbfOk5UYUAmGDsNO0iEPNjl7za.png" alt="침장" />
+        </div>
+        <div id="itemlist">
+            <span></span>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/SparringGloves_1640059055.png" alt="연습용장갑"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/NegatronCloak_1640059073.png" alt="음전자망토"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/Quicksilver_1658738710-Quicksilver_80.jpg" alt="수은" />
+        </div>
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/SparringGloves_1640059055.png" alt="연습용장갑"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/NeedlesslyLargeRod_1640059008.png" alt="쓸데없이큰지팡이"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/Quicksilver_1658738710-Quicksilver_80.jpg" alt="보석건틀릿" />
+        </div>
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/SparringGloves_1640059055.png" alt="연습용장갑"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/GiantsBelt_1658368751-1011.png" alt="거인의허리띠"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/images/tft/item/Backhand.png" alt="밴시의발톱" />
+        </div>
+        <div id="itemlist">
+            <span></span>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/SparringGloves_1640059055.png" alt="연습용장갑"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/SparringGloves_1640059055.png" alt="연습용장갑"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/ThiefsGloves_9PTkdu1Iyw6L1voQbNlsP5U74TzF7suIeq5RQjbh.png" alt="도적의장갑" />
+        </div>
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/SparringGloves_1640059055.png" alt="연습용장갑"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/Spatula_1658364227-4403.png" alt="황급뒤집개"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/YoumuusGhostblade_1653450667.png" alt="암살자상징" />
+        </div>
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/SparringGloves_1640059055.png" alt="연습용장갑"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/Tearofthegoddess_1640059037.png" alt="여신의눈물"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/HandofJustice_1658738743-HandofJustice_80.jpg" alt="정의의손길" />
+        </div>
+
+    </div>
+
+    <div id="gl_item">
+        <div id="itemlist">
+            <img src="//cdn.lolchess.gg/upload/images/items/Spatula_1658364227-4403.png" alt="황급뒤집개"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/BFSword_1658364277-1038.png" alt="bf대검"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/ShimmerscaleEmblem_1653450781.png" alt="빛바늘 상징" />
+        </div>
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/Spatula_1658364227-4403.png" alt="황급뒤집개"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/RecurveBow_1640058784.png" alt="곡궁"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/RagewingEmblem_1653450766.png" alt="분노날개 상징" />
+        </div>
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/Spatula_1658364227-4403.png" alt="황급뒤집개"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/ChainVest_1640058945.png" alt="쇠사슬조끼"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/CavalierEmblem_1653450753.png" alt="기병대 상징"/>
+        </div>
+        <div id="itemlist">
+            <span></span>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/Spatula_1658364227-4403.png" alt="황급뒤집개"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/NegatronCloak_1640059073.png" alt="음전자망토"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/MirageEmblem_1653450741.png" alt="신기루 상징" />
+        </div>
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/Spatula_1658364227-4403.png" alt="황급뒤집개"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/NeedlesslyLargeRod_1640059008.png" alt="쓸데없이큰지팡이"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/DragonmancerEmblem_1653450723.png" alt="용술사 상징" />
+        </div>
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/Spatula_1658364227-4403.png" alt="황급뒤집개"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/GiantsBelt_1658368751-1011.png" alt="거인의허리띠"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/GuardianEmblem_1653450685.png" alt="수호자 상징" />
+        </div>
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/Spatula_1658364227-4403.png" alt="황급뒤집개"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/SparringGloves_1640059055.png" alt="연습용장갑"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/YoumuusGhostblade_1653450667.png" alt="암살자 상징" />
+        </div>
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/Spatula_1658364227-4403.png" alt="황급뒤집개"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/Spatula_1658364227-4403.png" alt="황급뒤집개"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/ForceofNature_1640059110.png" alt="전략가의 왕관" />
+        </div>
+        <div id="itemlist">
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/Spatula_1658364227-4403.png" alt="황급뒤집개"/>
+            <i class="plus">+</i>
+            <img src="//cdn.lolchess.gg/upload/images/items/Tearofthegoddess_1640059037.png" alt="여신의눈물"/>
+            <i class="college">=</i>
+            <img class="dath" src="//cdn.lolchess.gg/upload/images/items/MageEmblem_1653450707.png" alt="요술사 상징" />
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h5 class="guide-section-title mt-5 mb-3">아이템 목록</h5>
+    <table class="guide-items-table w-100">
+        <thead>
+        <tr>
+            <th class="pl-2">아이템</th>
+            <th class="d-none d-md-table-cell">효과</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/BFSword_1658364277-1038.png" alt="B.F. 대검" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1246" data-original-title="" title="">
+                <span>B.F. 대검</span>
+                <div class="explanation">공격력 +10</div>
+            </td>
+            <td class="td">
+                공격력 +10
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RecurveBow_1640058784.png" alt="곡궁" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1455" data-original-title="" title="">
+                <span>곡궁</span>
+                <div class="explanation">공격 속도 +10</div>
+            </td>
+            <td class="td">
+                공격 속도 +10
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/ChainVest_1640058945.png" alt="쇠사슬 조끼" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1263" data-original-title="" title="">
+                <span>쇠사슬 조끼</span>
+                <div class="explanation">방어력 +20</div>
+            </td>
+            <td class="td">
+                방어력 +20
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/NegatronCloak_1640059073.png" alt="음전자 망토" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1397" data-original-title="" title="">
+                <span>음전자 망토</span>
+                <div class="explanation">마법 저항력 +20</div>
+            </td>
+            <td class="td">
+                마법 저항력 +20
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/NeedlesslyLargeRod_1640059008.png" alt="쓸데없이 큰 지팡이" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1396" data-original-title="" title="">
+                <span>쓸데없이 큰 지팡이</span>
+                <div class="explanation">주문력 +10</div>
+            </td>
+            <td class="td">
+                주문력 +10
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/Tearofthegoddess_1640059037.png" alt="여신의 눈물" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1506" data-original-title="" title="">
+                <span>여신의 눈물</span>
+                <div class="explanation">마나 +15</div>
+            </td>
+            <td class="td">
+                마나 +15
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/GiantsBelt_1658368751-1011.png" alt="거인의 허리띠" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1334" data-original-title="" title="">
+                <span>거인의 허리띠</span>
+                <div class="explanation">체력 +150</div>
+            </td>
+            <td class="td">
+                체력 +150
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/SparringGloves_1640059055.png" alt="연습용 장갑" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1486" data-original-title="" title="">
+                <span>연습용 장갑</span>
+                <div class="explanation">치명타 확률 +5%<br>회피 확률 +10%</div>
+            </td>
+            <td class="td">
+                치명타 확률 +5%<br>회피 확률 +10%
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/Spatula_1658364227-4403.png" alt="뒤집개" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1487" data-original-title="" title="">
+                <span>뒤집개</span>
+                <div class="explanation">특별한 능력을 얻음</div>
+            </td>
+            <td class="td">
+                특별한 능력을 얻음
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/OrnnItemSpiritVisage_1644815896.png" alt="영혼의 형상" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1405" data-original-title="" title="">
+                <span>영혼의 형상</span>
+                <div class="explanation">매초 최대 체력의 5%를 회복합니다.</div>
+            </td>
+            <td class="td">
+                매초 최대 체력의 5%를 회복합니다.
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/OrnnItemDeathsDance_1644815852.png" alt="죽음의 저항" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1400" data-original-title="" title="">
+                <span>죽음의 저항</span>
+                <div class="explanation">[고유] 받는 피해량의 50%를 5초 동안 치명적이지 않은 피해로 받습니다. 기본 공격 및 스킬 사용 시 입힌 피해량의 20%만큼 체력을 회복합니다.</div>
+            </td>
+            <td class="td">
+                [고유] 받는 피해량의 50%를 5초 동안 치명적이지 않은 피해로 받습니다. 기본 공격 및 스킬 사용 시 입힌 피해량의 20%만큼 체력을 회복합니다.
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/OrnnItemEverfrost_1644815863.png" alt="영원한 겨울" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1401" data-original-title="" title="">
+                <span>영원한 겨울</span>
+                <div class="explanation">[고유] 장착한 유닛에게 피해를 입힌 적은 2초 동안 공격 속도가 20% 둔화됩니다. 7번 둔화된 적은 둔화 대신 지속시간 동안 얼어붙습니다. 적은 15초에 한 번만 얼어붙을 수 있습니다.</div>
+            </td>
+            <td class="td">
+                [고유] 장착한 유닛에게 피해를 입힌 적은 2초 동안 공격 속도가 20% 둔화됩니다. 7번 둔화된 적은 둔화 대신 지속시간 동안 얼어붙습니다. 적은 15초에 한 번만 얼어붙을 수 있습니다.
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/OrnnItemTrinityForce_1644815912.png" alt="무한한 삼위일체" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1407" data-original-title="" title="">
+                <span>무한한 삼위일체</span>
+                <div class="explanation">공격력 +30, 공격 속도 +30%, 주문력 +30%, 체력 +30, 방어력 +30, 마법 저항력 +30</div>
+            </td>
+            <td class="td">
+                공격력 +30, 공격 속도 +30%, 주문력 +30%, 체력 +30, 방어력 +30, 마법 저항력 +30
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/OrnnItemMuramana_1644815872.png" alt="마나자네" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1402" data-original-title="" title="">
+                <span>마나자네</span>
+                <div class="explanation">[고유] 각 전투에서 처음으로 스킬을 시전하면 5초에 걸쳐 200 마나를 회복합니다.</div>
+            </td>
+            <td class="td">
+                [고유] 각 전투에서 처음으로 스킬을 시전하면 5초에 걸쳐 200 마나를 회복합니다.
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/OrnnItemBlackCleaver_1644815622.png" alt="흑요석 양날 도끼" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1399" data-original-title="" title="">
+                <span>흑요석 양날 도끼</span>
+                <div class="explanation">[고유] 기본 공격 및 스킬 피해가 4초 동안 적의 방어력 및 마법 저항력을 60% 감소시킵니다.</div>
+            </td>
+            <td class="td">
+                [고유] 기본 공격 및 스킬 피해가 4초 동안 적의 방어력 및 마법 저항력을 60% 감소시킵니다.
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/OrnnItemRanduinsOmen_1644815880.png" alt="란두인의 성소" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1403" data-original-title="" title="">
+                <span>란두인의 성소</span>
+                <div class="explanation">전투 시작 시 인접한 모든 아군에게 전투가 끝날 때까지 방어력 50, 마법 저항력을 50 부여합니다.</div>
+            </td>
+            <td class="td">
+                전투 시작 시 인접한 모든 아군에게 전투가 끝날 때까지 방어력 50, 마법 저항력을 50 부여합니다.
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/OrnnItemRocketPropelledFist_1644815888.png" alt="로켓 주먹" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1404" data-original-title="" title="">
+                <span>로켓 주먹</span>
+                <div class="explanation">[고유] 전투 시작 시 가장 멀리 있는 적을 근접 공격이 가능한 거리로 당기고 1.5초 동안 기절시킵니다. 범위 내의 아군은 해당 적을 우선적으로 공격합니다.</div>
+            </td>
+            <td class="td">
+                [고유] 전투 시작 시 가장 멀리 있는 적을 근접 공격이 가능한 거리로 당기고 1.5초 동안 기절시킵니다. 범위 내의 아군은 해당 적을 우선적으로 공격합니다.
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/OrnnItemTheCollector_1644815905.png" alt="황금 징수의 총" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1406" data-original-title="" title="">
+                <span>황금 징수의 총</span>
+                <div class="explanation">[고유] 장착 후 공격 적중 시 체력이 10%보다 낮은 적을 처형합니다. 처형 시 50% 확률로 1골드가 생성됩니다.</div>
+            </td>
+            <td class="td">
+                [고유] 장착 후 공격 적중 시 체력이 10%보다 낮은 적을 처형합니다. 처형 시 50% 확률로 1골드가 생성됩니다.
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/OrnnItemZhonyasHourglass_1644815918.png" alt="존야의 역설" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1408" data-original-title="" title="">
+                <span>존야의 역설</span>
+                <div class="explanation">[고유] 전투당 한 번: 체력이 40%일 때 3초 동안 무적 상태가 됩니다.</div>
+            </td>
+            <td class="td">
+                [고유] 전투당 한 번: 체력이 40%일 때 3초 동안 무적 상태가 됩니다.
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RadientArchangelsStaff_1651209951.png" alt="우르프 천사의 지팡이" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1417" data-original-title="" title="">
+                <span>우르프 천사의 지팡이</span>
+                <div class="explanation">전투 시 5초마다 주문력 25증가<br><br>찬란한 아이템 추가 효과 : 전투 시작 마나 +15</div>
+            </td>
+            <td class="td">
+                전투 시 5초마다 주문력 25증가<br><br>찬란한 아이템 추가 효과 : 전투 시작 마나 +15
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RadientBloodthirster_1651209965.png" alt="축복받은 피바라기" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1419" data-original-title="" title="">
+                <span>축복받은 피바라기</span>
+                <div class="explanation">피해량의 35%만큼 체력 회복. 체력이 40% 미만으로 떨어지면 최대 체력의 40%에 해당하는 보호막 획득 후 최대 5초까지 유지<br><br>찬란한 추가 효과: 공격력 +20</div>
+            </td>
+            <td class="td">
+                피해량의 35%만큼 체력 회복. 체력이 40% 미만으로 떨어지면 최대 체력의 40%에 해당하는 보호막 획득 후 최대 5초까지 유지<br><br>찬란한 추가 효과: 공격력 +20
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RadientBlueBuff_1651209972.png" alt="푸른 축복" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1420" data-original-title="" title="">
+                <span>푸른 축복</span>
+                <div class="explanation">[고유] 스킬 사용 후 30의 마나 회복<br><br>찬란한 추가 효과: 주문력 +40</div>
+            </td>
+            <td class="td">
+                [고유] 스킬 사용 후 30의 마나 회복<br><br>찬란한 추가 효과: 주문력 +40
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RadientBrambleVest_1651209978.png" alt="장미가시 조끼" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1421" data-original-title="" title="">
+                <span>장미가시 조끼</span>
+                <div class="explanation">받는 치명타 공격의 추가 피해 무효화. 기본 공격에 맞을 경우 주변 모든 적에게 125/175/225 ★의 마법 피해 (2.5초마다 한 번씩)</div>
+            </td>
+            <td class="td">
+                받는 치명타 공격의 추가 피해 무효화. 기본 공격에 맞을 경우 주변 모든 적에게 125/175/225 ★의 마법 피해 (2.5초마다 한 번씩)
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RadientChaliceofPower_1651209983.png" alt="선의의 성배" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1422" data-original-title="" title="">
+                <span>선의의 성배</span>
+                <div class="explanation">전투 시작 시 장착 유닛과 가로로 1칸 내에 있는 모든 아군이 전투가 끝날 때까지 주문력 50 및 모든 흡혈 10% 획득</div>
+            </td>
+            <td class="td">
+                전투 시작 시 장착 유닛과 가로로 1칸 내에 있는 모든 아군이 전투가 끝날 때까지 주문력 50 및 모든 흡혈 10% 획득
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RadientDeathblade_1651209988.png" alt="빛나는 죽음의 검" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1423" data-original-title="" title="">
+                <span>빛나는 죽음의 검</span>
+                <div class="explanation">장착 시 추가 공격력 50/85/115 ★ 획득(조합 아이템 포함)</div>
+            </td>
+            <td class="td">
+                장착 시 추가 공격력 50/85/115 ★ 획득(조합 아이템 포함)
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RadientDragonsClaw_1651209994.png" alt="용의 의지" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1424" data-original-title="" title="">
+                <span>용의 의지</span>
+                <div class="explanation">추가 마법 저항력 180 (조합 아이템 포함). 1.5초 마다 착용자를 공격하는 적 유닛 당 2.5%의 최대 체력을 회복합니다.<br><br>용이 장착한 경우 20%의 추가 효과를 얻습니다.</div>
+            </td>
+            <td class="td">
+                추가 마법 저항력 180 (조합 아이템 포함). 1.5초 마다 착용자를 공격하는 적 유닛 당 2.5%의 최대 체력을 회복합니다.<br><br>용이 장착한 경우 20%의 추가 효과를 얻습니다.
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RadientFrozenHeart_1651210006.png" alt="얼어붙은 황금 심장" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1426" data-original-title="" title="">
+                <span>얼어붙은 황금 심장</span>
+                <div class="explanation">[고유] 2칸 내에 있는 적의 공격 속도 50% 감소<br><br>찬란한 추가 효과: 시작 마나 +30</div>
+            </td>
+            <td class="td">
+                [고유] 2칸 내에 있는 적의 공격 속도 50% 감소<br><br>찬란한 추가 효과: 시작 마나 +30
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RadientGargoyleStoneplate_1651210010.png" alt="수호상 돌갑옷" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1427" data-original-title="" title="">
+                <span>수호상 돌갑옷</span>
+                <div class="explanation">적의 공격 대상이 되면 방어력이 30, 마법 저항력이 30 증가. 공격하는 적이 늘어나면 중첩되어 적용.<br><br>찬란한 추가 효과: 초당 최대 체력의 1%만큼 체력 회복</div>
+            </td>
+            <td class="td">
+                적의 공격 대상이 되면 방어력이 30, 마법 저항력이 30 증가. 공격하는 적이 늘어나면 중첩되어 적용.<br><br>찬란한 추가 효과: 초당 최대 체력의 1%만큼 체력 회복
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RadientGiantSlayer_1651210017.png" alt="악마 학살자" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1428" data-original-title="" title="">
+                <span>악마 학살자</span>
+                <div class="explanation">기본 공격 및 스킬 사용 시 40%의 추가 피해. 대상 최대 체력이 2000 초과 시 추가 피해 70%로 증가</div>
+            </td>
+            <td class="td">
+                기본 공격 및 스킬 사용 시 40%의 추가 피해. 대상 최대 체력이 2000 초과 시 추가 피해 70%로 증가
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RadientEdgeofNight_1651209999.png" alt="새벽의 서광" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1425" data-original-title="" title="">
+                <span>새벽의 서광</span>
+                <div class="explanation">[고유] 체력이 처음으로 50% 아래로 떨어지면 잠시 은신해 대상으로 지정할 수 없는 상태가 되고 해로운 효과가 사라지며, 은신이 풀린 후 공격 속도 40% 증가. 체력이 30% 이하로 떨어질 시 한 번 더 발동</div>
+            </td>
+            <td class="td">
+                [고유] 체력이 처음으로 50% 아래로 떨어지면 잠시 은신해 대상으로 지정할 수 없는 상태가 되고 해로운 효과가 사라지며, 은신이 풀린 후 공격 속도 40% 증가. 체력이 30% 이하로 떨어질 시 한 번 더 발동
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RadientGuinsoosRageblade_1651210023.png" alt="구인수의 심판" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1429" data-original-title="" title="">
+                <span>구인수의 심판</span>
+                <div class="explanation">기본 공격 시 전투가 끝날 때까지 공격 속도 +10% 증가. 무제한 중첩 가능</div>
+            </td>
+            <td class="td">
+                기본 공격 시 전투가 끝날 때까지 공격 속도 +10% 증가. 무제한 중첩 가능
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RadientHandofJustice_1651210027.png" alt="공정의 주먹" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1430" data-original-title="" title="">
+                <span>공정의 주먹</span>
+                <div class="explanation">준비 단계마다 다음 효과 둘 다 획득:<br>- 공격력 +35 및 주문력 +35<br>- 기본 공격과 스킬 사용 시 피해량의 35%만큼 체력 회복</div>
+            </td>
+            <td class="td">
+                준비 단계마다 다음 효과 둘 다 획득:<br>- 공격력 +35 및 주문력 +35<br>- 기본 공격과 스킬 사용 시 피해량의 35%만큼 체력 회복
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RadientHextechGunblade_1651210032.png" alt="마법공학 생명검" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1431" data-original-title="" title="">
+                <span>마법공학 생명검</span>
+                <div class="explanation">피해량의 40%만큼 체력 회복. 체력이 가장 낮은 아군의 체력도 같은 수치만큼 회복.<br><br>찬란한 추가 효과: 주문력 +30</div>
+            </td>
+            <td class="td">
+                피해량의 40%만큼 체력 회복. 체력이 가장 낮은 아군의 체력도 같은 수치만큼 회복.<br><br>찬란한 추가 효과: 주문력 +30
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RadientInfinityEdge_1651210037.png" alt="천공의 대검" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1432" data-original-title="" title="">
+                <span>천공의 대검</span>
+                <div class="explanation">[고유] 치명타 확률 75% (조합 아이템에도 적용) 증가. 치명타 확률이 100%가 되면 1% 증가할 때마다 치명타 피해량 +1% 증가<br><br>찬란한 추가 효과: 치명타 피해량 +50%</div>
+            </td>
+            <td class="td">
+                [고유] 치명타 확률 75% (조합 아이템에도 적용) 증가. 치명타 확률이 100%가 되면 1% 증가할 때마다 치명타 피해량 +1% 증가<br><br>찬란한 추가 효과: 치명타 피해량 +50%
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RadientIonicSpark_1651210041.png" alt="집단 충격기" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1433" data-original-title="" title="">
+                <span>집단 충격기</span>
+                <div class="explanation">3칸 내에 있는 모든 적의 마법 저항력 50% 감소. 해당 적이 스킬 사용 시 대상 최대 마나의 250%에 해당하는 마법 피해<br><br>찬란한 추가 효과: 초당 최대 체력의 1%만큼 체력 회복</div>
+            </td>
+            <td class="td">
+                3칸 내에 있는 모든 적의 마법 저항력 50% 감소. 해당 적이 스킬 사용 시 대상 최대 마나의 250%에 해당하는 마법 피해<br><br>찬란한 추가 효과: 초당 최대 체력의 1%만큼 체력 회복
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RadientJeweledGauntlet_1651210047.png" alt="눈부신 건틀릿" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1434" data-original-title="" title="">
+                <span>눈부신 건틀릿</span>
+                <div class="explanation">스킬의 마법 및 고정 피해에 치명타 적용 가능. 추가 치명타 피해량 40% 및 주문력 60 증가</div>
+            </td>
+            <td class="td">
+                스킬의 마법 및 고정 피해에 치명타 적용 가능. 추가 치명타 피해량 40% 및 주문력 60 증가
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RadientLastWhisper_1651210053.png" alt="영겁의 속삭임" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1435" data-original-title="" title="">
+                <span>영겁의 속삭임</span>
+                <div class="explanation">[고유] 물리 피해를 입힐 경우 전투가 끝날 때까지 대상 방어력 70% 감소 (중첩 불가)<br><br>찬란한 추가 효과: 치명타 확률 +35%</div>
+            </td>
+            <td class="td">
+                [고유] 물리 피해를 입힐 경우 전투가 끝날 때까지 대상 방어력 70% 감소 (중첩 불가)<br><br>찬란한 추가 효과: 치명타 확률 +35%
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RadientLocketoftheIronSolari_1651210058.png" alt="타곤 정상의 펜던트" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1436" data-original-title="" title="">
+                <span>타곤 정상의 펜던트</span>
+                <div class="explanation">전투 시작 시 장착한 유닛과 가로로 3칸 내에 있는 모든 아군이 60초 동안 400/500/600 ★의 피해를 흡수하는 보호막 획득<br><br>찬란한 추가 효과: 모든 아군에게 추가 체력 +200</div>
+            </td>
+            <td class="td">
+                전투 시작 시 장착한 유닛과 가로로 3칸 내에 있는 모든 아군이 60초 동안 400/500/600 ★의 피해를 흡수하는 보호막 획득<br><br>찬란한 추가 효과: 모든 아군에게 추가 체력 +200
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RadientMorellonomicon_1651210062.png" alt="엔젤로노미콘" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1437" data-original-title="" title="">
+                <span>엔젤로노미콘</span>
+                <div class="explanation">[고유] 추가 주문력 80 (조합 아이템 포함). 스킬로 마법 피해나 고정 피해를 입히면 대상을 불태워 30초 동안 대상 최대 체력의 60%만큼 고정 피해를 입히고 그동안 모든 체력 회복 효과 50% 감소.</div>
+            </td>
+            <td class="td">
+                [고유] 추가 주문력 80 (조합 아이템 포함). 스킬로 마법 피해나 고정 피해를 입히면 대상을 불태워 30초 동안 대상 최대 체력의 60%만큼 고정 피해를 입히고 그동안 모든 체력 회복 효과 50% 감소.
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RadientQuicksilver_1651210070.png" alt="반짝이는 수은" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1438" data-original-title="" title="">
+                <span>반짝이는 수은</span>
+                <div class="explanation">[고유] 장착 시 전투 중 30초 동안 군중 제어 효과에 면역<br><br>
+                    찬란한 추가 효과: 공격 속도 +50%</div>
+            </td>
+            <td class="td">
+                [고유] 장착 시 전투 중 30초 동안 군중 제어 효과에 면역<br><br>
+                찬란한 추가 효과: 공격 속도 +50%
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RadientRabadonsDeathcap_1651210075.png" alt="라바돈의 초월한 죽음모자" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1439" data-original-title="" title="">
+                <span>라바돈의 초월한 죽음모자</span>
+                <div class="explanation">주문력 +125 (조합 아이템 포함)</div>
+            </td>
+            <td class="td">
+                주문력 +125 (조합 아이템 포함)
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RadientRapidFirecannon_1651210085.png" alt="고속 광자포" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1440" data-original-title="" title="">
+                <span>고속 광자포</span>
+                <div class="explanation">공격 사거리 2칸 증가 및 추가 공격 속도 75% 획득 (조합 아이템 포함). 공격이 빗나가지 않음</div>
+            </td>
+            <td class="td">
+                공격 사거리 2칸 증가 및 추가 공격 속도 75% 획득 (조합 아이템 포함). 공격이 빗나가지 않음
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RadientRedemption_1651210090.png" alt="면죄" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1441" data-original-title="" title="">
+                <span>면죄</span>
+                <div class="explanation">5초마다 오오라를 발산해 2칸 내에 있는 아군의 체력을 잃은 체력의 18%만큼 회복. 효과를 받은 아군은 5초 광역 공격으로부터 입는 피해량이 25% 감소<br><br>찬란한 추가 효과: 체력 +150</div>
+            </td>
+            <td class="td">
+                5초마다 오오라를 발산해 2칸 내에 있는 아군의 체력을 잃은 체력의 18%만큼 회복. 효과를 받은 아군은 5초 광역 공격으로부터 입는 피해량이 25% 감소<br><br>찬란한 추가 효과: 체력 +150
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RadientRunaansHurricane_1651210096.png" alt="루난의 폭풍" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1442" data-original-title="" title="">
+                <span>루난의 폭풍</span>
+                <div class="explanation">기본 공격 시 주변 다른 적 하나에게 탄환을 발사하여 공격력의 110%만큼 피해를 입힘. 추가 탄환에는 치명타가 적용될 수 있음<br><br>찬란한 추가 효과: 공격 속도 +30%</div>
+            </td>
+            <td class="td">
+                기본 공격 시 주변 다른 적 하나에게 탄환을 발사하여 공격력의 110%만큼 피해를 입힘. 추가 탄환에는 치명타가 적용될 수 있음<br><br>찬란한 추가 효과: 공격 속도 +30%
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RadientShroudofStillness_1651210100.png" alt="경외의 장막" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1443" data-original-title="" title="">
+                <span>경외의 장막</span>
+                <div class="explanation">[고유] 전투 시작 시 굵은 광선을 발사해 적중당한 적들의 최대 마나를 50% 증가시켜 첫 스킬 사용 지연<br><br>찬란한 추가 효과: 전투 시작 시 모든 아군의 시작 마나 +15</div>
+            </td>
+            <td class="td">
+                [고유] 전투 시작 시 굵은 광선을 발사해 적중당한 적들의 최대 마나를 50% 증가시켜 첫 스킬 사용 지연<br><br>찬란한 추가 효과: 전투 시작 시 모든 아군의 시작 마나 +15
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RadientSpearofShojin_1651210105.png" alt="히라나의 창" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1444" data-original-title="" title="">
+                <span>히라나의 창</span>
+                <div class="explanation">기본 공격 시 추가로 12의 마나 회복<br><br>찬란한 추가 효과: 주문력 +30</div>
+            </td>
+            <td class="td">
+                기본 공격 시 추가로 12의 마나 회복<br><br>찬란한 추가 효과: 주문력 +30
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RadientStatikkShiv_1651210110.png" alt="스태틱의 호의" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1445" data-original-title="" title="">
+                <span>스태틱의 호의</span>
+                <div class="explanation">세 번째 공격마다 8명의 적에게 튕기는 연쇄 번개를 발사하여 75의 마법 피해를 입히고 대상의 마법 저항력 5초 동안 50% 감소</div>
+            </td>
+            <td class="td">
+                세 번째 공격마다 8명의 적에게 튕기는 연쇄 번개를 발사하여 75의 마법 피해를 입히고 대상의 마법 저항력 5초 동안 50% 감소
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RadientSunfireCape_1651210116.png" alt="태양빛 망토" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1446" data-original-title="" title="">
+                <span>태양빛 망토</span>
+                <div class="explanation">[고유] 추가 체력 600 (조합 아이템 포함). 1.5초마다 4칸 내에 있는 무작위 적 하나가 불타 30초 동안 최대 체력의 60%에 해당하는 고정 피해를 입고 체력 회복 효과 50% 감소</div>
+            </td>
+            <td class="td">
+                [고유] 추가 체력 600 (조합 아이템 포함). 1.5초마다 4칸 내에 있는 무작위 적 하나가 불타 30초 동안 최대 체력의 60%에 해당하는 고정 피해를 입고 체력 회복 효과 50% 감소
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RadientThiefsGloves_1651210121.png" alt="장난꾸러기의 장갑" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1447" data-original-title="" title="">
+                <span>장난꾸러기의 장갑</span>
+                <div class="explanation">준비 단계마다 찬란한 아이템 2개 일시 획득<br><br>[아이템 슬롯 3개 차지]</div>
+            </td>
+            <td class="td">
+                준비 단계마다 찬란한 아이템 2개 일시 획득<br><br>[아이템 슬롯 3개 차지]
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RadientTitansResolve_1651210127.png" alt="거인의 맹세" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1448" data-original-title="" title="">
+                <span>거인의 맹세</span>
+                <div class="explanation">피해를 입거나 기본 공격 시 공격력 및 주문력 3 증가. 이 효과는 최대 25회까지 중첩 가능하며, 최대 중첩 시 50의 방어력 및 마법 저항력 획득</div>
+            </td>
+            <td class="td">
+                피해를 입거나 기본 공격 시 공격력 및 주문력 3 증가. 이 효과는 최대 25회까지 중첩 가능하며, 최대 중첩 시 50의 방어력 및 마법 저항력 획득
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RadientBansheesClaw_1651209959.png" alt="밴시의 침묵" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1418" data-original-title="" title="">
+                <span>밴시의 침묵</span>
+                <div class="explanation">전투 시작 시 장착한 유닛 및 모든 아군이 처음 적중한 적 스킬을 막는 보호막 획득<br><br>찬란한 추가 효과: 전투 시작 시 모든 아군의 체력 +50</div>
+            </td>
+            <td class="td">
+                전투 시작 시 장착한 유닛 및 모든 아군이 처음 적중한 적 스킬을 막는 보호막 획득<br><br>찬란한 추가 효과: 전투 시작 시 모든 아군의 체력 +50
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RadientWarmogsArmor_1651210131.png" alt="워모그의 자부심" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1449" data-original-title="" title="">
+                <span>워모그의 자부심</span>
+                <div class="explanation">추가 체력 1600 획득 (조합 아이템 포함)<br><br>찬란한 추가 효과: 초당 최대 체력의 1%만큼 체력 회복</div>
+            </td>
+            <td class="td">
+                추가 체력 1600 획득 (조합 아이템 포함)<br><br>찬란한 추가 효과: 초당 최대 체력의 1%만큼 체력 회복
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RadientZekesHerald_1651210136.png" alt="지크의 조화" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1450" data-original-title="" title="">
+                <span>지크의 조화</span>
+                <div class="explanation">전투 시작 시 장착 유닛과 가로로 1칸 내에 있는 모든 아군이 전투가 끝날 때까지 공격 속도 50% 및 생명력 흡수 10% 증가</div>
+            </td>
+            <td class="td">
+                전투 시작 시 장착 유닛과 가로로 1칸 내에 있는 모든 아군이 전투가 끝날 때까지 공격 속도 50% 및 생명력 흡수 10% 증가
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RadientZephyr_1651210141.png" alt="겨울바람" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1451" data-original-title="" title="">
+                <span>겨울바람</span>
+                <div class="explanation">[고유] 전투 시작 시 결투장 반대편에 회오리바람을 소환해 회오리바람과 가장 가까운 적을 8초 동안 전투에서 제외. 군중 제어 효과 면역 무시<br><br>찬란한 추가 효과: 전투 시작 시 모든 아군의 공격 속도 +20%</div>
+            </td>
+            <td class="td">
+                [고유] 전투 시작 시 결투장 반대편에 회오리바람을 소환해 회오리바람과 가장 가까운 적을 8초 동안 전투에서 제외. 군중 제어 효과 면역 무시<br><br>찬란한 추가 효과: 전투 시작 시 모든 아군의 공격 속도 +20%
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RadientZzRotPortal_1651209943.png" alt="즈롯 소환문" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1452" data-original-title="" title="">
+                <span>즈롯 소환문</span>
+                <div class="explanation">전투 시작 시 체력과 공격력이 증가한 찬란한 공허 어미가 깨어나 4칸 내에 있는 적을 도발. 소환된 유닛에서 일어난 찬란한 공허 어미 효과가 25%로 적용</div>
+            </td>
+            <td class="td">
+                전투 시작 시 체력과 공격력이 증가한 찬란한 공허 어미가 깨어나 4칸 내에 있는 적을 도발. 소환된 유닛에서 일어난 찬란한 공허 어미 효과가 25%로 적용
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/BruiserEmblem_1634868865.png" alt="난동꾼 상징" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1255" data-original-title="" title="">
+                <span>난동꾼 상징</span>
+                <div class="explanation">[고유, 제작 불가] 장착 시 난동꾼 특성 획득</div>
+            </td>
+            <td class="td">
+                [고유, 제작 불가] 장착 시 난동꾼 특성 획득
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/DragonmancersBlessing_1654666685.png" alt="용의 축복" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1579" data-original-title="" title="">
+                <span>용의 축복</span>
+                <div class="explanation">용술사에게 사용 시 용술사 영웅으로 만듭니다.<br><br>[전투 중에는 사용할 수 없습니다.]</div>
+            </td>
+            <td class="td">
+                용술사에게 사용 시 용술사 영웅으로 만듭니다.<br><br>[전투 중에는 사용할 수 없습니다.]
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/YoumuusGhostblade_1653450667.png" alt="암살자 상징" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1546" data-original-title="" title="">
+                <span>암살자 상징</span>
+                <div class="explanation">[고유] 장착 시 암살자 특성 획득</div>
+            </td>
+            <td class="td">
+                [고유] 장착 시 암살자 특성 획득
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/AstralEmblem_1653450808.png" alt="별 상징" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1564" data-original-title="" title="">
+                <span>별 상징</span>
+                <div class="explanation">[고유, 제작 불가] 장착 시 별 특성 획득</div>
+            </td>
+            <td class="td">
+                [고유, 제작 불가] 장착 시 별 특성 획득
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/CannoneerEmblem_1653450930.png" alt="포병대 상징" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1559" data-original-title="" title="">
+                <span>포병대 상징</span>
+                <div class="explanation">[고유, 제작 불가] 장착 시 포병대 특성 획득</div>
+            </td>
+            <td class="td">
+                [고유, 제작 불가] 장착 시 포병대 특성 획득
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/CavalierEmblem_1653450753.png" alt="기병대 상징" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1553" data-original-title="" title="">
+                <span>기병대 상징</span>
+                <div class="explanation">[고유] 장착 시 기병대 특성 획득</div>
+            </td>
+            <td class="td">
+                [고유] 장착 시 기병대 특성 획득
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/DragonmancerEmblem_1653450723.png" alt="용술사 상징" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1558" data-original-title="" title="">
+                <span>용술사 상징</span>
+                <div class="explanation">[고유] 장착 시 용술사 특성 획득</div>
+            </td>
+            <td class="td">
+                [고유] 장착 시 용술사 특성 획득
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/EvokerEmblem_1653450853.png" alt="일깨우는 자 상징" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1569" data-original-title="" title="">
+                <span>일깨우는 자 상징</span>
+                <div class="explanation">[고유, 제작 불가] 장착 시 일깨우는 자 특성 획득</div>
+            </td>
+            <td class="td">
+                [고유, 제작 불가] 장착 시 일깨우는 자 특성 획득
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/GuardianEmblem_1653450685.png" alt="수호자 상징" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1550" data-original-title="" title="">
+                <span>수호자 상징</span>
+                <div class="explanation">[고유] 장착 시 수호자 특성 획득</div>
+            </td>
+            <td class="td">
+                [고유] 장착 시 수호자 특성 획득
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/GuildEmblem_1653450591.png" alt="길드 상징" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1568" data-original-title="" title="">
+                <span>길드 상징</span>
+                <div class="explanation">[고유, 제작 불가] 장착 시 길드 특성 획득</div>
+            </td>
+            <td class="td">
+                [고유, 제작 불가] 장착 시 길드 특성 획득
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/JadeEmblem_1653450836.png" alt="비취 상징" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1562" data-original-title="" title="">
+                <span>비취 상징</span>
+                <div class="explanation">[고유, 제작 불가] 장착 시 비취 특성 획득</div>
+            </td>
+            <td class="td">
+                [고유, 제작 불가] 장착 시 비취 특성 획득
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/LegendEmblem_1653450880.png" alt="전설 상징" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1561" data-original-title="" title="">
+                <span>전설 상징</span>
+                <div class="explanation">[고유, 제작 불가] 장착 시 전설 특성 획득</div>
+            </td>
+            <td class="td">
+                [고유, 제작 불가] 장착 시 전설 특성 획득
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/MageEmblem_1653450707.png" alt="요술사 상징" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1551" data-original-title="" title="">
+                <span>요술사 상징</span>
+                <div class="explanation">[고유] 장착 시 요술사 특성 획득</div>
+            </td>
+            <td class="td">
+                [고유] 장착 시 요술사 특성 획득
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/MirageEmblem_1653450741.png" alt="신기루 상징" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1552" data-original-title="" title="">
+                <span>신기루 상징</span>
+                <div class="explanation">[고유] 장착 시 신기루 특성 획득</div>
+            </td>
+            <td class="td">
+                [고유] 장착 시 신기루 특성 획득
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/MysticEmblem_1653450910.png" alt="신비술사 상징" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1570" data-original-title="" title="">
+                <span>신비술사 상징</span>
+                <div class="explanation">[고유, 제작 불가] 장착 시 신비술사 특성 획득</div>
+            </td>
+            <td class="td">
+                [고유, 제작 불가] 장착 시 신비술사 특성 획득
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RagewingEmblem_1653450766.png" alt="분노날개 상징" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1555" data-original-title="" title="">
+                <span>분노날개 상징</span>
+                <div class="explanation">[고유] 장착 시 분노날개 특성 획득</div>
+            </td>
+            <td class="td">
+                [고유] 장착 시 분노날개 특성 획득
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RevelEmblem_1653450887.png" alt="축제 상징" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1556" data-original-title="" title="">
+                <span>축제 상징</span>
+                <div class="explanation">[고유, 제작 불가] 장착 시 축제 특성 획득</div>
+            </td>
+            <td class="td">
+                [고유, 제작 불가] 장착 시 축제 특성 획득
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/ScalescornEmblem_1653450826.png" alt="비늘혐오자 상징" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1567" data-original-title="" title="">
+                <span>비늘혐오자 상징</span>
+                <div class="explanation">[고유, 제작 불가] 장착 시 비늘혐오자 특성 획득</div>
+            </td>
+            <td class="td">
+                [고유, 제작 불가] 장착 시 비늘혐오자 특성 획득
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/CrownofChampions_1653543639.png" alt="챔피언의 왕관" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1580" data-original-title="" title="">
+                <span>챔피언의 왕관</span>
+                <div class="explanation">매 5초 마다 다음 기본 공격이 소지 골드의 9001배만큼의 고정 피해를 입힙니다.</div>
+            </td>
+            <td class="td">
+                매 5초 마다 다음 기본 공격이 소지 골드의 9001배만큼의 고정 피해를 입힙니다.
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/DeterminedInvestor_1653451045.png" alt="결단력 있는 투자자" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1575" data-original-title="" title="">
+                <span>결단력 있는 투자자</span>
+                <div class="explanation">전투 중 사망 8회 시 이 아이템이 파괴됨. 파괴 시 다이아몬드 손, 챔피언 복제기 1개, 15골드 부여</div>
+            </td>
+            <td class="td">
+                전투 중 사망 8회 시 이 아이템이 파괴됨. 파괴 시 다이아몬드 손, 챔피언 복제기 1개, 15골드 부여
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/DeterminedInvestorHR_1655964119.png" alt="결단력 있는 투자자" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1728" data-original-title="" title="">
+                <span>결단력 있는 투자자</span>
+                <div class="explanation">전투 중 사망 4회 시 이 아이템이 파괴됨. 파괴 시 다이아몬드 손, 챔피언 복제기 1개, 15골드 부여</div>
+            </td>
+            <td class="td">
+                전투 중 사망 4회 시 이 아이템이 파괴됨. 파괴 시 다이아몬드 손, 챔피언 복제기 1개, 15골드 부여
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/DiamondHands_1653451038.png" alt="다이아몬드 손" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1576" data-original-title="" title="">
+                <span>다이아몬드 손</span>
+                <div class="explanation">전투당 한 번: 체력이 66% 그리고 33%일 때 1초 동안 무적 상태가 되고 1골드 획득</div>
+            </td>
+            <td class="td">
+                전투당 한 번: 체력이 66% 그리고 33%일 때 1초 동안 무적 상태가 되고 1골드 획득
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/DiamondHandsHR_1655964285.png" alt="다이아몬드 손" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1729" data-original-title="" title="">
+                <span>다이아몬드 손</span>
+                <div class="explanation">전투당 한 번: 체력이 66% 그리고 33%일 때 2초 동안 무적 상태가 되고 2골드 획득</div>
+            </td>
+            <td class="td">
+                전투당 한 번: 체력이 66% 그리고 33%일 때 2초 동안 무적 상태가 되고 2골드 획득
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/DravensAxe_1653451028.png" alt="드레이븐의 도끼" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1571" data-original-title="" title="">
+                <span>드레이븐의 도끼</span>
+                <div class="explanation">보유 중인 골드마다 공격력 1 증가 (최대 80골드). 공격 시 1중첩씩 최대 100회 획득. 최대 중첩 시 7골드 및 조합 아이템 1개 획득합니다.</div>
+            </td>
+            <td class="td">
+                보유 중인 골드마다 공격력 1 증가 (최대 80골드). 공격 시 1중첩씩 최대 100회 획득. 최대 중첩 시 7골드 및 조합 아이템 1개 획득합니다.
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/DravensAxeHR_1655952757.png" alt="드레이븐의 도끼" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1724" data-original-title="" title="">
+                <span>드레이븐의 도끼</span>
+                <div class="explanation">보유 중인 골드마다 공격력 3 증가 (최대 15골드). 공격 시 1중첩씩 최대 50회 획득. 최대 중첩 시 7골드 및 조합 아이템 1개 획득합니다.</div>
+            </td>
+            <td class="td">
+                보유 중인 골드마다 공격력 3 증가 (최대 15골드). 공격 시 1중첩씩 최대 50회 획득. 최대 중첩 시 7골드 및 조합 아이템 1개 획득합니다.
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/ShimmerscaleEmblem_1653450781.png" alt="빛비늘 상징" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1557" data-original-title="" title="">
+                <span>빛비늘 상징</span>
+                <div class="explanation">[고유] 장착 시 빛비늘 특성 획득</div>
+            </td>
+            <td class="td">
+                [고유] 장착 시 빛비늘 특성 획득
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/GamblersBlade_1653451098.png" alt="도박꾼의 칼날" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1573" data-original-title="" title="">
+                <span>도박꾼의 칼날</span>
+                <div class="explanation">보유 중인 골드마다 추가 공격 속도 1% 획득 (최대 80골드)<br><br>공격할 때마다 6% 확률로 1골드 획득</div>
+            </td>
+            <td class="td">
+                보유 중인 골드마다 추가 공격 속도 1% 획득 (최대 80골드)<br><br>공격할 때마다 6% 확률로 1골드 획득
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/GamblersBladeHR_1655963863.png" alt="도박꾼의 칼날" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1727" data-original-title="" title="">
+                <span>도박꾼의 칼날</span>
+                <div class="explanation">보유 중인 골드마다 추가 공격 속도 3% 획득 (최대 15골드)<br><br>공격할 때마다 10% 확률로 1골드 획득</div>
+            </td>
+            <td class="td">
+                보유 중인 골드마다 추가 공격 속도 3% 획득 (최대 15골드)<br><br>공격할 때마다 10% 확률로 1골드 획득
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/GoldmancersStaff_1653451072.png" alt="황금술사의 지팡이" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1572" data-original-title="" title="">
+                <span>황금술사의 지팡이</span>
+                <div class="explanation">보유 중인 골드마다 주문력 1 획득. (최대 80골드) 적을 처치할 때마다 50% 확률로 2골드 획득</div>
+            </td>
+            <td class="td">
+                보유 중인 골드마다 주문력 1 획득. (최대 80골드) 적을 처치할 때마다 50% 확률로 2골드 획득
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/GoldmancersStaffHR_1655963770.png" alt="황금술사의 지팡이" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1726" data-original-title="" title="">
+                <span>황금술사의 지팡이</span>
+                <div class="explanation">보유 중인 골드마다 주문력 4 획득. (최대 15골드) 적을 처치할 때마다 80% 확률로 2골드 획득</div>
+            </td>
+            <td class="td">
+                보유 중인 골드마다 주문력 4 획득. (최대 15골드) 적을 처치할 때마다 80% 확률로 2골드 획득
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/NeedlesslyBigGem_1653451091.jpg" alt="쓸데없이 큰 보석" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1577" data-original-title="" title="">
+                <span>쓸데없이 큰 보석</span>
+                <div class="explanation">전투당 한 번 : 전투 시작 후 장착 유닛이 15초동안 생존하면, 생존한 아군 2명당 1골드를 획득하고 생존한 각 아군이 은행의 골드마다  1%의 추가 피해를 입힙니다. (최대 80골드)</div>
+            </td>
+            <td class="td">
+                전투당 한 번 : 전투 시작 후 장착 유닛이 15초동안 생존하면, 생존한 아군 2명당 1골드를 획득하고 생존한 각 아군이 은행의 골드마다  1%의 추가 피해를 입힙니다. (최대 80골드)
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/NeedlesslyBigGemHR_1655954713.jpg" alt="쓸데없이 큰 보석" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1725" data-original-title="" title="">
+                <span>쓸데없이 큰 보석</span>
+                <div class="explanation">전투 시작 후 15초동안 생존하면, 보유 중인 골드마다 아군 유닛의 공격력 25% + 3%증가 (최대 15골드). 효과 발동 시점에 생존한 아군 2명마다 1골드를 획득합니다.</div>
+            </td>
+            <td class="td">
+                전투 시작 후 15초동안 생존하면, 보유 중인 골드마다 아군 유닛의 공격력 25% + 3%증가 (최대 15골드). 효과 발동 시점에 생존한 아군 2명마다 1골드를 획득합니다.
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/MogulsMail_1653451014.png" alt="거물의 갑옷" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1574" data-original-title="" title="">
+                <span>거물의 갑옷</span>
+                <div class="explanation">피해를 입으면 방어력+1, 마법 저항력+1, 체력 +8 획득 (최대 40회 중첩)<br><br>최대 중첩 시 2골드 획득합니다.</div>
+            </td>
+            <td class="td">
+                피해를 입으면 방어력+1, 마법 저항력+1, 체력 +8 획득 (최대 40회 중첩)<br><br>최대 중첩 시 2골드 획득합니다.
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/MogulsMailHR_1655952239.png" alt="거물의 갑옷" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1723" data-original-title="" title="">
+                <span>거물의 갑옷</span>
+                <div class="explanation">피해를 입으면 방어력+1.5, 마법 저항력+1.5, 체력 +15 획득 (최대 40회 중첩)<br><br>최대 중첩 시 3골드 획득합니다.</div>
+            </td>
+            <td class="td">
+                피해를 입으면 방어력+1.5, 마법 저항력+1.5, 체력 +15 획득 (최대 40회 중첩)<br><br>최대 중첩 시 3골드 획득합니다.
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/SwiftshotEmblem_1653450799.png" alt="민첩사수 상징" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1699" data-original-title="" title="">
+                <span>민첩사수 상징</span>
+                <div class="explanation">[고유, 제작 불가] 장착 시 민첩사수 특성 획득</div>
+            </td>
+            <td class="td">
+                [고유, 제작 불가] 장착 시 민첩사수 특성 획득
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/TempestEmblem_1653450896.png" alt="폭풍 상징" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1565" data-original-title="" title="">
+                <span>폭풍 상징</span>
+                <div class="explanation">[고유, 제작 불가] 장착 시 폭풍 특성 획득</div>
+            </td>
+            <td class="td">
+                [고유, 제작 불가] 장착 시 폭풍 특성 획득
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/WarriorEmblem_1653450861.png" alt="전사 상징" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1563" data-original-title="" title="">
+                <span>전사 상징</span>
+                <div class="explanation">[고유, 제작 불가] 장착 시 전사 특성 획득</div>
+            </td>
+            <td class="td">
+                [고유, 제작 불가] 장착 시 전사 특성 획득
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/WhispersEmblem_1653450844.png" alt="속삭임 상징" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1566" data-original-title="" title="">
+                <span>속삭임 상징</span>
+                <div class="explanation">[고유, 제작 불가] 장착 시 속삭임 특성 획득</div>
+            </td>
+            <td class="td">
+                [고유, 제작 불가] 장착 시 속삭임 특성 획득
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/3285_8H5TqcPL1z03UB6hTyP9x6N5hZ9jVJIcf6YhxpUg.png" alt="대천사의 지팡이" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1371" data-original-title="" title="">
+                <span>대천사의 지팡이</span>
+                <div class="explanation">추가 주문력 30<br><br>전투 시작: 5초마다 주문력 20 증가</div>
+            </td>
+            <td class="td">
+                추가 주문력 30<br><br>전투 시작: 5초마다 주문력 20 증가
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/Bloodthirster_1640059177.png" alt="피바라기" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1248" data-original-title="" title="">
+                <span>피바라기</span>
+                <div class="explanation">모든 피해 흡혈 25% 증가.<br><br>전투당 한 번: 체력이 40%일 때 최대 체력의 25%에 해당하는 보호막 획득 후 최대 5초까지 유지</div>
+            </td>
+            <td class="td">
+                모든 피해 흡혈 25% 증가.<br><br>전투당 한 번: 체력이 40%일 때 최대 체력의 25%에 해당하는 보호막 획득 후 최대 5초까지 유지
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/BrambleVest_1640058438.png" alt="덤불 조끼" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1253" data-original-title="" title="">
+                <span>덤불 조끼</span>
+                <div class="explanation">추가 방어력 60 (조합 아이템 포함). 받는 치명타 공격의 추가 피해 75% 무효화. 기본 공격에 맞을 경우 주변 모든 적에게 75/100/150 ★의 마법 피해 (2.5초마다 한 번씩)<br><br>[직접 피해 아이템]</div>
+            </td>
+            <td class="td">
+                추가 방어력 60 (조합 아이템 포함). 받는 치명타 공격의 추가 피해 75% 무효화. 기본 공격에 맞을 경우 주변 모든 적에게 75/100/150 ★의 마법 피해 (2.5초마다 한 번씩)<br><br>[직접 피해 아이템]
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/Chalice_D96IpanZVyS5SqA0PxLDfDp7FVAV7WGz6iCZaVLC.png" alt="힘의 성배" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1264" data-original-title="" title="">
+                <span>힘의 성배</span>
+                <div class="explanation">전투 시작: 장착 유닛과 1칸 내에 있는 같은 열의 아군이 30의 주문력 획득<br><br>[오오라 아이템]</div>
+            </td>
+            <td class="td">
+                전투 시작: 장착 유닛과 1칸 내에 있는 같은 열의 아군이 30의 주문력 획득<br><br>[오오라 아이템]
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/LordsEdge_1658738758-LordsEdge_80.jpg" alt="죽음의 검" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1370" data-original-title="" title="">
+                <span>죽음의 검</span>
+                <div class="explanation">추가 공격력 35/50/65★ 획득 (조합 아이템 포함)</div>
+            </td>
+            <td class="td">
+                추가 공격력 35/50/65★ 획득 (조합 아이템 포함)
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/DragonsClaw_1640058416.png" alt="용의 발톱" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1308" data-original-title="" title="">
+                <span>용의 발톱</span>
+                <div class="explanation">추가 마법 저항력 120 (조합 아이템 포함). 2초 마다 장착 유닛을 대상으로 하는 적 하나당 최대 체력의 1.2%만큼 회복<br><br>장착 유닛이 용이라면 모든 효과 20% 증가</div>
+            </td>
+            <td class="td">
+                추가 마법 저항력 120 (조합 아이템 포함). 2초 마다 장착 유닛을 대상으로 하는 적 하나당 최대 체력의 1.2%만큼 회복<br><br>장착 유닛이 용이라면 모든 효과 20% 증가
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/ForceofNature_1640059110.png" alt="전략가의 왕관" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1328" data-original-title="" title="">
+                <span>전략가의 왕관</span>
+                <div class="explanation">아군의 최대 팀 규모 +1 증가</div>
+            </td>
+            <td class="td">
+                아군의 최대 팀 규모 +1 증가
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/3110_v0619r67zsjsowMlFniZvXGsVNfdNDwoYbeCcVFX.png" alt="얼어붙은 심장" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1330" data-original-title="" title="">
+                <span>얼어붙은 심장</span>
+                <div class="explanation">[고유] 2칸 내에 있는 적의 공격 속도 30% 감소<br><br>[오오라 아이템]</div>
+            </td>
+            <td class="td">
+                [고유] 2칸 내에 있는 적의 공격 속도 30% 감소<br><br>[오오라 아이템]
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/IronWill_AnyIyxtEcc5fby5mgL1NNIwzm76wiG0yxwcPQ7nj.png" alt="가고일 돌갑옷" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1362" data-original-title="" title="">
+                <span>가고일 돌갑옷</span>
+                <div class="explanation">적의 공격 대상이 되면 방어력이 16, 마법 저항력이 16 증가. 공격하는 적이 늘어나면 중첩되어 적용.</div>
+            </td>
+            <td class="td">
+                적의 공격 대상이 되면 방어력이 16, 마법 저항력이 16 증가. 공격하는 적이 늘어나면 중첩되어 적용.
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/GuardianAngel_1643780049.png" alt="밤의 끝자락" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1339" data-original-title="" title="">
+                <span>밤의 끝자락</span>
+                <div class="explanation">[고유] 전투당 한 번: 체력이 60%일 때 잠시 은신하며 대상으로 지정할 수 없는 상태가 되고 해로운 효과 제거. 이후 추가 공격 속도 40% 획득.</div>
+            </td>
+            <td class="td">
+                [고유] 전투당 한 번: 체력이 60%일 때 잠시 은신하며 대상으로 지정할 수 없는 상태가 되고 해로운 효과 제거. 이후 추가 공격 속도 40% 획득.
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/GuinsoosRageblade_1658799327-GuinsoosRageblade.jpg" alt="구인수의 격노검" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1340" data-original-title="" title="">
+                <span>구인수의 격노검</span>
+                <div class="explanation">기본 공격 시 전투가 끝날 때까지 추가 공격 속도 +6% 획득. 무제한 중첩 가능</div>
+            </td>
+            <td class="td">
+                기본 공격 시 전투가 끝날 때까지 추가 공격 속도 +6% 획득. 무제한 중첩 가능
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/HextechGunblade_1640058876.png" alt="마법공학 총검" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1349" data-original-title="" title="">
+                <span>마법공학 총검</span>
+                <div class="explanation">모든 피해 흡혈 25% 증가. 피해를 입힌 만큼 체력이 가장 낮은 아군의 체력 회복.</div>
+            </td>
+            <td class="td">
+                모든 피해 흡혈 25% 증가. 피해를 입힌 만큼 체력이 가장 낮은 아군의 체력 회복.
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/InfinityEdge_ljmJbkViyMGC8IKr50os4jC8Ccl1ro2JbqXuvHqT.png" alt="무한의 대검" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1356" data-original-title="" title="">
+                <span>무한의 대검</span>
+                <div class="explanation">[고유] 치명타 확률 75% (조합 아이템 포함) 및 치명타 피해량 10% 증가. 치명타 확률이 100%가 되면 1% 증가할 때마다 치명타 피해량 1%로 전환</div>
+            </td>
+            <td class="td">
+                [고유] 치명타 확률 75% (조합 아이템 포함) 및 치명타 피해량 10% 증가. 치명타 확률이 100%가 되면 1% 증가할 때마다 치명타 피해량 1%로 전환
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/IonicSpark_1640059091.png" alt="이온 충격기" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1361" data-original-title="" title="">
+                <span>이온 충격기</span>
+                <div class="explanation">2칸 내에 있는 모든 적의 마법 저항력 50% 감소. 해당 적이 스킬 사용 시 최대 마나의 185%에 해당하는 마법 피해를 입음<br><br>[오오라 아이템]<br>[직접 피해 아이템]</div>
+            </td>
+            <td class="td">
+                2칸 내에 있는 모든 적의 마법 저항력 50% 감소. 해당 적이 스킬 사용 시 최대 마나의 185%에 해당하는 마법 피해를 입음<br><br>[오오라 아이템]<br>[직접 피해 아이템]
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/ArcaneGauntlet_1658738730-ArcaneGauntlet_80.jpg" alt="보석 건틀릿" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1218" data-original-title="" title="">
+                <span>보석 건틀릿</span>
+                <div class="explanation">치명타 피해량 10% 및 추가 주문력 40 증가 (조합 아이템 포함)<br><br>스킬의 마법 및 고정 피해에 치명타 적용 가능</div>
+            </td>
+            <td class="td">
+                치명타 피해량 10% 및 추가 주문력 40 증가 (조합 아이템 포함)<br><br>스킬의 마법 및 고정 피해에 치명타 적용 가능
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/LastWhisper_1642015257.png" alt="최후의 속삭임" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1368" data-original-title="" title="">
+                <span>최후의 속삭임</span>
+                <div class="explanation">[고유] 물리 피해를 입힐 경우 5초 동안 대상 방어력 50% 감소. (중첩 불가)</div>
+            </td>
+            <td class="td">
+                [고유] 물리 피해를 입힐 경우 5초 동안 대상 방어력 50% 감소. (중첩 불가)
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/LocketoftheIronSolari_YOaQeJjb0jXhQnypCCvBBX2TNxqgICIFAp6lyvqz.png" alt="강철의 솔라리 펜던트" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1369" data-original-title="" title="">
+                <span>강철의 솔라리 펜던트</span>
+                <div class="explanation">전투 시작: 장착한 유닛과 가로로 2칸 내에 있는 모든 아군이 15초 동안 300/350/400 ★의 피해를 흡수하는 보호막 획득<br><br>[오오라 아이템]</div>
+            </td>
+            <td class="td">
+                전투 시작: 장착한 유닛과 가로로 2칸 내에 있는 모든 아군이 15초 동안 300/350/400 ★의 피해를 흡수하는 보호막 획득<br><br>[오오라 아이템]
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/GiantSlayer_1658738581-GiantSlayer_80.jpg" alt="거인 학살자" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1335" data-original-title="" title="">
+                <span>거인 학살자</span>
+                <div class="explanation">기본 공격 및 스킬 사용시 20%의 추가 피해. 대상 최대 체력이 2200 초과 시 추가 피해 45%로 증가</div>
+            </td>
+            <td class="td">
+                기본 공격 및 스킬 사용시 20%의 추가 피해. 대상 최대 체력이 2200 초과 시 추가 피해 45%로 증가
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/Morellonomicon_1640058393.png" alt="모렐로노미콘" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1394" data-original-title="" title="">
+                <span>모렐로노미콘</span>
+                <div class="explanation">[고유] 추가 주문력 40 (조합 아이템 포함). 스킬로 마법 피해나 고정 피해를 입히면 대상을 불태워 10초 동안 대상 최대 체력의 10%만큼 고정 피해를 입히고 그동안 모든 체력 회복 효과 50% 감소</div>
+            </td>
+            <td class="td">
+                [고유] 추가 주문력 40 (조합 아이템 포함). 스킬로 마법 피해나 고정 피해를 입히면 대상을 불태워 10초 동안 대상 최대 체력의 10%만큼 고정 피해를 입히고 그동안 모든 체력 회복 효과 50% 감소
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/Backhand_1659422926-Backhand_80.jpg" alt="밴시의 발톱" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1241" data-original-title="" title="">
+                <span>밴시의 발톱</span>
+                <div class="explanation">전투 시작: 장착 유닛과 1칸 내에 있는 같은 열의 아군이 처음 적중한 적 스킬의 피해를 최대 600 흡수하는 보호막 획득<br><br>[오오라 아이템]</div>
+            </td>
+            <td class="td">
+                전투 시작: 장착 유닛과 1칸 내에 있는 같은 열의 아군이 처음 적중한 적 스킬의 피해를 최대 600 흡수하는 보호막 획득<br><br>[오오라 아이템]
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/Quicksilver_1658738710-Quicksilver_80.jpg" alt="수은" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1414" data-original-title="" title="">
+                <span>수은</span>
+                <div class="explanation">[고유] 추가 공격 속도 20% 획득<br><br>전투 시작: 15초 동안 군중 제어 효과에 면역</div>
+            </td>
+            <td class="td">
+                [고유] 추가 공격 속도 20% 획득<br><br>전투 시작: 15초 동안 군중 제어 효과에 면역
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RabadonsDeathcap_1658368695-3089.png" alt="라바돈의 죽음모자" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1415" data-original-title="" title="">
+                <span>라바돈의 죽음모자</span>
+                <div class="explanation">추가 주문력 75 (조합 아이템 포함)</div>
+            </td>
+            <td class="td">
+                추가 주문력 75 (조합 아이템 포함)
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/3094_SZmtvKzywMHMFOPSyWM1jysci2VFB13EmWzpUkh1.png" alt="고속 연사포" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1453" data-original-title="" title="">
+                <span>고속 연사포</span>
+                <div class="explanation">공격 사거리 1칸 증가 및 추가 공격 속도 50% 획득 (조합 아이템 포함) <br><br>공격이 빗나가지 않음</div>
+            </td>
+            <td class="td">
+                공격 사거리 1칸 증가 및 추가 공격 속도 50% 획득 (조합 아이템 포함) <br><br>공격이 빗나가지 않음
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/SunfireCape_1640059158.png" alt="태양불꽃 망토" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1497" data-original-title="" title="">
+                <span>태양불꽃 망토</span>
+                <div class="explanation">[고유] 추가 체력 250 (조합 아이템 포함). 2초마다 2칸 내에 있는 무작위 적 하나가 불타 10초 동안 최대 체력의 10%에 해당하는 고정 피해를 입고 체력 회복 효과 50% 감소</div>
+            </td>
+            <td class="td">
+                [고유] 추가 체력 250 (조합 아이템 포함). 2초마다 2칸 내에 있는 무작위 적 하나가 불타 10초 동안 최대 체력의 10%에 해당하는 고정 피해를 입고 체력 회복 효과 50% 감소
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/Redemption_1642015166.png" alt="구원" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1456" data-original-title="" title="">
+                <span>구원</span>
+                <div class="explanation">5초마다 1칸 내에 있는 아군의 체력을 대상이 잃은 체력의 12%만큼 회복. 또한 효과를 받은 아군은 5초 동안 다중 대상 공격으로부터 입는 피해량이 25% 감소 (피해량 감소는 중첩되지 않음)<br><br>[오오라 아이템]</div>
+            </td>
+            <td class="td">
+                5초마다 1칸 내에 있는 아군의 체력을 대상이 잃은 체력의 12%만큼 회복. 또한 효과를 받은 아군은 5초 동안 다중 대상 공격으로부터 입는 피해량이 25% 감소 (피해량 감소는 중첩되지 않음)<br><br>[오오라 아이템]
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/RunaansHurricane_1640058427.png" alt="루난의 허리케인" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1458" data-original-title="" title="">
+                <span>루난의 허리케인</span>
+                <div class="explanation">공격력 10 증가. 기본 공격 시 주변 적 하나에게 탄환을 발사하여 공격력의 70%만큼 물리 피해<br><br>[직접 피해 아이템]</div>
+            </td>
+            <td class="td">
+                공격력 10 증가. 기본 공격 시 주변 적 하나에게 탄환을 발사하여 공격력의 70%만큼 물리 피해<br><br>[직접 피해 아이템]
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/images/tft/item/BlueBuff.png" alt="푸른 파수꾼" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1251" data-original-title="" title="">
+                <span>푸른 파수꾼</span>
+                <div class="explanation">[고유] 시작 마나 40 증가 (조합 아이템 포함). 스킬 사용 후 20의 마나 회복</div>
+            </td>
+            <td class="td">
+                [고유] 시작 마나 40 증가 (조합 아이템 포함). 스킬 사용 후 20의 마나 회복
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/Shroud_EgjmR23WSHz0nbvbfOk5UYUAmGDsNO0iEPNjl7za.png" alt="침묵의 장막" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1473" data-original-title="" title="">
+                <span>침묵의 장막</span>
+                <div class="explanation">[고유] 전투 시작: 적중당한 적이 주문을 사용하기 전까지 해당 적의 최대 마나를 35% 증가시키는 광선 발사</div>
+            </td>
+            <td class="td">
+                [고유] 전투 시작: 적중당한 적이 주문을 사용하기 전까지 해당 적의 최대 마나를 35% 증가시키는 광선 발사
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/SpearofShojin_1642015208.png" alt="쇼진의 창" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1488" data-original-title="" title="">
+                <span>쇼진의 창</span>
+                <div class="explanation">기본 공격 시 추가로 8의 마나 회복</div>
+            </td>
+            <td class="td">
+                기본 공격 시 추가로 8의 마나 회복
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/StatikkShiv_1640058978.png" alt="스태틱의 단검" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1489" data-original-title="" title="">
+                <span>스태틱의 단검</span>
+                <div class="explanation">추가 공격 속도 10% (조합 아이템 포함). 세 번째 공격마다 4명의 적에게 튕기는 연쇄 번개를 발사하여 50의 마법 피해를 입히고 대상의 마법 저항력 5초 동안 50% 감소<br><br>[직접 피해 아이템</div>
+            </td>
+            <td class="td">
+                추가 공격 속도 10% (조합 아이템 포함). 세 번째 공격마다 4명의 적에게 튕기는 연쇄 번개를 발사하여 50의 마법 피해를 입히고 대상의 마법 저항력 5초 동안 50% 감소<br><br>[직접 피해 아이템
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/ThiefsGloves_9PTkdu1Iyw6L1voQbNlsP5U74TzF7suIeq5RQjbh.png" alt="도적의 장갑" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1508" data-original-title="" title="">
+                <span>도적의 장갑</span>
+                <div class="explanation">매 준비 단계마다 임시 아이템 2개 획득. 플레이어 레벨에 따라 아이템 성능 강화<br><br>[아이템 슬롯 3개 차지]</div>
+            </td>
+            <td class="td">
+                매 준비 단계마다 임시 아이템 2개 획득. 플레이어 레벨에 따라 아이템 성능 강화<br><br>[아이템 슬롯 3개 차지]
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/ZzRotPortal_1658798410-ZzRotPortal_80.jpg" alt="즈롯 차원문" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1549" data-original-title="" title="">
+                <span>즈롯 차원문</span>
+                <div class="explanation">전투 시작: 4칸 내에 있는 적을 도발<br><br>사망 시 공허 생물이 깨어나 주변 적을 도발하며 소환된 유닛에서 일어난 공허 생물의 효과가 25% 증가</div>
+            </td>
+            <td class="td">
+                전투 시작: 4칸 내에 있는 적을 도발<br><br>사망 시 공허 생물이 깨어나 주변 적을 도발하며 소환된 유닛에서 일어난 공허 생물의 효과가 25% 증가
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/TitansResolve_1640058512.png" alt="거인의 결의" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1516" data-original-title="" title="">
+                <span>거인의 결의</span>
+                <div class="explanation">공격하거나 피해를 받으면 공격력 및 주문력 2 획득 (최대 25회 중첩)<br><br>최대 중첩 시 방어력 및 마법 저항력 25 획득</div>
+            </td>
+            <td class="td">
+                공격하거나 피해를 받으면 공격력 및 주문력 2 획득 (최대 25회 중첩)<br><br>최대 중첩 시 방어력 및 마법 저항력 25 획득
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/HandofJustice_1658738743-HandofJustice_80.jpg" alt="정의의 손길" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1341" data-original-title="" title="">
+                <span>정의의 손길</span>
+                <div class="explanation">2가지 효과 부여:<br>- 공격력 +15 및 주문력 +15<br>- 모든 피해 흡혈 15%<br><br>매 라운드마다 이러한 효과 중 1개 무작위로 두 배 증가</div>
+            </td>
+            <td class="td">
+                2가지 효과 부여:<br>- 공격력 +15 및 주문력 +15<br>- 모든 피해 흡혈 15%<br><br>매 라운드마다 이러한 효과 중 1개 무작위로 두 배 증가
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/3083_C5Y1EvfU08Ug9wCaCJTEp2hNRjh5zSkq9eoY97Uc.png" alt="워모그의 갑옷" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1538" data-original-title="" title="">
+                <span>워모그의 갑옷</span>
+                <div class="explanation">추가 체력 1000 획득 (조합 아이템 포함)</div>
+            </td>
+            <td class="td">
+                추가 체력 1000 획득 (조합 아이템 포함)
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/upload/images/items/ZekesHerald_1640059135.png" alt="지크의 전령" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1547" data-original-title="" title="">
+                <span>지크의 전령</span>
+                <div class="explanation">전투 시작: 장착 유닛과 1칸 내에 있는 같은 열의 아군이 30%의 공격 속도 획득<br><br>[오오라 아이템]</div>
+            </td>
+            <td class="td">
+                전투 시작: 장착 유닛과 1칸 내에 있는 같은 열의 아군이 30%의 공격 속도 획득<br><br>[오오라 아이템]
+            </td>
+
+        </tr>
+        <tr>
+            <td class="type">
+                <img src="//cdn.lolchess.gg/images/tft/item/Zephyr.png" alt="서풍" width="32" class="mr-1" data-toggle="tooltip" data-tooltip-url="https://lolchess.gg/tooltip/item/set7/1548" data-original-title="" title="">
+                <span>서풍</span>
+                <div class="explanation">[고유] 전투 시작: 결투장 반대편에 회오리바람을 소환해 회오리바람과 가장 가까운 적을 5초 동안 전투에서 제외<br><br>[군중 제어 면역을 무시합니다.]</div>
+            </td>
+            <td class="td">
+                [고유] 전투 시작: 결투장 반대편에 회오리바람을 소환해 회오리바람과 가장 가까운 적을 5초 동안 전투에서 제외<br><br>[군중 제어 면역을 무시합니다.]
+            </td>
+
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+<p class="copyright">
+    © Nautilus. All Rights Reserved.
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="./item.js"></script>
+</body>
+</html>

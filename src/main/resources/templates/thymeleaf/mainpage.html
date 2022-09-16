@@ -11,37 +11,53 @@
 
 <!-- bootstrap css -->
 <link rel="stylesheet" th:href="@{/css/bootstrap.css}" type="text/css">
+<link rel="stylesheet" th:href="@{/css/synergy.css}" type="text/css">
 <link rel="stylesheet" th:href="@{/css/main.css}" type="text/css">
+<link rel="stylesheet" th:href="@{/css/topnavbar.css}" type="text/css">
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand">노틸러스</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<nav class="navbar navbar-expand-lg topbar-main">
+  <a class="navbar-brand ourBrand" href="/main/index">노틸러스</a>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">메인<span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="/syn/classes">시너지/class</a>
-      <a class="nav-item nav-link" href="/syn/origins">시너지/origin</a>
-      <a class="nav-item nav-link" href="#">아이템</a>
-      <a class="nav-item nav-link" href="#">증강</a>
-      <a class="nav-item nav-link" href="#">게시판</a>
-      <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      <a class="topbar-sub" href="/main/index">메  인</a>
+      <div class="dropdown">
+      <a class="topbar-sub">시너지</a>
+	      <div class="dropdown-content">
+	      	<a href="/syn/classes">직 업</a>
+	      	<a href="/syn/origins">계 열</a>
+	      	<a href="/syn/cheat">족 보</a>
+	      </div>
+	  </div>
+      <a class="topbar-sub" href="#">아이템</a>
+      <a class="topbar-sub" href="#">증  강</a>
+      <a class="topbar-sub" href="#">게시판</a>
     </div>
   </div>
 </nav>
+
 <div class="main">
 	<img class="mainImage" th:src="@{/image/etc/nautilus_main2.png}">
 </div>
 
 <div class="searchbar">
 	<form method="POST" th:action="@{/main/search}">
-		<span>챔피언/시너지 검색 </span>
+		<div>챔피언/시너지 검색 </div>
 		<input type="text" name="name" placeholder="챔피언/시너지 검색">
 		<button type="submit">검색</button>
 	</form>
 </div>
+
+<div class="col col-sm-4">
+	<div class="embed-responsive embed-responsive-16by9">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/SiqNVwkXCls" frameborder="0" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+	    </div>
+	<div class="embed-responsive embed-responsive-16by9">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/b9YBj_TZw2E" frameborder="0" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+
+	</div>
+</div>
+
 </body>
 </html>

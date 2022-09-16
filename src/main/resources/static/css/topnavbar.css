@@ -22,7 +22,9 @@
     padding-left: 1rem;
 	margin-bottom: -1px;
 }
-
+.topbar-sub:hover{
+	text-decoration:none;
+}
 /*상단 네비게이션 바의 시너지 드롭다운 메뉴 */
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 

@@ -5,12 +5,12 @@
 @import url('https://hangeul.pstatic.net/hangeul_static/css/maru-buri.css');
 @import url('https://hangeul.pstatic.net/hangeul_static/css/nanum-gothic.css');
 
-body{
-	background-color: #a8c6f9;
-	align-items: center;
-}
 main{
 	padding : 3px;
+}
+h3{
+	font-size:80px;
+	font-family: 'Black Han Sans', sans-serif;
 }
 .cheatTable{
 	border:2px solid;
@@ -18,14 +18,13 @@ main{
 	border-radius:3px;
 	border-collapse: collapse;
 	text-align: center;
-	background-color: white;
 }
 th,td{
 	border:1px solid;
 }
 
 .origin{
-	background-color: #a8c6f9;
+	background-color: #CED8F6;
 	height: 50px;
 	width: 90px;
 }
@@ -42,10 +41,10 @@ th,td{
 .className{
 	word-break:break-all;
 	white-space:pre-line;
-	background-color: #a8c6f9;
+	background-color: #CED8F6;
 	font-family: 'NanumGothicExtraBold';
 	font-size: 25px;
-	width: 80px;
+	width: 3em;
 }
 
 .cham{

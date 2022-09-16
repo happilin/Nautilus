@@ -5,6 +5,10 @@
 @import url('https://hangeul.pstatic.net/hangeul_static/css/maru-buri.css');
 @import url('https://hangeul.pstatic.net/hangeul_static/css/nanum-gothic.css');
 
+body{
+	background-color: #E0F2F7;
+	text-align: center;
+}
 .main{
 	text-align: center;
 	height: auto;
@@ -14,3 +18,10 @@
 	max-height:300px;
 }
 
+.searchbar{
+	text-align: center;
+}
+
+.searchbar div{
+	font-size: 30px;
+}
