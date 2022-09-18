@@ -22,9 +22,5 @@ public class ChampionService {
 	public Champion detailCham(String korname) {
 		return chamMapper.detailCham(korname);
 	}
-
-	public List<Champion> getSearchCham(Champion champion) {
-		return chamMapper.getSearchCham(champion);
-	}
 	
 }

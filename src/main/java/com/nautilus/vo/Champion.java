@@ -12,7 +12,7 @@ import lombok.Data;
 @Data
 @Component
 @Entity
-@Table(name="champion")
+@Table(name="championdetail")
 public class Champion 
 {
 	@Id
@@ -55,6 +55,15 @@ public class Champion
 	@Column(name="skillname")
 	private String skillname;
 	
+	@Column(name="skilltype")
+	private String skilltype;
+	
 	@Column(name="mana")
 	private String mana;
+	
+	@Column(name="skillcontent")
+	private String skillcontent;
+	
+	@Column(name="skilleffect")
+	private String skilleffect;
 }

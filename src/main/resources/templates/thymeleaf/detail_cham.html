@@ -7,12 +7,23 @@
 <link rel="stylesheet" th:href="@{/css/synergy.css}" type="text/css">
 </head>
 <body>
+	<div>
+		<h3>챔피언 검색</h3>
+		<form class="form-inline" method="GET" th:action="@{/cham/chamList}">
+  			<div class="form-group mx-sm-3 mb-2">
+    			<label for="searchText" class="sr-only">검색</label>
+    			<input type="text" class="form-control" id="searchText" name="searchText" placeholder="챔피언 이름">
+  			</div>
+  			<button type="submit" class="btn btn-light mb-2">검색</button>
+		</form>
+	</div>
+
 	<div id="container" th:object="${cham}">
 	<img class="chamImage" th:src="@{/image/champion/}+|${cham.engName}.png|" th:alt="${cham.korname}">
 	<div th:text="*{korname}"></div>
 	<tr>
 		<td th:text="'코스트: ' + *{cost1}"></td>
-		<td th:text="' ' + *{cost2}"></td>
+		<td th:text="*{cost2}"></td>
 		<td th:utext="'계열: ' + *{origins}"></td>
 		<td th:utext="'직업: ' + *{classes}"></td>
 		<td th:text="'체력: ' + *{health}"></td>
@@ -22,47 +33,11 @@
 		<td th:text="'사거리: ' + *{attackrange}"></td>
 		<td th:text="'공격속도: ' + *{attackSpeed}"></td>
 		<td th:text="'스킬: ' + *{skillname}"></td>
+		<td th:utext="*{skilltype}"></td>
 		<td th:text="'마나: ' + *{mana}"></td>
+		<td th:utext="*{skillcontent}"></td>
+		<td th:utext="*{skilleffect}"></td>
 	</tr>
-	
-	<div>
-		<h3>챔피언 목록</h3>
-		<form class="form-inline" method="GET" th:action="@{/cham/chamList}">
-  			<div class="form-group mx-sm-3 mb-2">
-    			<label for="searchText" class="sr-only">검색</label>
-    			<input type="text" class="form-control" id="searchText" name="searchText">
-  			</div>
-  			<button type="submit" class="btn btn-light mb-2">검색</button>
-		</form>
-		<table class="table table-hover">
-			<tr>
-				<th>이름</th>
-				<th>코스트</th>
-				<th>계열</th>
-				<th>직업</th>
-				<th>체력</th>
-				<th>방어력</th>
-				<th>공격력</th>
-				<th>스킬</th>
-				<th>마나</th>
-			</tr>
-
-			<tr th:each="cham : ${list}">
-				<td>
-					<img class="chamImage" th:src="@{/image/champion/}+|${cham.engName}.png|" th:alt="${cham.korname}">
-					<a th:href="@{'/cham/detailCham/'+${cham.engName}}" th:text="${cham.korname}"></a>
-				</td>
-				<td th:text="${cham.cost1}"></td>
-				<td th:utext="${cham.origins}"></td>
-				<td th:utext="${cham.classes}"></td>
-				<td th:text="${cham.health}"></td>
-				<td th:text="${cham.defence}"></td>
-				<td th:text="${cham.offense}"></td>
-				<td th:text="${cham.skillname}"></td>
-				<td th:text="${cham.mana}"></td>
-			</tr>
-		</table>
-	</div>
 </div>
 </body>
 </html>

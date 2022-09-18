@@ -5,7 +5,7 @@
 <mapper namespace="com.nautilus.mapper.ChampionMapper">
 
 	<select id="findAll" resultType="com.nautilus.vo.Champion">
-		SELECT * FROM champion
+		SELECT * FROM championdetail
 	</select>
 	
 	<select id="getChampionByOrigin" parameterType="String"
@@ -30,7 +30,7 @@
 	
 	<select id="detailCham" parameterType="String" resultType="com.nautilus.vo.Champion">
 		SELECT *
-		FROM champion 
+		FROM championdetail
 		WHERE engname = #{korname}
 	</select>
 </mapper>
