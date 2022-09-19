@@ -41,7 +41,10 @@
 		<td th:text="${cham.health}"></td>
 		<td th:text="${cham.defence}"></td>
 		<td th:text="${cham.offense}"></td>
-		<td th:text="${cham.skillname}"></td>
+		<td>
+			<img class="skillImage" th:src="@{/image/skill/}+|${cham.skillname}.png|">
+			
+		</td>
 		<td th:text="${cham.mana}"></td>
 	</tr>
 
