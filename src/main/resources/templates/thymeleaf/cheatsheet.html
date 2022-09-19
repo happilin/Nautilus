@@ -40,11 +40,15 @@
 	<tr>
 		<td></td>
 		<td class="origin" th:each="origin : ${originList}">
+			<img class="synergyImage" th:src="@{/image/synergy_white/}+|${origin}.svg|" th:alt="${origin}"><br>
 			<a class="originName" th:text="${origin}"></a>	
 		</td>
 	</tr>
 	<tr class="class" th:each="class : ${classList}" >
-		<td class="className" th:text="${class}"></td>
+		<td class="className">
+			<img class="synergyImage" th:src="@{/image/synergy_white/}+|${class}.svg|" th:alt="${class}"><br>
+			<a th:text="${class}"></a>
+		</td>
 		<td th:each="origin : ${originList}" >
 			<div class="cham" th:each="cham : ${chamList}"
 				th:if="${((class == cham.synergy1) or (class == cham.synergy2) or (class == cham.synergy3)) and ((origin == cham.synergy1) or (origin == cham.synergy2) or (origin == cham.synergy3))}">

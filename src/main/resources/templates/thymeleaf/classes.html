@@ -41,7 +41,7 @@
 	<div class="synergyBox" th:each="class : ${classChamp}">
 	    <div th:each="class2 : ${classEff}" th:if="${class.key.korName == class2.key}">
 	        <div class="synergyName">
-	        	<img class="synergyImage" th:src="@{/image/synergy/}+|${class.key.korName}.svg|" th:alt="${class.key.korName}">
+	        	<img class="synergyImage" th:src="@{/image/synergy_white/}+|${class.key.korName}.svg|" th:alt="${class.key.korName}">
 	        	<span th:text="${class.key.korName}"></span>
 	        </div>
 	        <div class="champions">

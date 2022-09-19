@@ -41,7 +41,7 @@
 	<div class="synergyBox" th:each="origin : ${originChamp}">
 	    <div th:each="origin2 : ${originEff}" th:if="${origin.key.korName == origin2.key}">
 	        <div class="synergyName">
-	        	<img class="synergyImage" th:src="@{/image/synergy/}+|${origin.key.korName}.svg|" th:alt="${origin.key.korName}">
+	        	<img class="synergyImage" th:src="@{/image/synergy_white/}+|${origin.key.korName}.svg|" th:alt="${origin.key.korName}">
 	        	<span th:text="${origin.key.korName}"></span>
 	        </div>
 	        <div class="champions" >

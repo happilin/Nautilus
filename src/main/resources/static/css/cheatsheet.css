@@ -40,13 +40,15 @@ th,td{
 }
 .className{
 	word-break:break-all;
-	white-space:pre-line;
 	background-color: #CED8F6;
 	font-family: 'NanumGothicExtraBold';
 	font-size: 25px;
 	width: 3em;
 }
-
+.synergyImage{
+	width: 20px;
+	height : 20px;
+}
 .cham{
 	margin:3px;
 }
