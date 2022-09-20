@@ -46,7 +46,9 @@
 	        </div>
 	        <div class="champions" >
 		        <div class="championDetail" th:each="cham : ${origin.value}">
-		        	<img class="chamImage" th:src="@{/image/champion/}+|${cham.engName}.png|" th:alt="${cham.korname}">
+		        	<a th:href="@{'/cham/detailCham/'+${cham.engName}}">
+		        		<img class="chamImage"  th:src="@{/image/champion/}+|${cham.engName}.png|" th:alt="${cham.korname}">
+		        	</a>
 		        	<a class="chamName" th:utext="|<br>${cham.korname}|"></a>	
 		        </div>
 	        </div>

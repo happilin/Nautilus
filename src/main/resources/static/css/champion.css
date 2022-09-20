@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+.guide-champion-detail__header__background {
+    background-color: #000;
+    background-position: top;
+    background-size: cover;
+    bottom: 0;
+    left: 0;
+    max-height: 130px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+*, :after, :before {
+    box-sizing: inherit;
+}
+
+.container{
+	display: block;
+}

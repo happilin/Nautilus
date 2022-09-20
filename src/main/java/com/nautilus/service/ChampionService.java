@@ -1,12 +1,11 @@
 package com.nautilus.service;
 
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.nautilus.mapper.ChampionMapper;
-import com.nautilus.vo.Champion;
+import com.nautilus.vo.ChampionDetail;
 
 @Service
 public class ChampionService {
@@ -14,13 +13,8 @@ public class ChampionService {
 	@Autowired
 	private ChampionMapper chamMapper;
 	
-	public List<Champion> getChamList(){
-		return chamMapper.findAll();
-	}
-
-	// champion mapper Champion detailCham(String name);a
-	public Champion detailCham(String name) {
-		return chamMapper.detailCham(name);
+	public ChampionDetail detailCham(String korname) {
+		return chamMapper.detailCham(korname);
 	}
 	
 }

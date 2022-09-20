@@ -3,48 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <title>챔피언 목록</title>
-<style type="text/css">
-	main { width:fit-content; padding:1em; margin:0 auto;}
-</style>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" th:href="@{/css/synergy.css}" type="text/css">
 </head>
 <body>
 
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">TFT 정보</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">챔피언 <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">시너지</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">시너지<span class="caret"></span></a>
-        </li>
-      </ul>
-      <form class="navbar-form navbar-right" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-    </div>
-  </div>
-</nav>
-
-<main>
 <h3>챔피언 목록</h3>
+<form class="form-inline" method="GET" th:action="@{/cham/chamList}">
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="searchText" class="sr-only">검색</label>
+    <input type="text" class="form-control" id="searchText" name="searchText" th:value="${param.searchText}">
+  </div>
+  <button type="submit" class="btn btn-light mb-2">검색</button>
+</form>
+<main>
 <table class="table table-striped, table-hover">
 	<tr>
 		<th>이름</th>
@@ -60,16 +32,29 @@
 
 	<tr th:each="cham : ${list}">
 		<td>
-			<img class="chamImage" th:src="@{/image/champion/}+|${cham.engName}.png|" th:alt="${cham.name}">
-			<a th:href="@{'/cham/detailCham/'+${cham.engName}}" th:text="${cham.name}"></a>
+			<img class="chamImage" th:src="@{/image/champion/}+|${cham.engName}.png|" th:alt="${cham.korname}">
+			<a th:href="@{'/cham/detailCham/'+${cham.engName}}" th:text="${cham.korname}"></a>
 		</td>
-		<td th:text="${cham.cost}"></td>
-		<td th:utext="${cham.origins}"></td>
-		<td th:utext="${cham.classes}"></td>
+		<td th:text="${cham.cost1}"></td>
+		<td>
+				<img class="img_synergy" th:src="@{/image/synergy_white/}+|${cham.origins1}.svg|">
+				<a th:text="${cham.origins1}"></a>
+				<img class="img_synergy" th:if="${cham.origins2} != NULL" th:src="@{/image/synergy_white/}+|${cham.origins2}.svg|">
+				<a th:text="${cham.origins2}"></a>
+		</td>
+		<td>
+				<img class="img_synergy" th:src="@{/image/synergy_white/}+|${cham.classes1}.svg|">
+				<a th:text="${cham.classes1}"></a>
+				<img class="img_synergy" th:if="${cham.classes2} != NULL" th:src="@{/image/synergy_white/}+|${cham.classes2}.svg|">
+				<a th:text="${cham.classes2}"></a>
+		</td>
 		<td th:text="${cham.health}"></td>
 		<td th:text="${cham.defence}"></td>
 		<td th:text="${cham.offense}"></td>
-		<td th:text="${cham.skillName}"></td>
+		<td>
+			<img class="skillImage" th:src="@{/image/skill/}+|${cham.skillname}.png|" th:alt="${cham.skillname}">
+			
+		</td>
 		<td th:text="${cham.mana}"></td>
 	</tr>
 

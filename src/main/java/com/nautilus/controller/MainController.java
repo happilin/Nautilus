@@ -42,6 +42,6 @@ public class MainController {
 	@GetMapping("/test")
 	public String test() {
 		
-		return "redirect:/syn/detail/origin";
+		return "thymeleaf/synergy_detail";
 	}
 }
