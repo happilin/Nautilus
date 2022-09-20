@@ -1,4 +1,4 @@
-<script>
+
         function common() {
             document.getElementById("bf_item").style.display = "none";
             document.getElementById("speed_item").style.display = "none";
@@ -11,6 +11,7 @@
             document.getElementById("gl_item").style.display = "none";
 
         }
+        
         function onClickBfEvent() {
             if (document.getElementById("bf_item").style.display === "none") {
                 common();
@@ -83,10 +84,3 @@
                 common();
             }
         }
-        
-
-
-
-
-
-    </script>

@@ -1,5 +1,6 @@
 package com.nautilus.vo;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -15,9 +16,15 @@ import lombok.NoArgsConstructor;
 public class Augments
 {
 	@Id
+	@Column(name="name")
 	private String name;
 	
+	@Column(name="consonant")
 	private String consonant;
+	
+	@Column(name="agmlevel")
 	private Integer agmLevel;
+	
+	@Column(name="explanation")
 	private String explanation;
 }
