@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 
+import com.nautilus.vo.ChampionDetail;
 import com.nautilus.vo.Champion;
 
 @Mapper
@@ -19,5 +20,5 @@ public interface ChampionMapper {
 
 	List<Champion> getChampionCrossList(String classname, String originname);
 
-	Champion detailCham(String korname);
+	ChampionDetail detailCham(String korname);
 }

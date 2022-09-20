@@ -5,7 +5,7 @@
 <mapper namespace="com.nautilus.mapper.ChampionMapper">
 
 	<select id="findAll" resultType="com.nautilus.vo.Champion">
-		SELECT * FROM championdetail
+		SELECT * FROM champion
 	</select>
 	
 	<select id="getChampionByOrigin" parameterType="String"
@@ -28,7 +28,7 @@
 		and (synergy1=#{originname} or synergy2=#{originname} or synergy3=#{originname}) 
 	</select>
 	
-	<select id="detailCham" parameterType="String" resultType="com.nautilus.vo.Champion">
+	<select id="detailCham" parameterType="String" resultType="com.nautilus.vo.ChampionDetail">
 		SELECT *
 		FROM championdetail
 		WHERE engname = #{korname}

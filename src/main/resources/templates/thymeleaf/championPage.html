@@ -22,6 +22,8 @@
 		<th>이름</th>
 		<th>코스트</th>
 		<th>계열</th>
+		<th>계열</th>
+		<th>직업</th>
 		<th>직업</th>
 		<th>체력</th>
 		<th>방어력</th>
@@ -32,17 +34,20 @@
 
 	<tr th:each="cham : ${list}">
 		<td>
-			<img class="chamImage" th:src="@{/image/champion/}+|${cham.engName}.png|" th:alt="${cham.korname}">
-			<a th:href="@{'/cham/detailCham/'+${cham.engName}}" th:text="${cham.korname}"></a>
+			<a th:href="@{'/cham/detailCham/'+${cham.engName}}" th:text="${cham.korname}">
+				<img class="chamImage" th:src="@{/image/champion/}+|${cham.engName}.png|" th:alt="${cham.korname}">
+			</a>
 		</td>
 		<td th:text="${cham.cost1}"></td>
-		<td th:utext="${cham.origins}"></td>
-		<td th:utext="${cham.classes}"></td>
+		<td th:utext="${cham.origins1}"></td>
+		<td th:utext="${cham.origins2}"></td>
+		<td th:utext="${cham.classes1}"></td>
+		<td th:utext="${cham.classes2}"></td>
 		<td th:text="${cham.health}"></td>
 		<td th:text="${cham.defence}"></td>
 		<td th:text="${cham.offense}"></td>
 		<td>
-			<img class="skillImage" th:src="@{/image/skill/}+|${cham.skillname}.png|">
+			<img class="skillImage" th:src="@{/image/skill/}+|${cham.skillname}.png|" th:alt="${cham.skillname}">
 			
 		</td>
 		<td th:text="${cham.mana}"></td>

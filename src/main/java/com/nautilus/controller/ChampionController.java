@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.nautilus.repository.ChampionRepository;
 import com.nautilus.service.ChampionService;
-import com.nautilus.vo.Champion;
+import com.nautilus.vo.ChampionDetail;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -33,21 +33,21 @@ public class ChampionController {
 	{
 //		List<Champion> list = chamService.getChamList();
 //		List<Champion> list = repository.findByKornameContainingOrClassesContainingOrOriginsContaining(searchText, searchText, searchText);
-		List<Champion> list = repository.findByKornameContaining(searchText);
+		List<ChampionDetail> list = repository.findByKornameContaining(searchText);
 		model.addAttribute("list",list);
 		return "thymeleaf/championPage";
 	}
 	
-	@GetMapping("/detailCham/{korname}")
-	public String detailCham(@PathVariable("korname") String korname,
+	@GetMapping("/detailCham/{name}")
+	public String detailCham(@PathVariable("name") String name,
 							@RequestParam(required = false, defaultValue = "") String searchText,
 							Model model)
 	{
 //		List<Champion> list = chamService.getChamList();
-		List<Champion> list = repository.findByKornameContaining(searchText);
-		Champion cham = chamService.detailCham(korname);
+		List<ChampionDetail> list = repository.findByKornameContaining(searchText);
+		ChampionDetail cham = chamService.detailCham(name);
 		model.addAttribute("cham", cham);
-		model.addAttribute("list",list);
+		model.addAttribute("list", list);
 		return "thymeleaf/detail_cham";
 	}
 
