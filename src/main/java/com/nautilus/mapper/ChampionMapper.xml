@@ -31,6 +31,6 @@
 	<select id="detailCham" parameterType="String" resultType="com.nautilus.vo.ChampionDetail">
 		SELECT *
 		FROM championdetail
-		WHERE engname = #{korname}
+		WHERE engname = #{name} or korname=#{name}
 	</select>
 </mapper>

@@ -20,5 +20,5 @@ public interface ChampionMapper {
 
 	List<Champion> getChampionCrossList(String classname, String originname);
 
-	ChampionDetail detailCham(String korname);
+	ChampionDetail detailCham(String name);
 }

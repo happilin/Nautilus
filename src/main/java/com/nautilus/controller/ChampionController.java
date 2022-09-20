@@ -50,5 +50,13 @@ public class ChampionController {
 		model.addAttribute("list",list);
 		return "thymeleaf/detail_cham";
 	}
-
+	
+	@GetMapping("/searchCham/{name}")
+	public String detailCham(@PathVariable("name") String name, Model model)
+	{
+		log.info(name);
+		ChampionDetail cham = chamService.detailKorCham(name);
+		model.addAttribute("cham", cham);
+		return "thymeleaf/detail_cham";
+	}
 }

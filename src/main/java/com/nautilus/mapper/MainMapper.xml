@@ -11,7 +11,12 @@
 		SELECT korname,type FROM classes
 		WHERE korname=#{name}
 		UNION 
-		SELECT korname,type FROM champions
+		SELECT engname,type FROM champions
+		WHERE korname=#{name}
+	</select>
+	
+	<select id="getEngName" resultType="String">
+		SELECT engname FROM champions
 		WHERE korname=#{name}
 	</select>
 </mapper>

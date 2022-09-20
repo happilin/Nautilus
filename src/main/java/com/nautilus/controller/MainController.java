@@ -28,15 +28,21 @@ public class MainController {
 	}
 	
 	@PostMapping("/search")
-	//@ResponseBody
+//	@ResponseBody
 	public String search(
 			@RequestParam(value="name") String name) {
 		Map<String,String> check = mainMapper.getSearch(name);
 		String type = check.get("type");
-		
-		return "redirect:/syn/"+type;
-		//return type;
-		//return check;
+
+		if(type.equals("champion")) {
+			String engName = check.get("korname");
+			return "redirect:/cham/searchCham/"+engName;
+		}
+		else {
+			return "redirect:/syn/"+type;
+		}
+//		return type;
+//		return check;
 	}
 	
 	@GetMapping("/test")

@@ -8,4 +8,6 @@ import org.apache.ibatis.annotations.Mapper;
 public interface MainMapper {
 
 	Map<String,String> getSearch(String name);
+
+	String getEngName(String name);
 }

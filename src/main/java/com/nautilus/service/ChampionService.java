@@ -13,8 +13,12 @@ public class ChampionService {
 	@Autowired
 	private ChampionMapper chamMapper;
 	
-	public ChampionDetail detailCham(String korname) {
-		return chamMapper.detailCham(korname);
+	public ChampionDetail detailCham(String name) {
+		return chamMapper.detailCham(name);
+	}
+
+	public ChampionDetail detailKorCham(String name) {
+		return chamMapper.detailCham(name);
 	}
 	
 }
