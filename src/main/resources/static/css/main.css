@@ -16,8 +16,18 @@
 
 .searchbar{
 	text-align: center;
+	padding-bottom:20px;
 }
-
+.searchbar input{
+	width: 300px;
+}
 .searchbar div{
 	font-size: 30px;
+}
+
+.mediacontainer{
+	display: inline-block;
+}
+.submedia{
+	display: inline-block;
 }
