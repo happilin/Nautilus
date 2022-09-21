@@ -3,13 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <title>챔피언</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-<link rel="stylesheet" th:href="@{/css/champion.css}" type="text/css">
+<link rel="stylesheet" th:href="@{/css/detail_cham.css}" type="text/css">
 </head>
 <body>
-	<div>
+	<div class="container" th:object="${cham}">
+	
+		<div>
 		<h3>챔피언 검색</h3>
-		<form class="form-inline" method="GET" th:action="@{/cham/chamList}">
+		<form class="form-inline flex-end" method="GET" th:action="@{/cham/chamList}">
   			<div class="form-group mx-sm-3 mb-2">
     			<label for="searchText" class="sr-only">검색</label>
     			<input type="text" class="form-control" id="searchText" name="searchText" placeholder="챔피언 이름">
@@ -17,65 +20,78 @@
   			<button type="submit" class="btn btn-light mb-2">검색</button>
 		</form>
 	</div>
-
-	<div class="container" th:object="${cham}">
-		<div class="champion-detail">
-			<div class="champion-detail-header">
+		
+		<div class="champion-detail" >
+		    <div class="champion-detail-header">
+				<img id="img_champion" th:src="@{/image/champion/}+|${cham.engName}.png|" th:alt="${cham.korname}">
 				<span th:text="*{korname}"></span>
-			</div>		
+		    </div>
+		    <div class="champion-detail-header">
+				<div>
+					<img id="img_coin" th:src="@{/image/etc/coin.png}">
+					<span th:text="*{cost1}"></span>
+					<i class='fa fa-sack-dollar'><span th:text="*{cost2}"></span></i>
+				</div>
+				<div>
+					<span>계열 : </span>
+					<img class="img_synergy img_synergy_back img_synergy_size" th:src="@{/image/synergy_white/}+|*{origins1}.svg|">
+					<span th:text="*{origins1}"></span>
+					<img class="img_synergy" th:if="*{origins2} != NULL" th:src="@{/image/synergy_white/}+|*{origins2}.svg|">
+					<span th:text="*{origins2}"></span>
+				</div>
+				<div>
+					<span>직업 : </span>
+					<img class="img_synergy" th:src="@{/image/synergy_white/}+|*{classes1}.svg|">
+					<span th:text="*{classes1}"></span>
+					<img class="img_synergy" th:if="*{classes2} != NULL" th:src="@{/image/synergy_white/}+|*{classes2}.svg|">
+					<span th:text="*{classes2}"></span>
+				</div>
+		    </div>
 		</div>
-	
-		<div>
-			<span th:text="'코스트: ' + *{cost1}"></span>
-			<span th:text="*{cost2}"></span>
+		
+		<div class="spec">
+		  <div class="spec-info">
+		  	<div>체력</div>
+		  	<div th:text="*{health}"></div>
+		  </div>
+		  <div class="spec-info">
+		  	<div>공격력</div>
+		  	<div th:text="*{offense}"></div>
+		  </div>
+		  <div class="spec-info">
+		  	<div>사거리</div>
+		  	<div th:text="*{attackrange}"></div>
+		  </div>
+		  <div class="spec-info">
+		  	<div>공격속도</div>
+		  	<div th:text="*{attackSpeed}"></div>
+		  </div>
+		  <div class="spec-info">
+		  	<div>방어력</div>
+		  	<div th:text="*{defence}"></div>
+		  </div>
+		  <div class="spec-info">
+		  	<div>마법 저항력</div>
+		  	<div th:text="*{mDefence}"></div>
+		  </div>
 		</div>
 		
-		<div>
-			<span th:text="'계열: '"></span>
-			<img class="img_synergy" th:src="@{/image/synergy_white/}+|${cham.origins1}.png|" th:alt="${cham.origins1}">
-			<span th:text="*{origins1}"></span>
-			<img class="img_synergy" th:if="${origins2 != NULL}" th:src="@{/image/synergy_white/}+|${cham.origins2}.png|" th:alt="${cham.origins2}">
-			<span th:text="*{origins2}"></span>
+		
+		<div class="skill">
+		  <div class="skill-contents">
+		  	<img id="img_skill" th:src="@{/image/skill/}+|*{skillname}.png|">
+		  </div>
+		  <div class="skill-contents">
+		  	<span th:text="*{skillname}"></span><br>
+		  	<span th:text="*{skilltype} + ' | '"></span>
+		  	<img id="img_mana" th:src="@{/image/etc/mana.png}">
+			<span>마나 : </span>
+			<span th:text="*{mana}"></span>
+		  	<div th:utext="*{skillcontent}"></div><br>
+			<div th:utext="*{skilleffect}"></div>
+		  </div>
 		</div>
-		
-		<div>
-			<span th:text="'직업: '"></span>
-			<img class="img_synergy" th:src="@{/image/synergy_white/}+|${cham.classes1}.png|" th:alt="${cham.classes1}">
-			<span th:text="*{classes1}"></span>
-			<img class="img_synergy" th:if="${classes2 != NULL}" th:src="@{/image/synergy_white/}+|${cham.classes2}.png|" th:alt="${cham.classes2}">
-			<span th:text="*{classes2}"></span>
-		</div>
-		
-		
-		
-		
-		<div class="d-flex align-content-stretch flex-wrap">
-			<div class = box>
-				<span th:text="'체력: ' + *{health}"></span>
-			</div>
-			<div class = box>
-				<span th:text="'방어력: ' + *{defence}"></span>
-			</div>
-			<div class = box>
-				<span th:text="'마법 저항력: ' + *{mDefence}"></span>
-			</div>
-			<div class = box>
-				<span th:text="'공격력: ' + *{offense}"></span>
-			</div>
-			<div class = box>
-				<span th:text="'사거리: ' + *{attackrange}"></span>
-			</div>
-			<div class = box>
-				<span th:text="'공격속도: ' + *{attackSpeed}"></span>
-			</div>
-		</div>	
-			
-		<div th:text="'스킬: ' + *{skillname}"></div>
-		<div th:utext="*{skilltype}"></div>
-		<div th:text="'마나: ' + *{mana}"></div>
-		<div th:utext="*{skillcontent}"></div>
-		<div th:utext="*{skilleffect}"></div>
-	
+
 </div>
 
 
