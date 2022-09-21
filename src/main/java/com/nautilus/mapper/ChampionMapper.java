@@ -18,7 +18,5 @@ public interface ChampionMapper {
 	
 	List<Champion> getChampionAll(String synergy);
 
-	List<Champion> getChampionCrossList(String classname, String originname);
-
 	ChampionDetail detailCham(String name);
 }

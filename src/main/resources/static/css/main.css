@@ -5,10 +5,6 @@
 @import url('https://hangeul.pstatic.net/hangeul_static/css/maru-buri.css');
 @import url('https://hangeul.pstatic.net/hangeul_static/css/nanum-gothic.css');
 
-body{
-	background-color: #E0F2F7;
-	text-align: center;
-}
 .main{
 	text-align: center;
 	height: auto;

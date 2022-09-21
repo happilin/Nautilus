@@ -5,9 +5,6 @@
 @import url('https://hangeul.pstatic.net/hangeul_static/css/maru-buri.css');
 @import url('https://hangeul.pstatic.net/hangeul_static/css/nanum-gothic.css');
 
-body{
-	background-color: blue;
-}
 /*이미지 */
 .img_synergy{
     align-items: center;
@@ -20,14 +17,13 @@ body{
     height: 24px;
     width: 24px;
 }
-.img_synergy_back{
-	background-image: url(/image/etc/backimg.svg);
-}
+
 #img_coin, #img_mana{
 	vertical-align: baseline;
 	max-width: 15px;
 	max-height: 15px;
 }
+
 #img_champion{
 	width: 10%;
 	height: 10%;

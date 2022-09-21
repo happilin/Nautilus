@@ -10,7 +10,7 @@ import com.nautilus.vo.Augments;
 
 public interface AgmRepository extends JpaRepository<Augments, String>
 {
-	List<Augments> findByAgmLevel(Integer agmLevel);
+	List<Augments> findByAgmlevel(Integer agmlevel);
 	
 	List<Augments> findByName(String name);
 }

@@ -28,9 +28,9 @@ public class AugmentsService
 		return agmRepository.findAll();
 	}
 	
-	public List<Augments> getListByAgmLevel(int i) 
+	public List<Augments> getListByAgmlevel(int i) 
 	{
-		return agmRepository.findByAgmLevel(i);
+		return agmRepository.findByAgmlevel(i);
 	}
 	
 //	public List<Augments> getListByName(String key)

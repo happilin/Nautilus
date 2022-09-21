@@ -14,9 +14,6 @@ import lombok.Data;
 @Entity
 @Table(name="classes")
 public class Classes {
-
-//	@Id
-//	private int classNum;
 	
 	@Id
 	@Column(name="korname")

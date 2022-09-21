@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Data
 @Entity
 @NoArgsConstructor
-@Table(name="Augments")
+@Table(name="augments")
 public class Augments
 {
 	@Id
@@ -23,7 +23,7 @@ public class Augments
 	private String consonant;
 	
 	@Column(name="agmlevel")
-	private Integer agmLevel;
+	private Integer agmlevel;
 	
 	@Column(name="explanation")
 	private String explanation;

@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+/* 글꼴 */
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+@import url('https://hangeul.pstatic.net/hangeul_static/css/maru-buri.css');
+@import url('https://hangeul.pstatic.net/hangeul_static/css/nanum-gothic.css');
+
+#choice, #searchbar{
+	background-color: white;
+	padding-bottom: 10px;
+}
+#choice > a{
+	font-weight:bold;
+	text-decoration: none;
+	font-size: 30px;
+}
+
+#choice > a:nth-child(1){
+	text-decoration: none;
+	color: silver;
+}
+
+#choice > a:nth-child(2){
+	text-decoration: none;
+	color: gold;
+}
+
+#choice > a:nth-child(3){
+	background-image: linear-gradient(90deg, red, orange, green, blue, navy, purple);
+	-webkit-background-clip: text;
+	color: transparent;
+	text-decoration: none;
+}
+
+/* 검색바 */
+#searchbar input{
+	width: 300px;
+}
+
+/* 증강 테이블 */
+#image{
+	width: 60px ;
+	height: 60px;
+	margin: 5px;
+}
+
+#name{
+	font-weight:bold;
+	font-size: 30px;
+	padding-bottom: 10px;
+}
+
+#explanation{
+	font-weight: 500;
+	font-size: 20px;
+	padding-bottom: 10px;
+}
+
+#agutable{
+	width:100%;
+	border: 1px solid black;
+}
+
+#agutable tr,td{
+	border: 1px solid black;
+}

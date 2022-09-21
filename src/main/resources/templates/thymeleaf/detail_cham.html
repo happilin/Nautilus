@@ -2,11 +2,34 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>챔피언</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-<link rel="stylesheet" th:href="@{/css/detail_cham.css}" type="text/css">
+<title>챔피언 세부정보</title>
+	<link rel="stylesheet" th:href="@{/css/bootstrap.css}" type="text/css">
+	<link rel="stylesheet" th:href="@{/css/topnavbar.css}" type="text/css">
+	<link rel="stylesheet" th:href="@{/css/detail_cham.css}" type="text/css">
 </head>
+
 <body>
+
+<nav id="head" class="navbar navbar-expand-lg topbar-main">
+  <a class="navbar-brand ourBrand" href="/main/index">노틸러스</a>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="topbar-sub" href="/cham/chamList">챔피언</a>
+      <div class="dropdown">
+      <a class="topbar-sub">시너지</a>
+	      <div class="dropdown-content">
+	      	<a href="/syn/classes">직 업</a>
+	      	<a href="/syn/origins">계 열</a>
+	      	<a href="/syn/cheat">족 보</a>
+	      </div>
+	  </div>
+      <a class="topbar-sub" href="/item/itempage">아이템</a>
+      <a class="topbar-sub" href="/agm">증강</a>
+      <a class="topbar-sub" href="#">게시판</a>
+    </div>
+  </div>
+</nav>
+
 	<div>
 		<h3>챔피언 검색</h3>
 		<form class="form-inline" method="GET" th:action="@{/cham/chamList}">
@@ -21,34 +44,31 @@
 	<div class="container" th:object="${cham}">
 		<div class="champion-detail">
 			<div class="champion-detail-header">
-				<div class="guide-champion-detail__header__background" style="background-image: url(//cdn.lolchess.gg/images/tft/champions/set7.5/splash/Graves.jpg)"></div>
 				<img id="img_champion" th:src="@{/image/champion/}+|${cham.engName}.png|" th:alt="${cham.korname}">
 				<span th:text="*{korname}"></span>
-				
-
 			</div>		
 		</div>
 	
 		<div id="part_cost">
-			<a>코스트 : </a>
+			<a>비용 : </a>
 			<img id="img_coin" th:src="@{/image/etc/coin.png}">
 			<a th:text="*{cost1}"></a>
-			<a th:text="*{cost2}"></a>
+			<a th:utext="|( *{cost2} )|"></a>
 		</div>
 
 		<div id="part_synergy">
 			<div>
 				<a>계열 : </a>
-				<img class="img_synergy img_synergy_back img_synergy_size" th:src="@{/image/synergy_white/}+|*{origins1}.svg|">
+				<img class="img_synergy img_synergy_back img_synergy_size" th:src="@{/image/synergy_black/}+|*{origins1}.svg|">
 				<a th:text="*{origins1}"></a>
-				<img class="img_synergy" th:if="*{origins2} != NULL" th:src="@{/image/synergy_white/}+|*{origins2}.svg|">
+				<img class="img_synergy" th:if="*{origins2} != NULL" th:src="@{/image/synergy_black/}+|*{origins2}.svg|">
 				<a th:text="*{origins2}"></a>
 			</div>
 			<div>
 				<a>직업 : </a>
-				<img class="img_synergy" th:src="@{/image/synergy_white/}+|*{classes1}.svg|">
+				<img class="img_synergy" th:src="@{/image/synergy_black/}+|*{classes1}.svg|">
 				<a th:text="*{classes1}"></a>
-				<img class="img_synergy" th:if="*{classes2} != NULL" th:src="@{/image/synergy_white/}+|*{classes2}.svg|">
+				<img class="img_synergy" th:if="*{classes2} != NULL" th:src="@{/image/synergy_black/}+|*{classes2}.svg|">
 				<a th:text="*{classes2}"></a>
 			</div>
 		</div>
@@ -73,8 +93,7 @@
 			<div th:utext="*{skillcontent}"></div>
 			<div th:utext="*{skilleffect}"></div>
 		</div>
-
-</div>
+	</div>
 
 
 </body>

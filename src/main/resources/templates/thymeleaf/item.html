@@ -2,15 +2,37 @@
 <html lang="UTF-8">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/item.css">
+  	<link rel="stylesheet" href="/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="/css/topnavbar.css" type="text/css">
+    <link rel="stylesheet" href="/css/item.css" type="text/css" >
     <script type="text/javascript" src="/js/item.js"></script>
   <title>아이템 사이트</title>
 </head>
 
 <body class="theme-dark">
+
+<nav id="head" class="navbar navbar-expand-lg topbar-main">
+  <a class="navbar-brand ourBrand" href="/main/index">노틸러스</a>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="topbar-sub" href="/cham/chamList">챔피언</a>
+      <div class="dropdown">
+      <a class="topbar-sub">시너지</a>
+	      <div class="dropdown-content">
+	      	<a href="/syn/classes">직 업</a>
+	      	<a href="/syn/origins">계 열</a>
+	      	<a href="/syn/cheat">족 보</a>
+	      </div>
+	  </div>
+      <a class="topbar-sub" href="/item/itempage">아이템</a>
+      <a class="topbar-sub" href="/agm">증강</a>
+      <a class="topbar-sub" href="#">게시판</a>
+    </div>
+  </div>
+</nav>
+
 <div id="item_see">
-    보고싶은 아이템을 클릭하시면 아이템 조합표가 나옵니다.
+    조합하고싶은 아이템을 클릭하시면 아이템 조합표가 나옵니다.
 </div>
 
     <div class="tembox">
@@ -766,7 +788,6 @@
         <tr>
             <td class="type">
                 <span>
-
                 <img src="//cdn.lolchess.gg/upload/images/items/BFSword_1658364277-1038.png" title="B.F. 대검"   >
                 <div>B.F. 대검</div>
                 <div class="explanation">공격력 +10</div>
@@ -2789,23 +2810,14 @@
     </table>
 
 </div>
+
 <p class="copyright">
     © Nautilus. All Rights Reserved.
 </p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+<div id="gotop">
+	<a href="#head"><img src="/image/etc/gotop.svg"></a>
+</div>
 
 </body>
 </html>

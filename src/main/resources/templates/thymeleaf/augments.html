@@ -3,6 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>nautilus_augments</title>
+		<link rel="stylesheet" href="/css/bootstrap.css" type="text/css">
+		<link rel="stylesheet" th:href="@{/css/topnavbar.css}" type="text/css">
+		<link rel="stylesheet" th:href="@{/css/aguments.css}" type="text/css">
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<script type="text/javascript">
 	
@@ -35,18 +38,37 @@
 	</script>
 </head>
 <body>
+<nav id="head" class="navbar navbar-expand-lg topbar-main">
+  <a class="navbar-brand ourBrand" href="/main/index">노틸러스</a>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="topbar-sub" href="/cham/chamList">챔피언</a>
+      <div class="dropdown">
+      <a class="topbar-sub">시너지</a>
+	      <div class="dropdown-content">
+	      	<a href="/syn/classes">직 업</a>
+	      	<a href="/syn/origins">계 열</a>
+	      	<a href="/syn/cheat">족 보</a>
+	      </div>
+	  </div>
+      <a class="topbar-sub" href="/item/itempage">아이템</a>
+      <a class="topbar-sub" href="/agm">증강</a>
+      <a class="topbar-sub" href="#">게시판</a>
+    </div>
+  </div>
+</nav>
+
 	<form action="">
-		
 		<!-- 버튼 -->
-		<div> 
-			[<a href="/agm/1">실버</a>]&nbsp;&nbsp;
-			[<a href="/agm/2">골드</a>]&nbsp;&nbsp;
-			[<a href="/agm/3">프리즘</a>]
+		<div id="choice"> 
+			<a href="/agm/1">[실버]</a>&nbsp;&nbsp;
+			<a href="/agm/2">[골드]</a>&nbsp;&nbsp;
+			<a href="/agm/3">[프리즘]</a>
 		</div>
 		
 		<!-- 검색창 -->
-		<div>
-			<input type="text" id="keyword" placeholder="증강 검색(ex.강인함, ㄱㅇㅎ, ...)" list="dtList" onKeypress="enterkey(event);">
+		<div id="searchbar">
+			<input type="text" id="keyword" placeholder="증강 검색 (예. 강인함, ㄱㅇㅎ, ...)" list="dtList" onKeypress="enterkey(event);">
 			<button type="button" onclick="search();">검색</button>
 		</div>
 		
@@ -56,18 +78,25 @@
 		
 		<div>
 		<!-- 증강체들... -->
-			<table>
+			<table id="agutable">
 				<tr th:each="list:${list}">
 					<td>
-						<img src="augments_img/${list.name}.png" width="50" height="50">
+						<img id="image" th:src="@{/image/augments_img/}+|${list.name}.png|">
 					</td>
 					<td>
 						<div id="name" th:text="${list.name}"></div>
-						<div id="explanation" th:text="${list.explanation}"></div>
+						<div id="explanation" th:utext="${list.explanation}"></div>
 					</td>
 				</tr>
 			</table>
 		</div>
 	</form>
+
+<p class="copyright">
+    © Nautilus. All Rights Reserved.
+</p>
+<div id="gotop">
+	<a href="#head"><img src="/image/etc/gotop.svg"></a>
+</div>
 </body>
 </html>

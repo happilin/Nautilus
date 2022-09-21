@@ -35,7 +35,7 @@ public class AugmentsController
 	@GetMapping("")
 	public String listAll(Model model)
 	{
-		List<Augments> list = svc.getListByAgmLevel(1);
+		List<Augments> list = svc.getListByAgmlevel(1);
 		model.addAttribute("list", list);
 		log.debug("list.size():{}", list.size());
 		
@@ -45,7 +45,7 @@ public class AugmentsController
 	@GetMapping("/{agmLevel}")
 	public String listByLevel(@PathVariable("agmLevel")int agmLevel, Model model)
 	{
-		List<Augments> list = svc.getListByAgmLevel(agmLevel);
+		List<Augments> list = svc.getListByAgmlevel(agmLevel);
 		log.debug("listByLevel() > getList.size(): {}", list.size());
 		model.addAttribute("list", list);
 		

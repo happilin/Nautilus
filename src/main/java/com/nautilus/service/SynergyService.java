@@ -68,10 +68,6 @@ public class SynergyService {
 	public List<Champion> getChampionAll(String synergy){
 		return chamMapper.getChampionAll(synergy);
 	}
-	
-	public List<Champion> getChampionCrossList(String className, String originName){
-		return chamMapper.getChampionCrossList(className,originName);
-	}
 
 	public Classes getClass(String name) {
 		return classMapper.findClass(name);
