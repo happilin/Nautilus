@@ -52,7 +52,7 @@ public class SynergyController {
 		Map<String,List<OriginEffect>> originEff = new LinkedHashMap<>();
 		
 		for(int i=0;i<oriList.size();i++) {
-			String originName = oriList.get(i).getKorName();
+			String originName = oriList.get(i).getKorname();
 			List<Champion> chamList = synService.getChampionAll(originName);
 			List<OriginEffect> effectList = synService.getOriginEffect(originName);
 			
@@ -74,7 +74,7 @@ public class SynergyController {
 		Map<String,List<ClassEffect>> classEff = new LinkedHashMap<>();
 		
 		for(int i=0;i<classList.size();i++) {
-			String className = classList.get(i).getKorName();
+			String className = classList.get(i).getKorname();
 			List<Champion> chamList = synService.getChampionAll(className);
 			List<ClassEffect> effectList = synService.getClassEffect(className);
 			
@@ -101,16 +101,26 @@ public class SynergyController {
 		return "thymeleaf/cheatsheet";
 	}
 	
-	//
-	@GetMapping("/detail/{type}")
+	@GetMapping("/detail/{synname}")
 	public String detail(Model model,
-			@PathVariable("type") String type) {
+			@PathVariable("synname") String synname) {
 		
-		if(type == "origins") {
-			return "rediect:/syn/origins";
+		Map<String,String> check = synService.search(synname);
+		List<Champion> chamList = synService.getChamListBySynergy(synname);
+		
+		if(check.get("type").equals("classes")) {
+			Classes fClass = synService.getClass(synname);
+			List<ClassEffect> effectList = synService.getClassEffect(synname);
+			model.addAttribute("synergy",fClass);
+			model.addAttribute("effectList",effectList);
 		}
-		else {
-			return "rediect:/syn/classes";
+		else if(check.get("type").equals("origins")) {
+			Origins fOrigin = synService.getOrigin(synname);
+			List<OriginEffect> effectList = synService.getOriginEffect(synname);
+			model.addAttribute("synergy",fOrigin);
+			model.addAttribute("effectList",effectList);
 		}
+		model.addAttribute("chamList",chamList);
+		return "thymeleaf/synergy_detail";
 	}
 }

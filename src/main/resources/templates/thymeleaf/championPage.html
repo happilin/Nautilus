@@ -11,7 +11,7 @@
 <body>
 
 <nav id="head" class="navbar navbar-expand-lg topbar-main">
-  <a class="navbar-brand ourBrand" href="/main/index">노틸러스</a>
+  <a class="navbar-brand ourBrand" href="/main/main">노틸러스</a>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <a class="topbar-sub" href="/cham/chamList">챔피언</a>
@@ -59,11 +59,11 @@
 	
 		<tr class="chamdetail" th:each="cham : ${list}">
 			<td class="champion">
-				<a class="chamimage" th:href="@{'/cham/detailCham/'+${cham.engName}}">
-					<img class="img_champion"  th:src="@{/image/champion/}+|${cham.engName}.png|">
+				<a class="chamimage" th:href="@{'/cham/detailCham/'+${cham.engname}}">
+					<img class="img_champion"  th:src="@{/image/champion/}+|${cham.engname}.png|">
 				</a>
 				<br>
-				<a class="chamname" th:href="@{'/cham/detailCham/'+${cham.engName}}" th:text="${cham.korname}"></a>
+				<a class="chamname" th:href="@{'/cham/detailCham/'+${cham.engname}}" th:text="${cham.korname}"></a>
 			</td>
 			<td>
 				<img id="img_coin" th:src="@{/image/etc/coin.png}">
@@ -71,15 +71,15 @@
 			</td>
 			<td>
 					<img class="img_synergy" th:src="@{/image/synergy_black/}+|${cham.origins1}.svg|">
-					<a th:text="${cham.origins1}"></a><br>
+					<a class="synname" th:href="@{'/syn/detail/'+${cham.origins1}}" th:text="${cham.origins1}"></a><br>
 					<img class="img_synergy" th:if="${cham.origins2} != NULL" th:src="@{/image/synergy_black/}+|${cham.origins2}.svg|">
-					<a th:text="${cham.origins2}"></a>
+					<a class="synname" th:href="@{'/syn/detail/'+${cham.origins2}}" th:text="${cham.origins2}"></a>
 			</td>
 			<td>
 					<img class="img_synergy" th:src="@{/image/synergy_black/}+|${cham.classes1}.svg|">
-					<a th:text="${cham.classes1}"></a><br>
+					<a class="synname" th:href="@{'/syn/detail/'+${cham.classes1}}" th:text="${cham.classes1}"></a><br>
 					<img class="img_synergy" th:if="${cham.classes2} != NULL" th:src="@{/image/synergy_black/}+|${cham.classes2}.svg|">
-					<a th:text="${cham.classes2}"></a>
+					<a class="synname" th:href="@{'/syn/detail/'+${cham.classes2}}" th:text="${cham.classes2}"></a>
 			</td>
 			<td th:text="${cham.health}"></td>
 			<td th:text="${cham.defence}"></td>

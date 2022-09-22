@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.nautilus.mapper.SynergyMapper">
+
+	<select id="findClassAll" resultType="com.nautilus.vo.Classes">
+		SELECT * FROM classes ORDER BY korName
+	</select>
+
+	<select id="findClassEffect" parameterType="String"
+	resultType="com.nautilus.vo.ClassEffect">
+		SELECT * FROM classeffect WHERE korName = #{className} 
+	</select>
+	
+	<select id="findClassAllName" resultType="String">
+		SELECT korName FROM classes ORDER BY korName
+	</select>
+	
+	<select id="findOriginAll" resultType="com.nautilus.vo.Origins">
+		SELECT * FROM origins ORDER BY korName ASC
+	</select>
+
+	<select id="findOriginEffect" parameterType="String"
+	resultType="com.nautilus.vo.OriginEffect">
+		SELECT * FROM origineffect WHERE korName = #{origin} 
+	</select>
+	
+	<select id="findOriginAllName" resultType="String">
+		SELECT korName FROM origins ORDER BY korName
+	</select>
+	
+	<select id="getSynergySearch" resultType="map">
+		SELECT korname,type FROM origins
+		WHERE korname like #{name}
+		UNION
+		SELECT korname,type FROM classes
+		WHERE korname like #{name}
+	</select>
+	
+	<select id="findClass" resultType="com.nautilus.vo.Classes">
+		SELECT * FROM classes WHERE korname = #{name}
+	</select>
+	
+	<select id="findOrigin" resultType="com.nautilus.vo.Origins">
+		SELECT * FROM origins WHERE korname = #{name}
+	</select>
+</mapper>

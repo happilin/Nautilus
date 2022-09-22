@@ -79,7 +79,7 @@ img {
 .explan{
 	font-size: 25px;
 }
-.synergy{
+.synergyE{
 	word-break:keep-all;
 	font-family: 'MaruBuriBold';
 	padding: 5px;
@@ -95,4 +95,18 @@ img {
 	box-sizing: content-box;
 	font-size: 20px;
 	text-align: center;
+}
+
+/* 시너지 디테일 부분*/
+.d_synergyBox{
+    display: inline-grid;
+    border: 3px solid #a0a0a0;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+#golist{
+	text-decoration: none;
+	font-size: 30px;
+	color: black;
 }

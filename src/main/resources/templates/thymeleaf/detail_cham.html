@@ -11,7 +11,7 @@
 <body>
 
 <nav id="head" class="navbar navbar-expand-lg topbar-main">
-  <a class="navbar-brand ourBrand" href="/main/index">노틸러스</a>
+  <a class="navbar-brand ourBrand" href="/main/main">노틸러스</a>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <a class="topbar-sub" href="/cham/chamList">챔피언</a>
@@ -44,7 +44,7 @@
 	<div class="container" th:object="${cham}">
 		<div class="champion-detail">
 			<div class="champion-detail-header">
-				<img id="img_champion" th:src="@{/image/champion/}+|${cham.engName}.png|" th:alt="${cham.korname}">
+				<img id="img_champion" th:src="@{/image/champion/}+|${cham.engname}.png|" th:alt="${cham.korname}">
 				<span th:text="*{korname}"></span>
 			</div>		
 		</div>

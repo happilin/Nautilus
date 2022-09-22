@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeLeaf.org">
 <head>
 <meta charset="UTF-8">
-<title>계열</title>
+<title>시너지-계열</title>
 
 <!-- bootstrap css -->
 <link rel="stylesheet" th:href="@{/css/bootstrap.css}" type="text/css">
@@ -13,7 +13,7 @@
 
 <body>
 <nav id="head" class="navbar navbar-expand-lg topbar-main">
-  <a class="navbar-brand ourBrand" href="/main/index">노틸러스</a>
+  <a class="navbar-brand ourBrand" href="/main/main">노틸러스</a>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <a class="topbar-sub" href="/cham/chamList">챔피언</a>
@@ -39,23 +39,23 @@
 </div>
 <div class="synergyMain">
 	<div class="synergyBox" th:each="origin : ${originChamp}">
-	    <div th:each="origin2 : ${originEff}" th:if="${origin.key.korName == origin2.key}">
+	    <div th:each="origin2 : ${originEff}" th:if="${origin.key.korname == origin2.key}">
 	        <div class="synergyName">
-	        	<img class="synergyImage" th:src="@{/image/synergy_white/}+|${origin.key.korName}.svg|" th:alt="${origin.key.korName}">
-	        	<span th:text="${origin.key.korName}"></span>
+	        	<img class="synergyImage" th:src="@{/image/synergy_white/}+|${origin.key.korname}.svg|" th:alt="${origin.key.korname}">
+	        	<span th:text="${origin.key.korname}"></span>
 	        </div>
 	        <div class="champions" >
 		        <div class="championDetail" th:each="cham : ${origin.value}">
-		        	<a th:href="@{'/cham/detailCham/'+${cham.engName}}">
-		        		<img class="chamImage"  th:src="@{/image/champion/}+|${cham.engName}.png|" th:alt="${cham.korname}">
+		        	<a th:href="@{'/cham/detailCham/'+${cham.engname}}">
+		        		<img class="chamImage"  th:src="@{/image/champion/}+|${cham.engname}.png|" th:alt="${cham.korname}">
 		        	</a>
 		        	<a class="chamName" th:utext="|<br>${cham.korname}|"></a>	
 		        </div>
 	        </div>
-	        <div class="synergy" th:if="${(origin.key.explan != NULL)}">
+	        <div class="synergyE" th:if="${(origin.key.explan != NULL)}">
 	        	<a th:utext="${origin.key.explan}"></a>
 	        </div>
-	        <div class="synergy">
+	        <div class="synergyE">
 	        	<a class="explan">시너지 효과</a><br>
 	        	<a th:each="eff : ${origin2.value}" th:utext="|(${eff.member}) : ${eff.effect}<br>|"></a>
 	        </div>

@@ -20,7 +20,7 @@ public class ChampionDetail
 	private String korname;
 	
 	@Column(name="engname")
-	private String engName;
+	private String engname;
 	
 	@Column(name="cost1")
 	private int cost1;

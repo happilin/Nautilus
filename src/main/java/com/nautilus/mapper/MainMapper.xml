@@ -4,15 +4,15 @@
 
 <mapper namespace="com.nautilus.mapper.MainMapper">
 
-	<select id="getSearch" resultType="Map">
-		SELECT korname,type FROM origins
-		WHERE korname=#{name}
+	<select id="getSearch" resultType="map">
+		SELECT IFNULL(MAX(korname),"nodata") AS korname,type FROM origins
+		WHERE korname like #{name}
 		UNION
-		SELECT korname,type FROM classes
-		WHERE korname=#{name}
+		SELECT IFNULL(MAX(korname),"nodata") AS korname,type FROM classes
+		WHERE korname like #{name}
 		UNION 
-		SELECT engname,type FROM champions
-		WHERE korname=#{name}
+		SELECT IFNULL(MAX(engname),"nodata") AS engname,type FROM champions
+		WHERE korname like #{name}
 	</select>
 	
 	<select id="getEngName" resultType="String">

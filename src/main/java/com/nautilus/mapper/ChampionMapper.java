@@ -12,9 +12,7 @@ public interface ChampionMapper {
 
 	List<Champion> findAll();
 	
-	List<String> getChampionByOrigin(String synergy);
-
-	List<String> getChampionByClass(String synergy);
+	List<Champion> getChampionBySynergy(String synergy);
 	
 	List<Champion> getChampionAll(String synergy);
 

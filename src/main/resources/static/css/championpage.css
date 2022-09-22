@@ -32,8 +32,8 @@
 }
 
 #img_mana,#img_coin{
-	width: 10px;
-	height:10px;
+	width: 15px;
+	height:15px;
 }
 
 a:hover{
@@ -68,17 +68,20 @@ a:hover{
 	color: black;
 	
 }
-
+tbody > tr:nth-child(1) > th:nth-child(1){
+	width: 200px;
+}
 tbody > tr:nth-child(1) > th:nth-child(2){
-	width: 100px;
+	width: 70px;
 }
-tbody > tr:nth-child(1) > th:nth-child(3){
-	width: 150px;
-}
-tbody > tr:nth-child(1) > th:nth-child(4){
+tbody > tr:nth-child(1) > th:nth-child(3), th:nth-child(4), th:nth-child(8){
 	width: 150px;
 }
 
+
+tbody > tr:nth-child(1) > th:nth-child(9){
+	width: 120px;
+}
 .chamtable td{
 	vertical-align: middle;
 	padding: 2px;
@@ -89,3 +92,8 @@ tbody > tr:nth-child(1) > th:nth-child(4){
 	float:right;
 }
 
+.synname{
+	font-weight: 500;
+	text-decoration: none;
+	color : black;
+}

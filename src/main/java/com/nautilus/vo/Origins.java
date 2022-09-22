@@ -21,14 +21,12 @@ public class Origins {
 	@Id
 	@Column(name="korname") //-> originname 으로 인식
 //	@Column(name="originName") //-> origin_name 으로 인식
-	private String korName;
+	private String korname;
 	
 	@Column(name="explan")
 	private String explan;
 	
-//	@Column(name="memberNum")
-//	private int memberNum;
-//	
-//	@Column(name="originEffect")
-//	private String originEffect;
+	@Column(name="type")
+	private String type;
+
 }

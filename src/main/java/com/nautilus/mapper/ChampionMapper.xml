@@ -8,14 +8,9 @@
 		SELECT * FROM champions
 	</select>
 	
-	<select id="getChampionByOrigin" parameterType="String"
-		resultType="String">	
-		SELECT korname FROM champions WHERE synergy1=#{synergy} or synergy2=#{synergy} or synergy3=#{synergy} ORDER BY korname
-	</select>
-
-	<select id="getChampionByClass" parameterType="String"
-		resultType="String">	
-		SELECT korname FROM champions WHERE synergy1=#{synergy} or synergy2=#{synergy} or synergy3=#{synergy} ORDER BY korname
+	<select id="getChampionBySynergy" parameterType="String"
+		resultType="com.nautilus.vo.Champion">	
+		SELECT korname,engname FROM champions WHERE synergy1=#{synergy} or synergy2=#{synergy} or synergy3=#{synergy} ORDER BY korname
 	</select>
 
 	<select id="getChampionAll" parameterType="String"

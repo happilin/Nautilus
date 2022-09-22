@@ -4,9 +4,28 @@
 <meta charset="UTF-8">
 <title>노틸러스 메인</title>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script type="text/javascript">
-
+	function search(){
+		$.ajax({
+			url:'/main/search/'+$("#name").val(),
+			method:'get',
+			cache:false,
+			dataType:'json',
+			success:function(res){
+				if(res.data){
+					location.href = res.url;
+				}
+				else{
+					alert("검색 정보가 없습니다.");
+					history.go(0);
+				}
+			},
+			error:function(xhr,status,error){
+				alert(error);
+			}
+		});
+	}
 </script>
 
 <!-- bootstrap css -->
@@ -18,7 +37,7 @@
 
 <body>
 <nav id="head" class="navbar navbar-expand-lg topbar-main">
-  <a class="navbar-brand ourBrand" href="/main/index">노틸러스</a>
+  <a class="navbar-brand ourBrand" href="/main/main">노틸러스</a>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <a class="topbar-sub" href="/cham/chamList">챔피언</a>
@@ -38,19 +57,21 @@
 </nav>
 
 <div class="main">
-	<img class="mainImage" th:src="@{/image/etc/nautilus_main2.png}">
+	<a th:href="@{/main/main}">
+		<img class="mainImage" th:src="@{/image/etc/nautilus_main2.png}">
+	</a>
 </div>
 
 <div class="searchbar">
-	<form method="POST" th:action="@{/main/search}">
+	<form id="searchform" th:action="@{/main/search}" method="GET" onsubmit="return search();">
 		<div>챔피언/시너지 검색 </div>
-		<input type="text" name="name" placeholder="챔피언/시너지 검색">
+		<input id="name" type="text" name="name" placeholder="챔피언/시너지 검색">
 		<button type="submit">검색</button>
 	</form>
 </div>
-<div>
+<div class="mediacontainer">
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/b9YBj_TZw2E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/SiqNVwkXCls" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+
 </body>
 </html>

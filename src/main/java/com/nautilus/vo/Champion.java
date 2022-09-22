@@ -27,7 +27,7 @@ public class Champion {
 	private String korname;
 	
 	@Column(name="engname")
-	private String engName;
+	private String engname;
 	
 	@Column(name="synergy1")
 	private String synergy1;

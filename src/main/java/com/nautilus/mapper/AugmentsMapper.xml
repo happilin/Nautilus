@@ -6,7 +6,7 @@
 
 	<select id="findByKey" parameterType="String" resultType="com.nautilus.vo.Augments">
 		<!-- select * from augments where name like #{key}% or consonant like #{key}% -->
-		select * from Augments where name like '%'||#{key}||'%' or consonant like '%'||#{key}||'%'
+		select * from augments where name like '%'||#{key}||'%' or consonant like '%'||#{key}||'%'
 	</select>
 	
 </mapper>

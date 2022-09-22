@@ -14,8 +14,8 @@
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg topbar-main">
-  <a class="navbar-brand ourBrand" href="/main/index">노틸러스</a>
+<nav id="head" class="navbar navbar-expand-lg topbar-main">
+  <a class="navbar-brand ourBrand" href="/main/main">노틸러스</a>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <a class="topbar-sub" href="/cham/chamList">챔피언</a>
@@ -28,7 +28,7 @@
 	      </div>
 	  </div>
       <a class="topbar-sub" href="/item/itempage">아이템</a>
-      <a class="topbar-sub" href="/agm">증 강</a>
+      <a class="topbar-sub" href="/agm">증강</a>
       <a class="topbar-sub" href="#">게시판</a>
     </div>
   </div>
@@ -52,8 +52,8 @@
 		<td th:each="origin : ${originList}" >
 			<div class="cham" th:each="cham : ${chamList}"
 				th:if="${((class == cham.synergy1) or (class == cham.synergy2) or (class == cham.synergy3)) and ((origin == cham.synergy1) or (origin == cham.synergy2) or (origin == cham.synergy3))}">
-				<a th:href="@{'/cham/detailCham/'+${cham.engName}}">
-		        	<img class="chamImage"  th:src="@{/image/champion/}+|${cham.engName}.png|" th:alt="${cham.korname}">
+				<a th:href="@{'/cham/detailCham/'+${cham.engname}}">
+		        	<img class="chamImage"  th:src="@{/image/champion/}+|${cham.engname}.png|" th:alt="${cham.korname}">
 		        </a>
 				<div class="chamKorName" th:text="${cham.korname}"></div>
 			</div>

@@ -17,14 +17,12 @@ public class Classes {
 	
 	@Id
 	@Column(name="korname")
-	private String korName;
+	private String korname;
 	
 	@Column(name="explan")
 	private String explan;
 	
-//	@Column(name="member_num")
-//	private int memberNum;
-//	
-//	@Column(name="class_effect")
-//	private String classEffect;
+	@Column(name="type")
+	private String type;
+	
 }
