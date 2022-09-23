@@ -1,5 +1,6 @@
 package com.nautilus.service;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -9,10 +10,8 @@ import org.springframework.stereotype.Service;
 import com.nautilus.mapper.ChampionMapper;
 import com.nautilus.mapper.SynergyMapper;
 import com.nautilus.vo.Champion;
-import com.nautilus.vo.ClassEffect;
-import com.nautilus.vo.Classes;
-import com.nautilus.vo.OriginEffect;
-import com.nautilus.vo.Origins;
+import com.nautilus.vo.Synergy;
+import com.nautilus.vo.SynergyEffect;
 
 @Service
 public class SynergyService {
@@ -27,8 +26,8 @@ public class SynergyService {
 		return chamMapper.findAll();
 	}
 	
-	public List<Champion> getChamListBySynergy(String originName) {
-		return chamMapper.getChampionBySynergy(originName);
+	public List<Champion> getChamListBySynergy(String synergy) {
+		return chamMapper.getChampionBySynergy(synergy);
 	}
 	
 	public List<String> getClassNameList(){
@@ -39,35 +38,46 @@ public class SynergyService {
 		return synergyMapper.findOriginAllName();
 	}
 	
-	public List<Origins> getOriginsList() {
+	public List<Synergy> getOriginsList() {
 		return synergyMapper.findOriginAll();
 	}
 	
-	public List<Classes> getClassesList(){
+	public List<Synergy> getClassesList(){
 		return synergyMapper.findClassAll();
 	}
 
-	public List<ClassEffect> getClassEffect(String className) {
-		return synergyMapper.findClassEffect(className);
-	}
-	
-	public List<OriginEffect> getOriginEffect(String originName) {
-		return synergyMapper.findOriginEffect(originName);
+	public List<SynergyEffect> getSynergyEffect(String synergyName) {
+		return synergyMapper.findSynergyEffect(synergyName);
 	}
 
 	public List<Champion> getChampionAll(String synergy){
 		return chamMapper.getChampionAll(synergy);
 	}
 
-	public Classes getClass(String name) {
+	public Synergy getClass(String name) {
 		return synergyMapper.findClass(name);
 	}
 
-	public Origins getOrigin(String name) {
+	public Synergy getOrigin(String name) {
 		return synergyMapper.findOrigin(name);
 	}
 
-	public Map<String, String> search(String synname) {
+	public Synergy search(String synname) {
 		return synergyMapper.getSynergySearch(synname);
+	}
+
+	public Map<String, Object> getSynInfo(String synname) {
+		
+		Map<String, Object> getSynInfo = new HashMap<String, Object>();
+		
+		Synergy synergy = search(synname);
+		List<Champion> chamList = getChamListBySynergy(synname);
+		List<SynergyEffect> effectList = getSynergyEffect(synname);
+		
+		getSynInfo.put("synergy", synergy);
+		getSynInfo.put("chamList", chamList);
+		getSynInfo.put("effectList", effectList);
+		
+		return getSynInfo;
 	}
 }

@@ -16,10 +16,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.nautilus.service.SynergyService;
 import com.nautilus.vo.Champion;
-import com.nautilus.vo.ClassEffect;
-import com.nautilus.vo.Classes;
-import com.nautilus.vo.OriginEffect;
-import com.nautilus.vo.Origins;
+import com.nautilus.vo.Synergy;
+import com.nautilus.vo.SynergyEffect;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -43,18 +41,18 @@ public class SynergyController {
 	public String origins(Model model) {
 	
 		// 서비스를 통해 origin의 name과 explan을 리스트로 가져온다
-		List<Origins> oriList = synService.getOriginsList();
+		List<Synergy> oriList = synService.getOriginsList();
 		
 		// LinkedHashMap > Map을 순서대로 저장
 		// 해당 origin 속성을 가진 챔피언들의 리스트를 저장
 		// 해당 origin 의 효과를 저장
-		Map<Origins,List<Champion>> originChamp = new LinkedHashMap<>();
-		Map<String,List<OriginEffect>> originEff = new LinkedHashMap<>();
+		Map<Synergy,List<Champion>> originChamp = new LinkedHashMap<>();
+		Map<String,List<SynergyEffect>> originEff = new LinkedHashMap<>();
 		
 		for(int i=0;i<oriList.size();i++) {
 			String originName = oriList.get(i).getKorname();
 			List<Champion> chamList = synService.getChampionAll(originName);
-			List<OriginEffect> effectList = synService.getOriginEffect(originName);
+			List<SynergyEffect> effectList = synService.getSynergyEffect(originName);
 			
 			originChamp.put(oriList.get(i), chamList);
 			originEff.put(originName, effectList);
@@ -69,14 +67,14 @@ public class SynergyController {
 	@GetMapping("/classes")
 	public String classes(Model model) {
 		
-		List<Classes> classList = synService.getClassesList();
-		Map<Classes,List<Champion>> classChamp = new LinkedHashMap<>();
-		Map<String,List<ClassEffect>> classEff = new LinkedHashMap<>();
+		List<Synergy> classList = synService.getClassesList();
+		Map<Synergy,List<Champion>> classChamp = new LinkedHashMap<>();
+		Map<String,List<SynergyEffect>> classEff = new LinkedHashMap<>();
 		
 		for(int i=0;i<classList.size();i++) {
 			String className = classList.get(i).getKorname();
 			List<Champion> chamList = synService.getChampionAll(className);
-			List<ClassEffect> effectList = synService.getClassEffect(className);
+			List<SynergyEffect> effectList = synService.getSynergyEffect(className);
 			
 			classChamp.put(classList.get(i), chamList);
 			classEff.put(className, effectList);
@@ -105,22 +103,23 @@ public class SynergyController {
 	public String detail(Model model,
 			@PathVariable("synname") String synname) {
 		
-		Map<String,String> check = synService.search(synname);
-		List<Champion> chamList = synService.getChamListBySynergy(synname);
+		Map<String, Object> getSynInfo = synService.getSynInfo(synname);
 		
-		if(check.get("type").equals("classes")) {
-			Classes fClass = synService.getClass(synname);
-			List<ClassEffect> effectList = synService.getClassEffect(synname);
-			model.addAttribute("synergy",fClass);
-			model.addAttribute("effectList",effectList);
-		}
-		else if(check.get("type").equals("origins")) {
-			Origins fOrigin = synService.getOrigin(synname);
-			List<OriginEffect> effectList = synService.getOriginEffect(synname);
-			model.addAttribute("synergy",fOrigin);
-			model.addAttribute("effectList",effectList);
-		}
-		model.addAttribute("chamList",chamList);
+		model.addAttribute("synergy",getSynInfo.get("synergy"));
+		model.addAttribute("effectList",getSynInfo.get("effectList"));
+		model.addAttribute("chamList",getSynInfo.get("chamList"));
 		return "thymeleaf/synergy_detail";
+	}
+	
+	@GetMapping("/detail_mini/{synname}")
+	public String detail_mini(Model model,
+			@PathVariable("synname") String synname) {
+		
+		Map<String, Object> getSynInfo = synService.getSynInfo(synname);
+		
+		model.addAttribute("synergy",getSynInfo.get("synergy"));
+		model.addAttribute("effectList",getSynInfo.get("effectList"));
+		model.addAttribute("chamList",getSynInfo.get("chamList"));
+		return "thymeleaf/synergy_mini";
 	}
 }

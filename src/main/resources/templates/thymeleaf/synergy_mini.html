@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeLeaf.org">
+<head>
+<meta charset="UTF-8">
+<title>시너지 상세정보</title>
+
+<!-- bootstrap css -->
+<link rel="stylesheet" th:href="@{/css/bootstrap.css}" type="text/css">
+<link rel="stylesheet" th:href="@{/css/synergy_mini.css}" type="text/css">
+<link rel="stylesheet" th:href="@{/css/main.css}" type="text/css">
+<link rel="stylesheet" th:href="@{/css/topnavbar.css}" type="text/css">
+
+</head>
+<body>
+<main class="synergyBody d_synergyBody">
+<div class="synergyMain d_synergyMain">
+	<div class="synergyBox d_synergyBox" th:object="${synergy}">
+        <div class="synergyName">
+        	<img class="synergyImage" th:src="@{/image/synergy_white/}+|*{korname}.svg|" th:alt="*{korname}">
+        	<span th:text="*{korname}"></span>
+        </div>
+        <div class="champions" >
+	        <div class="championDetail" th:each="cham :${chamList}">
+	        	<a >
+	        		<img class="chamImage"  th:src="@{/image/champion/}+|${cham.engname}.png|">
+	        	</a>
+	        	<a class="chamName" th:utext="|<br>${cham.korname}|"></a>	
+	        </div>
+	    </div>
+        <div class="synergyE" th:if="${(synergy.explan != NULL)}">
+        	<a th:utext="${synergy.explan}"></a>
+        </div>
+        <div class="synergyE">
+        	<a class="explan">시너지 효과</a><br>
+        	<a th:each="eff : ${effectList}" th:utext="|(${eff.member}) : ${eff.effect}<br>|"></a>
+        </div>
+	</div>
+</div>
+</main>
+
+</body>
+</html>

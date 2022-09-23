@@ -7,6 +7,15 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" />
 <link rel="stylesheet" th:href="@{/css/detail_cham.css}" type="text/css">
 <link rel="stylesheet" th:href="@{/css/topnavbar.css}" type="text/css">
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+	$(function() {
+
+	$("#synergy").load("mainpage.html");
+	});
+</script>
+
 </head>
 
 <body id="d_cham">
@@ -66,18 +75,18 @@
 								<div class="guide-champion-detail__stats__name">계열</div>
 								<div class="guide-champion-detail__stats__value">
 									<img class="img_synergy img_synergy_back img_synergy_size" th:src="@{/image/synergy_white/}+|*{origins1}.svg|" alt="계열" width="14" height="14">
-									<span th:text="*{origins1}"></span>
+									<a th:href="@{'/syn/detail/'+*{origins1}}" th:text="*{origins1}"></a>
 									<img class="img_synergy" th:if="*{origins2} != NULL" th:src="@{/image/synergy_white/}+|*{origins2}.svg|">
-									<span th:text="*{origins2}"></span>
+									<a th:href="@{'/syn/detail/'+*{origins2}}" th:text="*{origins2}"></a>
 								</div>
 							</div>
 							<div class="guide-champion-detail__stats__row">
 								<div class="guide-champion-detail__stats__name">직업</div>
 								<div class="guide-champion-detail__stats__value">
 									<img class="img_synergy img_synergy_back img_synergy_size" th:src="@{/image/synergy_white/}+|*{classes1}.svg|" alt="직업" width="14" height="14">
-									<span th:text="*{classes1}"></span>
+									<a th:href="@{'/syn/detail/'+*{classes1}}" th:text="*{classes1}"></a>
 									<img class="img_synergy" th:if="*{classes2} != NULL" th:src="@{/image/synergy_white/}+|*{classes2}.svg|">
-									<span th:text="*{classes2}"></span>
+									<a th:href="@{'/syn/detail/'+*{classes2}}" th:text="*{classes2}"></a>
 								</div>
 							</div>	
 						</div>	
@@ -147,8 +156,15 @@
 			<a href="/cham/chamList">챔피언 목록으로</a>
 		</div>
 		
+		<div class="iframebox" th:object="${cham}">
+			<iframe th:if="*{origins1} != NULL" th:src="@{'/syn/detail_mini/'+*{origins1}}" title="origins1"  ></iframe>
+			<iframe th:if="*{origins2} != NULL" th:src="@{'/syn/detail_mini/'+*{origins2}}" title="origins2"  width="100%" height="500px" style="border:none"></iframe>
+			<iframe th:if="*{classes1} != NULL" th:src="@{'/syn/detail_mini/'+*{classes1}}" title="classes1"  ></iframe>
+			<iframe th:if="*{classes2} != NULL" th:src="@{'/syn/detail_mini/'+*{classes2}}" title="classes2"  width="100%" height="500px" style="border:none"></iframe>
+		</div>
 	</div>
-
-
+<div id="gotop">
+	<a href="#head"><img src="/image/etc/gotop.svg"></a>
+</div>
 </body>
 </html>

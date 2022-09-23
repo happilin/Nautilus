@@ -12,14 +12,14 @@ import lombok.Data;
 @Data
 @Component
 @Entity
-@Table(name="classeffect")
-public class ClassEffect {
+@Table(name="synergyffect")
+public class SynergyEffect {
 
 	@Id
 	private int num;
 	
-	@Column(name="classname")
-	private String className;
+	@Column(name="korname")
+	private String korname;
 	
 	@Column(name="member")
 	private int member;

@@ -1,6 +1,7 @@
 package com.nautilus.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.nautilus.repository.ChampionRepository;
 import com.nautilus.service.ChampionService;
+import com.nautilus.service.SynergyService;
 import com.nautilus.vo.ChampionDetail;
 
 import lombok.extern.slf4j.Slf4j;
@@ -26,6 +28,9 @@ public class ChampionController {
 	
 	@Autowired
 	private ChampionRepository repository;
+	
+	@Autowired
+	private SynergyService synService;
 	
 	@GetMapping("/chamList")
 	public String chamList(Model model, 
@@ -46,6 +51,25 @@ public class ChampionController {
 //		List<Champion> list = chamService.getChamList();
 		List<ChampionDetail> list = repository.findByKornameContaining(searchText);
 		ChampionDetail cham = chamService.detailCham(name);
+		
+		if(cham.getClasses1() != null) {
+			Map<String, Object> synergy1 = synService.getSynInfo(cham.getClasses1());
+			model.addAttribute("synergy1",synergy1);
+			log.info(synergy1.toString());
+		}
+		if(cham.getClasses2() != null) {
+			Map<String, Object> synergy2 = synService.getSynInfo(cham.getClasses2());
+			model.addAttribute("synergy2",synergy2);
+		}
+		if(cham.getOrigins1() != null) {
+			Map<String, Object> synergy3 = synService.getSynInfo(cham.getOrigins1());
+			model.addAttribute("synergy3",synergy3);
+		}
+		if(cham.getOrigins2() != null) {
+			Map<String, Object> synergy4 = synService.getSynInfo(cham.getOrigins2());
+			model.addAttribute("synergy4",synergy4);
+		}
+		
 		model.addAttribute("cham", cham);
 		model.addAttribute("list",list);
 		return "thymeleaf/detail_cham";
@@ -54,7 +78,7 @@ public class ChampionController {
 	@GetMapping("/searchCham/{name}")
 	public String detailCham(@PathVariable("name") String name, Model model)
 	{
-		log.info(name);
+//		log.info(name);
 		ChampionDetail cham = chamService.detailKorCham(name);
 		model.addAttribute("cham", cham);
 		return "thymeleaf/detail_cham";

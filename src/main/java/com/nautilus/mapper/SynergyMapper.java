@@ -4,31 +4,26 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.ibatis.annotations.Mapper;
-
-import com.nautilus.vo.ClassEffect;
-import com.nautilus.vo.Classes;
-import com.nautilus.vo.OriginEffect;
-import com.nautilus.vo.Origins;
+import com.nautilus.vo.Synergy;
+import com.nautilus.vo.SynergyEffect;
 
 @Mapper
 public interface SynergyMapper {
 
-	List<Classes> findClassAll();
+	List<Synergy> findClassAll();
 
-	List<ClassEffect> findClassEffect(String className);
+	List<SynergyEffect> findSynergyEffect(String synergy);
 
 	List<String> findClassAllName();
 
-	List<Origins> findOriginAll();
-
-	List<OriginEffect> findOriginEffect(String origin);
+	List<Synergy> findOriginAll();
 
 	List<String> findOriginAllName();
 	
-	Map<String,String> getSynergySearch (String name);
+	Synergy getSynergySearch (String name);
 	
-	Classes findClass(String name);
+	Synergy findClass(String name);
 
-	Origins findOrigin(String name);
+	Synergy findOrigin(String name);
 	
 }

@@ -100,6 +100,11 @@ div {
     vertical-align: top;
 }
 
+.guide-champion-detail__stats__value > a{
+    text-decoration:none;
+    color:white;
+}
+
 img {
     vertical-align: middle;
     border-style: none;
@@ -232,7 +237,7 @@ img {
 
 #golist{
 	text-align: center;
-
+	margin-bottom:20px;
 }
 
 #golist > a{
@@ -240,4 +245,24 @@ img {
 	text-decoration: none;
     font-size: 30px;
     color: black;
+}
+
+#golist {
+	font-weight: bold;
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+}
+
+.iframebox {
+	position: relative;
+	width: 100%;
+	padding-bottom: 30%;
+}
+.iframebox iframe {
+	overflow-x:hidden;
+	overflow:auto;
+	border:none;
+	width: 100%;
+	min-height:500px;
 }
