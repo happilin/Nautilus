@@ -58,6 +58,8 @@
   </div>
 </nav>
 
+<h3 class="title">증강 목록</h3>
+<div>
 	<form action="">
 		<!-- 버튼 -->
 		<div id="choice"> 
@@ -71,12 +73,12 @@
 			<input type="text" id="keyword" placeholder="증강 검색 (예. 강인함, ㄱㅇㅎ, ...)" list="dtList" onKeypress="enterkey(event);">
 			<button type="button" onclick="search();">검색</button>
 		</div>
-		
+</div>		
 		<!-- <datalist id="dtList" th:each="list:${list}">
 			<option value="${list.name}">
 		</datalist> -->
 		
-		<div>
+		<div class="aguments">
 		<!-- 증강체들... -->
 			<table id="agutable">
 				<tr th:each="list:${list}">

@@ -13,11 +13,18 @@ h3{
 	font-family: 'Black Han Sans', sans-serif;
 }
 .cheatTable{
-	border:2px solid;
+	border:3px solid;
 	width: -webkit-fill-available;
 	border-radius:3px;
 	border-collapse: collapse;
 	text-align: center;
+	margin: 30px;
+}
+tbody > tr:nth-child(1){
+	border-bottom: 3px solid;
+}
+tbody > tr:nth-child(1) > td:nth-child(1){
+	border-right: 3px solid;
 }
 th,td{
 	border:1px solid;
@@ -44,10 +51,11 @@ th,td{
 	font-family: 'NanumGothicExtraBold';
 	font-size: 25px;
 	width: 3em;
+	border-right: 3px solid;
 }
 .synergyImage{
-	width: 20px;
-	height : 20px;
+	width: 25px;
+	height : 25px;
 }
 .cham{
 	margin:3px;

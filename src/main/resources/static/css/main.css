@@ -29,3 +29,10 @@
 	position: relative;
 	display: inline-block;
 }
+
+#golist {
+	font-weight: bold;
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+}

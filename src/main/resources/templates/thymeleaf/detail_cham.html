@@ -2,14 +2,14 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>챔피언 세부정보</title>
-	<link rel="stylesheet" th:href="@{/css/bootstrap.css}" type="text/css">
-	<link rel="stylesheet" th:href="@{/css/topnavbar.css}" type="text/css">
-	<link rel="stylesheet" th:href="@{/css/detail_cham.css}" type="text/css">
+<title>챔피언</title>
+<link rel="stylesheet" th:href="@{/css/bootstrap.css}" type="text/css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" />
+<link rel="stylesheet" th:href="@{/css/detail_cham.css}" type="text/css">
+<link rel="stylesheet" th:href="@{/css/topnavbar.css}" type="text/css">
 </head>
 
-<body>
-
+<body id="d_cham">
 <nav id="head" class="navbar navbar-expand-lg topbar-main">
   <a class="navbar-brand ourBrand" href="/main/main">노틸러스</a>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -30,69 +30,123 @@
   </div>
 </nav>
 
-	<div>
-		<h3>챔피언 검색</h3>
-		<form class="form-inline" method="GET" th:action="@{/cham/chamList}">
-  			<div class="form-group mx-sm-3 mb-2">
-    			<label for="searchText" class="sr-only">검색</label>
-    			<input type="text" class="form-control" id="searchText" name="searchText" placeholder="챔피언 이름">
-  			</div>
-  			<button type="submit" class="btn btn-light mb-2">검색</button>
+	<div class="container justify-content-center" th:object="${cham}">
+		<div class="mainhead">
+			챔피언 상세정보
+		</div>
+		<form id="searchbar" class="form-inline justify-content-end" method="GET" th:action="@{/cham/chamList}">
+		  <div class="form-group mx-sm-3 mb-2">
+		    <label for="searchText" class="sr-only">검색</label>
+		    <input type="text" class="form-control" id="searchText" name="searchText" th:value="${param.searchText}" placeholder="챔피언 검색">
+		  </div>
+		  <button type="submit" class="btn btn-light mb-2">검색</button>
 		</form>
-	</div>
-
-	<div class="container" th:object="${cham}">
-		<div class="champion-detail">
-			<div class="champion-detail-header">
-				<img id="img_champion" th:src="@{/image/champion/}+|${cham.engname}.png|" th:alt="${cham.korname}">
-				<span th:text="*{korname}"></span>
-			</div>		
-		</div>
-	
-		<div id="part_cost">
-			<a>비용 : </a>
-			<img id="img_coin" th:src="@{/image/etc/coin.png}">
-			<a th:text="*{cost1}"></a>
-			<a th:utext="|( *{cost2} )|"></a>
-		</div>
-
-		<div id="part_synergy">
-			<div>
-				<a>계열 : </a>
-				<img class="img_synergy img_synergy_back img_synergy_size" th:src="@{/image/synergy_black/}+|*{origins1}.svg|">
-				<a th:text="*{origins1}"></a>
-				<img class="img_synergy" th:if="*{origins2} != NULL" th:src="@{/image/synergy_black/}+|*{origins2}.svg|">
-				<a th:text="*{origins2}"></a>
-			</div>
-			<div>
-				<a>직업 : </a>
-				<img class="img_synergy" th:src="@{/image/synergy_black/}+|*{classes1}.svg|">
-				<a th:text="*{classes1}"></a>
-				<img class="img_synergy" th:if="*{classes2} != NULL" th:src="@{/image/synergy_black/}+|*{classes2}.svg|">
-				<a th:text="*{classes2}"></a>
-			</div>
+		
+		<div class="row row-normal mb-5" >
+		    <div class="col-xl-9 mt-xl-0">
+		    	<div class="guide-champion-detail">
+		    		<div class="guide-champion-detail__header">
+		    			<div class="guide-champion-detail__header__background" >
+							<img id="img_champion" th:src="@{/image/champion/}+|${cham.engname}.png|" th:alt="${cham.korname}">
+							<span class="guide-champion-detail__name" th:text="*{korname}"></span>
+						<div class="guide-champion-detail__stats d-none d-md-block">
+							<div class="guide-champion-detail__stats__row">
+								<div class="guide-champion-detail__stats__name">비용</div>
+								<div class="guide-champion-detail__stats__value">
+									<img id="img_coin" th:src="@{/image/etc/coin.png}">
+									<span th:text="*{cost1}"></span>
+									<span class="d-inline-block font-size-11 text-light-gray ml-2">
+										<i class='fa fa-sack-dollar'>
+											<span th:text="*{cost2}"></span>
+										</i>											
+									</span>
+								</div>
+							</div>
+							<div class="guide-champion-detail__stats__row">
+								<div class="guide-champion-detail__stats__name">계열</div>
+								<div class="guide-champion-detail__stats__value">
+									<img class="img_synergy img_synergy_back img_synergy_size" th:src="@{/image/synergy_white/}+|*{origins1}.svg|" alt="계열" width="14" height="14">
+									<span th:text="*{origins1}"></span>
+									<img class="img_synergy" th:if="*{origins2} != NULL" th:src="@{/image/synergy_white/}+|*{origins2}.svg|">
+									<span th:text="*{origins2}"></span>
+								</div>
+							</div>
+							<div class="guide-champion-detail__stats__row">
+								<div class="guide-champion-detail__stats__name">직업</div>
+								<div class="guide-champion-detail__stats__value">
+									<img class="img_synergy img_synergy_back img_synergy_size" th:src="@{/image/synergy_white/}+|*{classes1}.svg|" alt="직업" width="14" height="14">
+									<span th:text="*{classes1}"></span>
+									<img class="img_synergy" th:if="*{classes2} != NULL" th:src="@{/image/synergy_white/}+|*{classes2}.svg|">
+									<span th:text="*{classes2}"></span>
+								</div>
+							</div>	
+						</div>	
+						</div>		
+					</div>		
+					
+					<div class="guide-champion-detail__base-stats">
+						<div class="guide-champion-detail__base-stat">
+							<div class="guide-champion-detail__base-stats__name">체력</div>
+							<div class="guide-champion-detail__base-stats__value">
+								<span th:text="*{health}"></span>
+							</div>
+						</div>
+						<div class="guide-champion-detail__base-stat">
+							<div class="guide-champion-detail__base-stats__name">공격력</div>
+							<div class="guide-champion-detail__base-stats__value">
+								<span th:text="*{offense}"></span>
+							</div>
+						</div>
+						<div class="guide-champion-detail__base-stat">
+							<div class="guide-champion-detail__base-stats__name">사거리</div>
+							<div class="guide-champion-detail__base-stats__value">
+								<span th:text="*{attackrange}"></span>
+							</div>
+						</div>
+						<div class="guide-champion-detail__base-stat">
+							<div class="guide-champion-detail__base-stats__name">공격속도</div>
+							<div class="guide-champion-detail__base-stats__value">
+								<span th:text="*{attackSpeed}"></span>
+							</div>
+						</div>
+						<div class="guide-champion-detail__base-stat">
+							<div class="guide-champion-detail__base-stats__name">방어력</div>
+							<div class="guide-champion-detail__base-stats__value">
+								<span th:text="*{defence}"></span>
+							</div>
+						</div>
+						<div class="guide-champion-detail__base-stat">
+							<div class="guide-champion-detail__base-stats__name">마법 저항력</div>
+							<div class="guide-champion-detail__base-stats__value">
+								<span th:text="*{mDefence}"></span>
+							</div>
+						</div>
+					</div>
+					<div class="guide-champion-detail__skill">
+						<img id="img_skill" th:src="@{/image/skill/}+|*{skillname}.png|">
+						<strong class="d-block font-size-14"><span th:text="*{skillname}"></span></strong>
+						<div class="text-gray">
+							<span th:text="*{skilltype}"></span>
+							<span class="mx-1">|</span>
+							<img id="img_mana" th:src="@{/image/etc/mana.png}" width="14">
+							<span>마나 : </span>
+							<span th:text="*{mana}"></span>
+						</div>
+						<span class="d-block mt-1" th:utext="*{skillcontent}"></span>
+						<div class="guide-champion-detail__skill__stats">
+							<div>
+								<span class="font-weight-bold" th:utext="*{skilleffect}"></span>
+							</div>
+						</div>
+					</div>			
+				</div>
+		   	</div>
 		</div>
 		
-		<div id="part_spec">
-			<a th:text="'체력: ' + *{health}"></a>
-			<div th:text="'방어력: ' + *{defence}"></div>
-			<div th:text="'마법 저항력: ' + *{mDefence}"></div>
-			<div th:text="'공격력: ' + *{offense}"></div>
-			<div th:text="'사거리: ' + *{attackrange}"></div>
-			<div th:text="'공격속도: ' + *{attackSpeed}"></div>
+		<div id="golist">
+			<a href="/cham/chamList">챔피언 목록으로</a>
 		</div>
 		
-		<div id="part_skill">
-			<img id="img_skill" th:src="@{/image/skill/}+|*{skillname}.png|">
-			<a th:text="'스킬: ' + *{skillname} + ' | ' + *{skilltype}"></a>
-			<div>
-				<a>마나 : </a>
-				<img id="img_mana" th:src="@{/image/etc/mana.png}">
-				<a th:text="*{mana}"></a>
-			</div>
-			<div th:utext="*{skillcontent}"></div>
-			<div th:utext="*{skilleffect}"></div>
-		</div>
 	</div>
 
 

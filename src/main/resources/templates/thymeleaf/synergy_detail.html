@@ -32,13 +32,13 @@
   </div>
 </nav>
 
-<main class="synergyBody">
+<main class="synergyBody d_synergyBody">
 <div class="head">
-	<div class="mainhead">시너지 상세보기</div>
+	<div class="mainhead d_mainhead">시너지 상세보기</div>
 </div>
 
-<div class="synergyMain">
-	<div class="d_synergyBox" th:object="${synergy}">
+<div class="synergyMain d_synergyMain">
+	<div class="synergyBox d_synergyBox" th:object="${synergy}">
         <div class="synergyName">
         	<img class="synergyImage" th:src="@{/image/synergy_white/}+|*{korname}.svg|" th:alt="*{korname}">
         	<span th:text="*{korname}"></span>
